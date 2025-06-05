@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'barlow';
+  src: url('https://fonts.freeman.land/barlow/Barlow-ExtraBold.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'alegreya';
+  src: url('https://fonts.freeman.land/alegreya/Alegreya-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dm-mono';
+  src: url('https://fonts.freeman.land/dm-mono/DMMono-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

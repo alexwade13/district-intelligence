@@ -1,0 +1,40 @@
+{
+  "name": "live-election-results",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write 'components/**/*.js' 'pages/**/*.js'"
+  },
+  "dependencies": {
+    "@szhsin/react-autocomplete": "^1.1.0",
+    "@theme-ui/mdx": "^0.17.2",
+    "@theme-ui/presets": "^0.17.2",
+    "d3-color": "^3.1.0",
+    "d3-format": "^3.1.0",
+    "d3-scale": "^4.0.2",
+    "d3-scale-chromatic": "^3.1.0",
+    "d3-time-format": "^4.1.0",
+    "lucide-react": "^0.501.0",
+    "maplibre-gl": "^5.3.0",
+    "maplibre-google-maps": "^1.1.0",
+    "next": "^15.2.4",
+    "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "theme-ui": "^0.17.2"
+  },
+  "author": "",
+  "license": "MIT",
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": true
+  }
+}
