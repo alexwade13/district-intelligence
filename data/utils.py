@@ -4,6 +4,46 @@ from urllib.parse import urljoin
 import pandas as pd
 from io import StringIO
 
+def get_elections(url: str):
+    """Given the root url, ie https://enr.boenyc.gov, output a dict, from election name to per_ad link, ie: 
+    {"State Senator": "https://enr.boenyc.gov/CD27280AD0.html", ...}
+    
+    The values returned are able to be passed directly in get_per_ed_results below. 
+
+    - Parameters
+        - url: root url of the boenyc election night results website.
+    - Returns
+        - election_to_link: the dictionary described above. 
+    """
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    races_table = soup.find_all("table")[-1] # this table contains each race with AD Details links.
+
+    race_to_url = {}
+    for row in races_table.find_all('tr'):
+        cells = row.find_all('td')
+        if len(cells) < 7:
+            continue  # skip rows that don’t match expected format
+
+        race_title = cells[2].get_text(strip=True)
+        ad_link_tag = cells[6].find('a')
+
+        assert ad_link_tag, f"Couldn't find AD Details for row: {row.prettify()}"
+        assert ad_link_tag.text == "AD Details", f"Expected 'AD Details' as the text of the link, instead found: {ad_link_tag.text}"
+        
+        race_to_url[race_title] = ad_link_tag['href'] # this link is to the AD Details page, which is by borough.
+
+    election_to_link = {} # we still need to click on the 'Total' link in the AD Details page.
+    for race_title, sub_link in race_to_url.items():
+        sub_url = urljoin(url, sub_link)
+        sub_response = requests.get(sub_url)
+        sub_soup = BeautifulSoup(sub_response.text, "html.parser")
+
+        total_tag_links = [tag_link for tag_link in sub_soup.find_all("a", href=True) if tag_link.text == 'Total']
+        assert len(total_tag_links) == 1, f"Expected 1 'Total' sublink but found {len(total_tag_links)} in {sub_url}"
+        election_to_link[race_title] = urljoin(url, total_tag_links[0]['href'])
+    return election_to_link
+
 def get_per_ed_results(per_ad_url: str): 
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts. 
