@@ -10,6 +10,7 @@
     "format": "prettier --write 'components/**/*.js' 'pages/**/*.js'"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
     "@szhsin/react-autocomplete": "^1.1.0",
     "@theme-ui/mdx": "^0.17.2",
     "@theme-ui/presets": "^0.17.2",
