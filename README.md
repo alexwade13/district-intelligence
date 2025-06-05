@@ -1,6 +1,6 @@
 # live-election-results
 
-To run locally, first install node (nvm is recommended), then run
+To run locally, first install node ([nvm](https://github.com/nvm-sh/nvm) is recommended), then run
 
 ```
 npm i
