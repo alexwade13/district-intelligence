@@ -20,15 +20,11 @@ import {
 } from '../components/constants'
 import shapes from '../data'
 import results from '../data/sample'
-import { schemeSet3 } from 'd3-scale-chromatic'
 
 const Index = () => {
   const map = useRef()
   const [selected, setSelected] = useState()
   const [showRegions, setShowRegions] = useState()
-
-  const colorScheme = [...schemeSet3]
-  colorScheme.splice(8, 1)
 
   const setup = () => {
     addShapes(map.current, 'districts', 0.5)
