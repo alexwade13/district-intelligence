@@ -18,7 +18,7 @@ const theme = {
   fonts: {
     body: "alegreya",
     heading: 'barlow',
-    mono: 'dm-mono',
+    mono: 'roboto-mono',
   },
   letterSpacings: {
     mono: '1.54px',

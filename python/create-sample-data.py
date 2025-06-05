@@ -1,5 +1,8 @@
+import datetime
+from datetime import timezone
 import json
 import urllib
+import numpy as np
 import pandas as pd
 
 # load districts
@@ -9,7 +12,7 @@ csv_url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:cs
 df = pd.read_csv(csv_url)
 
 obj = {}
-
+districts = {}
 for district in df['district']:
 	data = {}
 	data['reporting'] = np.random.rand()
@@ -19,7 +22,7 @@ for district in df['district']:
 	candidates['Michael Blake'] = int(np.round(np.random.rand() * 5))
 	candidates['Andrew Cuomo'] = int(np.round(np.random.rand() * 30))
 	candidates['Brad Lander'] = int(np.round(np.random.rand() * 10))
-	candidates['Zohran Kwame Mamdani'] = int(np.round(np.random.rand() * 25))
+	candidates['Zohran Kwame Mamdani'] = int(np.round(np.random.rand() * 30))
 	candidates['Zellnor Myrie'] = int(np.round(np.random.rand() * 5))
 	candidates['Paperboy Prince'] = int(np.round(np.random.rand() * 1))
 	candidates['Jessica Ramos'] = int(np.round(np.random.rand() * 5))
@@ -28,7 +31,11 @@ for district in df['district']:
 	candidates['Write In'] = int(np.round(np.random.rand() * 1))
 	data['total'] = sum(candidates.values())
 	data['candidates'] = candidates
-	obj[district] = data
+	districts[district] = data
 
-with open('sample.json', 'w') as f:
+obj['districts'] = districts
+obj['reporting'] = np.random.rand()
+obj['last_updated'] = str(datetime.datetime.now(timezone.utc))
+
+with open('data/sample.json', 'w') as f:
 	json.dump(obj, f)

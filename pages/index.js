@@ -57,8 +57,8 @@ const Index = () => {
         map.current.setFeatureState(
           { source: 'districts', id: shapes['districts'][k].id },
           {
-            color: candidateColors[getMaxKey(results[k].candidates)],
-            opacity: results[k].reporting,
+            color: candidateColors[getMaxKey(results.districts[k].candidates)],
+            opacity: results.districts[k].reporting > 0.3 ? 1 : 0,
             'line-width': 0.5,
           },
         )
@@ -68,8 +68,11 @@ const Index = () => {
         map.current.setFeatureState(
           { source: 'districts', id: shapes['districts'][selected].id },
           {
-            color: candidateColors[getMaxKey(results[selected].candidates)],
-            opacity: results[selected].reporting,
+            color:
+              candidateColors[
+                getMaxKey(results.districts[selected].candidates)
+              ],
+            opacity: results.districts[selected].reporting > 0.3 ? 1 : 0,
             'line-width': 1.5,
           },
         )

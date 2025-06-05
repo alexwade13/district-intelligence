@@ -15,8 +15,8 @@
 }
 
 @font-face {
-  font-family: 'dm-mono';
-  src: url('https://fonts.freeman.land/dm-mono/DMMono-Regular.ttf')
+  font-family: 'roboto-mono';
+  src: url('https://fonts.freeman.land/roboto-mono/RobotoMono-VariableFont_wght.ttf')
     format('truetype');
   font-weight: normal;
   font-style: normal;

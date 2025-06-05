@@ -80,5 +80,10 @@ export const getMax = (obj) => {
 }
 
 export const formatPercent = (v) => {
-  return Math.round(v * 100) + '%'
+  return String(Math.round(v * 100)).padStart(2, '0') + '%'
+}
+
+export const formatDate = (date) => {
+  date = new Date(date)
+  return date.toLocaleTimeString()
 }
