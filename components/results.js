@@ -25,15 +25,7 @@ const Results = ({ selected }) => {
   const sortedTotals = Object.entries(totals).sort((a, b) => b[1] - a[1])
 
   return (
-    <Box
-      sx={{
-        borderRadius: [0, '2px', '2px', '2px'],
-        bg: 'rgb(255,255,255,0.9)',
-        ml: [0, 4, 4, 4],
-        mt: [0, 4, 4, 4],
-        width: ['calc(100vw)', '400px', '400px', '400px'],
-      }}
-    >
+    <>
       <Box sx={{ px: [4], py: [4] }}>
         <Box
           sx={{
@@ -125,7 +117,7 @@ const Results = ({ selected }) => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   )
 }
 

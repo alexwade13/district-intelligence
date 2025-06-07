@@ -15,12 +15,12 @@ export const boroughColorsDarker = {
 }
 
 export const candidateColors = {
-  'Adrienne Adams': '#8dd3c7',
+  'Adrienne Adams': 'rgb(82,58,150)',
   'Selma Bartholomew': '#ffffb3',
   'Michael Blake': '#bebada',
-  'Andrew Cuomo': '#bc80bd',
-  'Brad Lander': '#80b1d3',
-  'Zohran Kwame Mamdani': '#fdb462',
+  'Andrew Cuomo': 'rgb(20,70,123)',
+  'Brad Lander': 'rgb(243,112,38)',
+  'Zohran Kwame Mamdani': 'rgb(255,171,0)',
   'Zellnor Myrie': '#b3de69',
   'Paperboy Prince': '#fccde5',
   'Jessica Ramos': '#d9d9d9',

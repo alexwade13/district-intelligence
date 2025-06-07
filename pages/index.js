@@ -1,9 +1,16 @@
 import { useEffect, useState, useRef } from 'react'
-import { Box, Container, IconButton, Switch } from 'theme-ui'
+import { Box, Container, IconButton, Switch, Image } from 'theme-ui'
 import { Search, X, ChevronUp, ChevronDown } from 'lucide-react'
 import { Themed } from '@theme-ui/mdx'
 import maplibregl from 'maplibre-gl'
-import { Row, Column, Input, Autocomplete, Results } from '../components'
+import {
+  Row,
+  Column,
+  Input,
+  Autocomplete,
+  Results,
+  Options,
+} from '../components'
 import { addLabels, addShapes } from '../components/layers'
 import {
   handleShapeClick,
@@ -26,9 +33,6 @@ const Index = () => {
   const [selected, setSelected] = useState()
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
   const [showRegions, setShowRegions] = useState()
-  
-  // Get unique list of candidates
-  const allCandidates = Object.keys(candidateColors)
 
   const setup = () => {
     addShapes(map.current, 'districts', 0.5)
@@ -61,27 +65,32 @@ const Index = () => {
         const districtResults = results.districts[k]
         let color = '#cccccc'
         let opacity = 0
-        
+
         if (selectedCandidate === 'All Candidates') {
           // Show leading candidate for each district
           const leadingCandidate = getMaxKey(districtResults.candidates)
           if (leadingCandidate) {
             color = candidateColors[leadingCandidate] || '#cccccc'
-            opacity = 0.3 + (districtResults.reporting * 0.7) // Scale opacity based on reporting
+            opacity = 0.3 + districtResults.reporting * 0.7 // Scale opacity based on reporting
           }
-        } else if (districtResults.candidates[selectedCandidate] !== undefined) {
+        } else if (
+          districtResults.candidates[selectedCandidate] !== undefined
+        ) {
           // Show only the selected candidate's results
-          const totalVotes = Object.values(districtResults.candidates).reduce((a, b) => a + b, 0)
-          const candidateVoteShare = totalVotes > 0 
-            ? districtResults.candidates[selectedCandidate] / totalVotes 
-            : 0
-        
+          const totalVotes = Object.values(districtResults.candidates).reduce(
+            (a, b) => a + b,
+            0,
+          )
+          const candidateVoteShare =
+            totalVotes > 0
+              ? districtResults.candidates[selectedCandidate] / totalVotes
+              : 0
+
           // Show the candidate's color with opacity based on vote share and reporting
           color = candidateColors[selectedCandidate] || '#cccccc'
-          opacity = 0.3 + (candidateVoteShare * 0.7 * districtResults.reporting)
+          opacity = 0.3 + candidateVoteShare * 0.7 * districtResults.reporting
         }
         // If candidate not in district, keep opacity at 0 (invisible)
-
 
         map.current.setFeatureState(
           { source: 'districts', id: shapes['districts'][k].id },
@@ -89,7 +98,7 @@ const Index = () => {
             color,
             opacity,
             'line-width': selected === k ? 1.5 : 0.5,
-          }
+          },
         )
       })
     }
@@ -137,31 +146,56 @@ const Index = () => {
 
   return (
     <>
-      <Box sx={{ position: 'absolute', top: 0, left: 0, zIndex: 1000, p: 3, bg: 'background', borderRadius: 2, m: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-        <Box sx={{ mb: 3 }}>
-          <label htmlFor="candidate-select" style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>Filter by Candidate:</label>
-          <select
-            id="candidate-select"
-            value={selectedCandidate}
-            onChange={(e) => setSelectedCandidate(e.target.value)}
-            style={{
-              padding: '8px 12px',
-              borderRadius: '4px',
-              border: '1px solid #ccc',
-              width: '250px',
-              fontSize: '16px',
-              backgroundColor: 'white',
-            }}
-          >
-            <option value="All Candidates">All Candidates</option>
-            {allCandidates.map((candidate) => (
-              <option key={candidate} value={candidate}>
-                {candidate}
-              </option>
-            ))}
-          </select>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: 1000,
+          borderRadius: 2,
+        }}
+      >
+        <Box
+          sx={{
+            borderRadius: [0, '2px', '2px', '2px'],
+            bg: 'rgb(255,255,255,0.9)',
+            ml: [0, 4, 4, 4],
+            mt: [0, 4, 4, 4],
+            width: ['calc(100vw)', '400px', '400px', '400px'],
+          }}
+        >
+          <Results selected={selected} />
         </Box>
-        <Results selected={selected} />
+      </Box>
+      <Box sx={{ position: 'absolute', top: 0, right: 0 }}>
+        <Box
+          sx={{
+            borderRadius: [0, '2px', '2px', '2px'],
+            bg: 'rgb(255,255,255,0.9)',
+            mr: [0, 4, 4, 4],
+            mt: [0, 4, 4, 4],
+            width: ['calc(100vw)', '400px', '400px', '400px'],
+          }}
+        >
+          <Options
+            selectedCandidate={selectedCandidate}
+            setSelectedCandidate={setSelectedCandidate}
+          />
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          zIndex: 1000,
+          borderRadius: 2,
+        }}
+      >
+        <Image
+          sx={{ mr: [5], width: 200, height: 200 }}
+          src='/logos/nycdsa-square-transparent.png'
+        />
       </Box>
       <Box
         id='map'
