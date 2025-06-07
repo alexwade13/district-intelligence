@@ -47,7 +47,6 @@ const Options = ({ selectedCandidate, setSelectedCandidate }) => {
         <Select
           id='scale-select'
           value={'Election district'}
-          onChange={(e) => setSelectedCandidate(e.target.value)}
         >
           <option value='Election district'>Election district</option>
           <option value='Assembly district'>Assembly district</option>
