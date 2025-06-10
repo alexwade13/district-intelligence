@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import pandas as pd
 from io import StringIO
+import numpy as np
 
 def get_elections(url: str):
     """Given the root url, ie https://enr.boenyc.gov, output a dict, from election name to per_ad link, ie: 
@@ -44,7 +45,7 @@ def get_elections(url: str):
         election_to_link[race_title] = urljoin(url, total_tag_links[0]['href'])
     return election_to_link
 
-def get_per_ed_results(per_ad_url: str): 
+def get_per_ed_results(per_ad_url: str, format='dict'): 
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts. 
 
@@ -52,7 +53,7 @@ def get_per_ed_results(per_ad_url: str):
 
     - Parameters
         - per_ad_url: the url of the subpage with AD totals, ie: https://enr.boenyc.gov/CD27280AD0.html
-        - density: whether to return the fraction of votes in each ED per candidate, or total number.
+        - format: 'dict' or 'df', depending on whether you want to do get_nested_dict post-formatting
     - Returns
         - df: Dataframe consisting of ElectDist (XXYY) where XX is AD, and YYY is the ED, with columns for each candidate.
 
@@ -74,33 +75,69 @@ def get_per_ed_results(per_ad_url: str):
                 subpage_df.iloc[2:-1]
                 .set_axis(columns, axis=1)
                 .astype({col: int for col in columns[2:]}) # all vote counts are ints.
+                .rename(columns=lambda col: col.replace("&nbsp", "").strip())
                 .assign(
                     **{
                         "Reported %": lambda df: df["Reported %"].str[:-1].astype(float) / 100.0,
                         "AD": " ".join(link.text.split()), # assembly district.
                     }
                 )
+                .assign(AD=lambda df: df.AD.str.split().str[-1].astype(int), ED=lambda df: df.ED.str.split().str[-1].astype(int))
                 .assign(
-                    ElectDist=lambda df: df.AD.str.split().str[-1].astype(int) * 1000
-                    + df.ED.str.split().str[-1].astype(int) # AD * 1000 + ED (I think this matches with the ElectDist from the geodata)
+                    ElectDist=lambda df: df.AD * 1000 + df.ED # AD * 1000 + ED (To match with geodata)
                 )
             )
     df = pd.concat(data)
-
-    # turn this into a dictionary.
-    sum_reporting_perc = 0.0
-    sum_counts = 0
-    def reformat_dict(input):
-        nonlocal sum_reporting_perc, sum_counts
-        output = {}
-        output["reporting"] = input.pop("Reported %")
-        output["candidates"] = input
-        output["total"] = sum(input.values())
-        sum_reporting_perc += output['reporting'] * output['total']
-        sum_counts += output['total']
+    if format == 'df':
+        return df
+    if format == 'dict':
+        output = get_nested_dict(df)
+        output['last_updated'] = str(pd.Timestamp.now())
         return output
-    output_dict = {}
-    output_dict['districts'] = {k: reformat_dict(v) for k, v in df.drop(columns=["ED", "AD"]).set_index("ElectDist").to_dict(orient='index').items()}
-    output_dict['reporting'] = sum_reporting_perc / sum_counts
-    output_dict['last_updated'] = str(pd.Timestamp.now())
-    return output_dict
+    else:
+        raise ValueError("Unrecognized format", format)
+
+def get_nested_dict(df, subsets=[("AD", "assembly_districts"), ("ElectDist", "electoral_districts")]):
+        """Useful helper function to get a nested dictionary from a dataframe.
+        - Parameters
+            - subsets: defines all the nested subgroups and their names in the output dict.
+        - Returns
+            - nested_dict: a dictionary with len(subsets) levels of nesting and stats for each nesting group.
+        """
+        if len(subsets) == 0:
+            cand_df = df[[c for c in df.columns if not c in ["ED", "AD", "Reported %", "ElectDist"]]]
+            total_voters = cand_df.sum(axis=1) / df["Reported %"] # The total voters (including those who have not been reported)
+            valid_eds = df.eval("`Reported %` > 0") & (cand_df.sum(axis=1) > 0) # For EDs with 0% reporting, we should drop.
+
+            output = {}
+            output['total'] = float(cand_df.sum().sum())
+            output['candidates'] = cand_df.sum().to_dict()
+            if not valid_eds.any():
+                output['approx_total_voters'] = 0
+                output['reporting'] = 0
+            else:
+                output['approx_total_voters'] = float(total_voters.fillna(0).sum())
+                output['reporting'] = float(np.average(df.loc[valid_eds]["Reported %"], weights=total_voters.loc[valid_eds]))
+            return output
+        # recurse
+        cur_subset = subsets[0]
+        assert len(cur_subset) == 2, f"the subset: {cur_subset} is malformatted, every element of 'subsets' should be a pair."
+        future_subsets = subsets[1:]
+        output = {}
+        output[cur_subset[1]] = {}
+        output['total'] = 0
+        output['approx_total_voters'] = 0
+        output['candidates'] = {}
+        sum_reporting_percs = 0.0
+        for g, gdf in df.groupby(cur_subset[0]):
+            child_dict = get_nested_dict(gdf, future_subsets)
+            output[cur_subset[1]][g] = child_dict
+            output['total'] += child_dict['total']
+            output['approx_total_voters'] += child_dict['approx_total_voters']
+            sum_reporting_percs += child_dict['approx_total_voters'] * child_dict['reporting']
+            for cand in child_dict['candidates'].keys():
+                if not cand in output['candidates']:
+                    output['candidates'][cand] = 0
+                output['candidates'][cand] += child_dict['candidates'][cand]
+        output["reporting"] = sum_reporting_percs / output['approx_total_voters']
+        return output

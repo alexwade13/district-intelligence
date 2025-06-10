@@ -1,0 +1,1704 @@
+{
+    "assembly_districts": {
+        "41": {
+            "electoral_districts": {
+                "41020": {
+                    "total": 38.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 12.0,
+                        "Zohran Mamdani": 20.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 627.7607785586665,
+                    "reporting": 0.060532612577752436
+                },
+                "41021": {
+                    "total": 185.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 77.0,
+                        "Zohran Mamdani": 97.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 634.5613908772864,
+                    "reporting": 0.2915399560383527
+                },
+                "41022": {
+                    "total": 78.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 10.0,
+                        "Zohran Mamdani": 62.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 131.043313189543,
+                    "reporting": 0.5952230457358755
+                },
+                "41023": {
+                    "total": 130.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 32.0,
+                        "Zohran Mamdani": 86.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 157.84411354639994,
+                    "reporting": 0.8235973903568163
+                },
+                "41024": {
+                    "total": 32.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 23.0,
+                        "Zohran Mamdani": 2.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 161.3425728762199,
+                    "reporting": 0.1983357487707229
+                },
+                "41025": {
+                    "total": 143.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 54.0,
+                        "Zohran Mamdani": 82.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 1876.0956715828836,
+                    "reporting": 0.07622212564423714
+                },
+                "41026": {
+                    "total": 126.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 61.0,
+                        "Zohran Mamdani": 57.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 260.4325799720075,
+                    "reporting": 0.48381043575094584
+                },
+                "41027": {
+                    "total": 132.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 86.0,
+                        "Zohran Mamdani": 36.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 474.55890981733074,
+                    "reporting": 0.2781530327832429
+                },
+                "41028": {
+                    "total": 155.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 94.0,
+                        "Zohran Mamdani": 51.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 1348.8178180891819,
+                    "reporting": 0.11491544515595332
+                },
+                "41029": {
+                    "total": 76.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 47.0,
+                        "Zohran Mamdani": 23.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 904.4944272790062,
+                    "reporting": 0.08402484051629933
+                },
+                "41030": {
+                    "total": 154.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 61.0,
+                        "Zohran Mamdani": 86.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 186.60212100434507,
+                    "reporting": 0.8252853674498913
+                },
+                "41031": {
+                    "total": 79.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 14.0,
+                        "Zohran Mamdani": 53.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 119.01381860310498,
+                    "reporting": 0.6637884652995997
+                },
+                "41036": {
+                    "total": 148.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 68.0,
+                        "Zohran Mamdani": 77.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 218.29336602200368,
+                    "reporting": 0.6779867052170601
+                },
+                "41037": {
+                    "total": 101.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 76.0,
+                        "Zohran Mamdani": 14.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 372.6062106834668,
+                    "reporting": 0.2710636513941541
+                },
+                "41040": {
+                    "total": 112.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 76.0,
+                        "Zohran Mamdani": 25.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 270.6815896709631,
+                    "reporting": 0.41377029053267234
+                },
+                "41041": {
+                    "total": 178.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 87.0,
+                        "Zohran Mamdani": 88.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 372.22259251721016,
+                    "reporting": 0.47820847949139456
+                },
+                "41042": {
+                    "total": 46.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 0.0,
+                        "Zohran Mamdani": 41.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 179.08799132812334,
+                    "reporting": 0.25685697661167706
+                },
+                "41043": {
+                    "total": 61.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 44.0,
+                        "Zohran Mamdani": 13.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 209.19662724107042,
+                    "reporting": 0.29159169918024475
+                },
+                "41044": {
+                    "total": 103.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 71.0,
+                        "Zohran Mamdani": 24.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 332.51427917226323,
+                    "reporting": 0.3097611334358352
+                },
+                "41045": {
+                    "total": 174.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 85.0,
+                        "Zohran Mamdani": 78.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 206.19955651378663,
+                    "reporting": 0.8438427460360044
+                },
+                "41046": {
+                    "total": 156.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 81.0,
+                        "Zohran Mamdani": 63.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 224.96033707768854,
+                    "reporting": 0.6934555754427344
+                },
+                "41047": {
+                    "total": 68.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 42.0,
+                        "Zohran Mamdani": 20.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 553.8715621957704,
+                    "reporting": 0.12277214545989788
+                },
+                "41048": {
+                    "total": 123.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 74.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 135.73263197517682,
+                    "reporting": 0.9061932875691573
+                },
+                "41052": {
+                    "total": 132.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 93.0,
+                        "Zohran Mamdani": 36.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 1466.8823171049034,
+                    "reporting": 0.08998676885036039
+                },
+                "41053": {
+                    "total": 139.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 39.0,
+                        "Zohran Mamdani": 94.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 594.2162508286426,
+                    "reporting": 0.23392157283844495
+                },
+                "41054": {
+                    "total": 125.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 21.0,
+                        "Zohran Mamdani": 98.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 2127.3247257370786,
+                    "reporting": 0.05875924746594097
+                },
+                "41055": {
+                    "total": 110.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 40.0,
+                        "Zohran Mamdani": 59.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 142.85271516449342,
+                    "reporting": 0.7700238660030797
+                },
+                "41056": {
+                    "total": 105.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 34.0,
+                        "Zohran Mamdani": 61.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 123.12464615379878,
+                    "reporting": 0.8527943289992588
+                },
+                "41057": {
+                    "total": 89.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 54.0,
+                        "Zohran Mamdani": 33.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 116.16193125901933,
+                    "reporting": 0.7661718347428874
+                },
+                "41058": {
+                    "total": 137.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 67.0,
+                        "Zohran Mamdani": 62.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 182.3940343648185,
+                    "reporting": 0.751121057643679
+                },
+                "41061": {
+                    "total": 182.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 85.0,
+                        "Zohran Mamdani": 90.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 283.920190660328,
+                    "reporting": 0.6410252105590417
+                },
+                "41062": {
+                    "total": 91.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 66.0,
+                        "Zohran Mamdani": 18.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 113.10692722593888,
+                    "reporting": 0.8045484236188402
+                },
+                "41068": {
+                    "total": 141.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 72.0,
+                        "Zohran Mamdani": 60.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 1135.0254685073046,
+                    "reporting": 0.12422628734968565
+                },
+                "41069": {
+                    "total": 150.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 81.0,
+                        "Zohran Mamdani": 61.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 812.4154166791575,
+                    "reporting": 0.18463460554840583
+                },
+                "41070": {
+                    "total": 100.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 51.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 101.64939635532893,
+                    "reporting": 0.9837736728945911
+                },
+                "41071": {
+                    "total": 92.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 58.0,
+                        "Zohran Mamdani": 25.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 407.1458167235854,
+                    "reporting": 0.22596326972078296
+                }
+            },
+            "total": 4191.0,
+            "approx_total_voters": 17564.1540965579,
+            "candidates": {
+                "Adrienne Adams": 167.0,
+                "Andrew Cuomo": 2003.0,
+                "Zohran Mamdani": 1920.0,
+                "WRITE-IN": 101.0
+            },
+            "reporting": 0.23861097875594947
+        },
+        "42": {
+            "electoral_districts": {
+                "42056": {
+                    "total": 137.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 54.0,
+                        "Zohran Mamdani": 73.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 228.5896974718666,
+                    "reporting": 0.5993270979190176
+                },
+                "42057": {
+                    "total": 155.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 67.0,
+                        "Zohran Mamdani": 81.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 336.2706063317024,
+                    "reporting": 0.4609382951750045
+                }
+            },
+            "total": 292.0,
+            "approx_total_voters": 564.860303803569,
+            "candidates": {
+                "Adrienne Adams": 9.0,
+                "Andrew Cuomo": 121.0,
+                "Zohran Mamdani": 154.0,
+                "WRITE-IN": 8.0
+            },
+            "reporting": 0.5169419731458832
+        },
+        "44": {
+            "electoral_districts": {
+                "44042": {
+                    "total": 136.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 90.0,
+                        "Zohran Mamdani": 36.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 360.1826047632013,
+                    "reporting": 0.37758625264374424
+                },
+                "44049": {
+                    "total": 153.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 76.0,
+                        "Zohran Mamdani": 64.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 190.3261237332698,
+                    "reporting": 0.8038833398110916
+                },
+                "44050": {
+                    "total": 78.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 66.0,
+                        "Zohran Mamdani": 8.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 175.157034800924,
+                    "reporting": 0.4453146862679621
+                },
+                "44051": {
+                    "total": 78.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 57.0,
+                        "Zohran Mamdani": 13.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 108.95350741447515,
+                    "reporting": 0.7159016891790049
+                },
+                "44052": {
+                    "total": 126.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 83.0,
+                        "Zohran Mamdani": 38.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 266.9027551429414,
+                    "reporting": 0.47208205075485243
+                }
+            },
+            "total": 571.0,
+            "approx_total_voters": 1101.5220258548115,
+            "candidates": {
+                "Adrienne Adams": 26.0,
+                "Andrew Cuomo": 372.0,
+                "Zohran Mamdani": 159.0,
+                "WRITE-IN": 14.0
+            },
+            "reporting": 0.5183736562660998
+        },
+        "45": {
+            "electoral_districts": {
+                "45001": {
+                    "total": 118.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 19.0,
+                        "Zohran Mamdani": 91.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 191.70993385769052,
+                    "reporting": 0.6155132268085459
+                },
+                "45002": {
+                    "total": 58.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 34.0,
+                        "Zohran Mamdani": 18.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 90.76069057988781,
+                    "reporting": 0.6390431763952726
+                },
+                "45003": {
+                    "total": 176.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 96.0,
+                        "Zohran Mamdani": 68.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 248.964435225048,
+                    "reporting": 0.7069282801011607
+                },
+                "45004": {
+                    "total": 127.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 39.0,
+                        "Zohran Mamdani": 85.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 141.36561103201134,
+                    "reporting": 0.8983797337475637
+                },
+                "45005": {
+                    "total": 37.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 22.0,
+                        "Zohran Mamdani": 5.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 70.81169979428464,
+                    "reporting": 0.5225125241660468
+                },
+                "45006": {
+                    "total": 64.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 26.0,
+                        "Zohran Mamdani": 29.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 121.56387813506271,
+                    "reporting": 0.5264721805674317
+                },
+                "45007": {
+                    "total": 130.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 98.0,
+                        "Zohran Mamdani": 28.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 280.5373316380051,
+                    "reporting": 0.46339643726185836
+                },
+                "45008": {
+                    "total": 89.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 53.0,
+                        "Zohran Mamdani": 31.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 336.5293883108627,
+                    "reporting": 0.26446427293234764
+                },
+                "45009": {
+                    "total": 116.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 75.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 144.01793299817797,
+                    "reporting": 0.8054552484201225
+                },
+                "45010": {
+                    "total": 83.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 13.0,
+                        "Zohran Mamdani": 68.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 128.3842952451597,
+                    "reporting": 0.6464965192316171
+                },
+                "45011": {
+                    "total": 130.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 42.0,
+                        "Zohran Mamdani": 87.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 208.9820318247752,
+                    "reporting": 0.6220630494635102
+                },
+                "45013": {
+                    "total": 71.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 54.0,
+                        "Zohran Mamdani": 6.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 139.36623018413184,
+                    "reporting": 0.5094490961418287
+                },
+                "45014": {
+                    "total": 121.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 63.0,
+                        "Zohran Mamdani": 52.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 195.155839782881,
+                    "reporting": 0.6200173160824577
+                },
+                "45015": {
+                    "total": 119.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 85.0,
+                        "Zohran Mamdani": 32.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 121.5128235678439,
+                    "reporting": 0.9793205071360973
+                },
+                "45016": {
+                    "total": 48.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 1.0,
+                        "Zohran Mamdani": 45.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 65.38986160533575,
+                    "reporting": 0.7340587488884247
+                },
+                "45017": {
+                    "total": 93.0,
+                    "candidates": {
+                        "Adrienne Adams": 10.0,
+                        "Andrew Cuomo": 47.0,
+                        "Zohran Mamdani": 35.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 177.4360132284722,
+                    "reporting": 0.5241326059341193
+                },
+                "45019": {
+                    "total": 144.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 40.0,
+                        "Zohran Mamdani": 95.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 218.9805671800476,
+                    "reporting": 0.6575925976189569
+                },
+                "45022": {
+                    "total": 111.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 18.0,
+                        "Zohran Mamdani": 88.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 220.8045654643054,
+                    "reporting": 0.5027069968711491
+                },
+                "45025": {
+                    "total": 189.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 93.0,
+                        "Zohran Mamdani": 82.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 907.9644386034424,
+                    "reporting": 0.20815793214402156
+                },
+                "45026": {
+                    "total": 51.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 17.0,
+                        "Zohran Mamdani": 26.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 63.627809037822324,
+                    "reporting": 0.8015363214798742
+                },
+                "45027": {
+                    "total": 42.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 3.0,
+                        "Zohran Mamdani": 36.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 200.49770252176853,
+                    "reporting": 0.20947870958990145
+                },
+                "45029": {
+                    "total": 141.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 91.0,
+                        "Zohran Mamdani": 40.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 148.7210085369406,
+                    "reporting": 0.9480839417853815
+                },
+                "45030": {
+                    "total": 133.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 41.0,
+                        "Zohran Mamdani": 90.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 184.2211019850154,
+                    "reporting": 0.7219585517994473
+                },
+                "45031": {
+                    "total": 61.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 53.0,
+                        "Zohran Mamdani": 6.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 452.9704363156823,
+                    "reporting": 0.13466662525738904
+                },
+                "45032": {
+                    "total": 71.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 14.0,
+                        "Zohran Mamdani": 49.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 75.01751506709236,
+                    "reporting": 0.946445639215065
+                },
+                "45033": {
+                    "total": 74.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 59.0,
+                        "Zohran Mamdani": 2.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 191.03004092491653,
+                    "reporting": 0.38737362794726804
+                },
+                "45034": {
+                    "total": 84.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 29.0,
+                        "Zohran Mamdani": 44.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 88.99594034128687,
+                    "reporting": 0.9438632782334998
+                },
+                "45036": {
+                    "total": 95.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 19.0,
+                        "Zohran Mamdani": 63.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 144.30169614252995,
+                    "reporting": 0.6583429200039784
+                },
+                "45037": {
+                    "total": 97.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 29.0,
+                        "Zohran Mamdani": 62.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 212.24358459157293,
+                    "reporting": 0.4570220588135099
+                },
+                "45038": {
+                    "total": 66.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 11.0,
+                        "Zohran Mamdani": 53.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 236.89362914599275,
+                    "reporting": 0.27860605723307796
+                },
+                "45044": {
+                    "total": 73.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 1.0,
+                        "Zohran Mamdani": 60.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 271.22159072924165,
+                    "reporting": 0.2691526135648814
+                },
+                "45054": {
+                    "total": 49.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 7.0,
+                        "Zohran Mamdani": 37.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 55.79477038122876,
+                    "reporting": 0.8782185080285814
+                },
+                "45055": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 15.0,
+                        "Zohran Mamdani": 94.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 184.62883204746709,
+                    "reporting": 0.6174550244172655
+                }
+            },
+            "total": 3175.0,
+            "approx_total_voters": 6520.4032260259855,
+            "candidates": {
+                "Adrienne Adams": 152.0,
+                "Andrew Cuomo": 1267.0,
+                "Zohran Mamdani": 1682.0,
+                "WRITE-IN": 74.0
+            },
+            "reporting": 0.4869330760599416
+        },
+        "47": {
+            "electoral_districts": {
+                "47019": {
+                    "total": 107.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 54.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 137.58935818171784,
+                    "reporting": 0.7776764236277803
+                }
+            },
+            "total": 107.0,
+            "approx_total_voters": 137.58935818171784,
+            "candidates": {
+                "Adrienne Adams": 6.0,
+                "Andrew Cuomo": 46.0,
+                "Zohran Mamdani": 54.0,
+                "WRITE-IN": 1.0
+            },
+            "reporting": 0.7776764236277803
+        },
+        "48": {
+            "electoral_districts": {
+                "48001": {
+                    "total": 68.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 56.0,
+                        "Zohran Mamdani": 8.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 149.38349391463723,
+                    "reporting": 0.4552042412320165
+                },
+                "48002": {
+                    "total": 120.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 50.0,
+                        "Zohran Mamdani": 65.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 411.9630270726338,
+                    "reporting": 0.2912882761657216
+                },
+                "48003": {
+                    "total": 147.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 94.0,
+                        "Zohran Mamdani": 43.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 183.63560963899647,
+                    "reporting": 0.800498336292088
+                },
+                "48004": {
+                    "total": 109.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 24.0,
+                        "Zohran Mamdani": 74.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 236.30320566105607,
+                    "reporting": 0.46127177875168257
+                },
+                "48005": {
+                    "total": 84.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 65.0,
+                        "Zohran Mamdani": 11.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 160.2618303527838,
+                    "reporting": 0.5241422727738171
+                },
+                "48006": {
+                    "total": 132.0,
+                    "candidates": {
+                        "Adrienne Adams": 10.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 75.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 152.0846837806001,
+                    "reporting": 0.8679374984954132
+                },
+                "48007": {
+                    "total": 109.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 63.0,
+                        "Zohran Mamdani": 37.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 150.11481136926145,
+                    "reporting": 0.72611089475958
+                },
+                "48008": {
+                    "total": 120.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 61.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 204.70639886782283,
+                    "reporting": 0.5862054174353533
+                },
+                "48009": {
+                    "total": 57.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 50.0,
+                        "Zohran Mamdani": 2.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 140.0994000198793,
+                    "reporting": 0.4068539907516522
+                },
+                "48010": {
+                    "total": 148.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 81.0,
+                        "Zohran Mamdani": 61.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 275.610206116397,
+                    "reporting": 0.5369902736384731
+                },
+                "48011": {
+                    "total": 110.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 58.0,
+                        "Zohran Mamdani": 44.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 215.91605101204127,
+                    "reporting": 0.5094572612105873
+                },
+                "48012": {
+                    "total": 115.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 54.0,
+                        "Zohran Mamdani": 56.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 229.64221953486307,
+                    "reporting": 0.5007789953995864
+                },
+                "48013": {
+                    "total": 94.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 18.0,
+                        "Zohran Mamdani": 72.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 147.944560234714,
+                    "reporting": 0.6353731414718393
+                },
+                "48015": {
+                    "total": 159.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 69.0,
+                        "Zohran Mamdani": 80.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 336.77454161901403,
+                    "reporting": 0.4721259488191164
+                },
+                "48016": {
+                    "total": 104.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 61.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 883.2004319134155,
+                    "reporting": 0.11775356560309702
+                },
+                "48017": {
+                    "total": 24.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 0.0,
+                        "Zohran Mamdani": 10.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 53.2486682192017,
+                    "reporting": 0.45071549773230757
+                },
+                "48018": {
+                    "total": 89.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 11.0,
+                        "Zohran Mamdani": 75.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 567.5825328732685,
+                    "reporting": 0.15680538925230136
+                },
+                "48022": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 6.0,
+                        "Zohran Mamdani": 95.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 170.4800380200728,
+                    "reporting": 0.6686999916469828
+                },
+                "48023": {
+                    "total": 109.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 68.0,
+                        "Zohran Mamdani": 31.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 272.64289680758424,
+                    "reporting": 0.3997903531553436
+                },
+                "48024": {
+                    "total": 132.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 77.0,
+                        "Zohran Mamdani": 48.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 351.9412549350115,
+                    "reporting": 0.3750625939672084
+                },
+                "48025": {
+                    "total": 100.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 25.0,
+                        "Zohran Mamdani": 65.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 101.24942382248031,
+                    "reporting": 0.9876599414069663
+                },
+                "48026": {
+                    "total": 133.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 67.0,
+                        "Zohran Mamdani": 62.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 206.5907923225097,
+                    "reporting": 0.6437847423150068
+                },
+                "48027": {
+                    "total": 62.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 5.0,
+                        "Zohran Mamdani": 50.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 159.32106745249177,
+                    "reporting": 0.38915129675796256
+                },
+                "48028": {
+                    "total": 72.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 8.0,
+                        "Zohran Mamdani": 60.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 73.98965871794739,
+                    "reporting": 0.9731089620843897
+                },
+                "48029": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 61.0,
+                        "Zohran Mamdani": 46.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 2254.819567044607,
+                    "reporting": 0.050558369133464565
+                },
+                "48030": {
+                    "total": 81.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 47.0,
+                        "Zohran Mamdani": 24.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 87.50212123365118,
+                    "reporting": 0.9256918444721015
+                },
+                "48031": {
+                    "total": 56.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 18.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 81.85091208812882,
+                    "reporting": 0.684170751081
+                },
+                "48032": {
+                    "total": 86.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 57.0,
+                        "Zohran Mamdani": 19.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 410.8120336039883,
+                    "reporting": 0.20934148215069492
+                },
+                "48033": {
+                    "total": 120.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 55.0,
+                        "Zohran Mamdani": 64.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 190.05037215809384,
+                    "reporting": 0.6314115496715667
+                },
+                "48034": {
+                    "total": 57.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 16.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 62.75035815530226,
+                    "reporting": 0.9083613492520541
+                },
+                "48035": {
+                    "total": 163.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 88.0,
+                        "Zohran Mamdani": 67.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 2794.5320398128374,
+                    "reporting": 0.05832819151034563
+                },
+                "48036": {
+                    "total": 100.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 93.0,
+                        "Zohran Mamdani": 2.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 458.8432220382206,
+                    "reporting": 0.2179393640289411
+                },
+                "48037": {
+                    "total": 181.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 94.0,
+                        "Zohran Mamdani": 77.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 233.17916117564167,
+                    "reporting": 0.7762271683603071
+                },
+                "48038": {
+                    "total": 175.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 73.0,
+                        "Zohran Mamdani": 92.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 279.2111742854109,
+                    "reporting": 0.6267657462058243
+                },
+                "48039": {
+                    "total": 172.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 64.0,
+                        "Zohran Mamdani": 97.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 2747.6518151419864,
+                    "reporting": 0.0625989068382421
+                },
+                "48040": {
+                    "total": 74.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 45.0,
+                        "Zohran Mamdani": 24.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 532.1391362333844,
+                    "reporting": 0.13906137504523863
+                },
+                "48041": {
+                    "total": 53.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 31.0,
+                        "Zohran Mamdani": 19.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 119.45512255590721,
+                    "reporting": 0.44368126595152935
+                },
+                "48042": {
+                    "total": 116.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 31.0,
+                        "Zohran Mamdani": 77.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 249.74075836255807,
+                    "reporting": 0.4644816519360385
+                },
+                "48043": {
+                    "total": 117.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 80.0,
+                        "Zohran Mamdani": 32.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 1170.012743211678,
+                    "reporting": 0.09999891084847135
+                },
+                "48044": {
+                    "total": 136.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 90.0,
+                        "Zohran Mamdani": 37.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 252.47903283863675,
+                    "reporting": 0.5386585906597626
+                },
+                "48045": {
+                    "total": 160.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 69.0,
+                        "Zohran Mamdani": 84.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 163.24886176287157,
+                    "reporting": 0.980098717211329
+                },
+                "48046": {
+                    "total": 73.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 33.0,
+                        "Zohran Mamdani": 35.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 359.59699891827836,
+                    "reporting": 0.20300503124218205
+                },
+                "48047": {
+                    "total": 64.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 37.0,
+                        "Zohran Mamdani": 23.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 459.8841890860744,
+                    "reporting": 0.13916547147921499
+                },
+                "48048": {
+                    "total": 128.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 47.0,
+                        "Zohran Mamdani": 78.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 270.3755964601327,
+                    "reporting": 0.47341550670928906
+                },
+                "48049": {
+                    "total": 101.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 11.0,
+                        "Zohran Mamdani": 85.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 173.87459769606158,
+                    "reporting": 0.5808784108679939
+                },
+                "48050": {
+                    "total": 92.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 69.0,
+                        "Zohran Mamdani": 14.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 139.6317200867782,
+                    "reporting": 0.6588760773184197
+                },
+                "48051": {
+                    "total": 81.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 36.0,
+                        "Zohran Mamdani": 43.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 86.23191960690455,
+                    "reporting": 0.9393273438564895
+                },
+                "48052": {
+                    "total": 76.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 55.0,
+                        "Zohran Mamdani": 11.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 76.0887134743892,
+                    "reporting": 0.9988340784021923
+                }
+            },
+            "total": 5087.0,
+            "approx_total_voters": 19488.648971310206,
+            "candidates": {
+                "Adrienne Adams": 218.0,
+                "Andrew Cuomo": 2412.0,
+                "Zohran Mamdani": 2330.0,
+                "WRITE-IN": 127.0
+            },
+            "reporting": 0.26102373784292165
+        },
+        "49": {
+            "electoral_districts": {
+                "49002": {
+                    "total": 146.0,
+                    "candidates": {
+                        "Adrienne Adams": 10.0,
+                        "Andrew Cuomo": 76.0,
+                        "Zohran Mamdani": 58.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 233.573221244564,
+                    "reporting": 0.6250716551411943
+                },
+                "49003": {
+                    "total": 62.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 32.0,
+                        "Zohran Mamdani": 26.0,
+                        "WRITE-IN": 4.0
+                    },
+                    "approx_total_voters": 74.2538604606738,
+                    "reporting": 0.8349734224638237
+                },
+                "49046": {
+                    "total": 80.0,
+                    "candidates": {
+                        "Adrienne Adams": 1.0,
+                        "Andrew Cuomo": 64.0,
+                        "Zohran Mamdani": 15.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 105.62961125650635,
+                    "reporting": 0.7573633855920522
+                },
+                "49048": {
+                    "total": 64.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 27.0,
+                        "WRITE-IN": 0.0
+                    },
+                    "approx_total_voters": 624.9485608600472,
+                    "reporting": 0.10240842848237608
+                },
+                "49051": {
+                    "total": 118.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 35.0,
+                        "Zohran Mamdani": 76.0,
+                        "WRITE-IN": 5.0
+                    },
+                    "approx_total_voters": 713.1787138442407,
+                    "reporting": 0.1654564244689044
+                }
+            },
+            "total": 470.0,
+            "approx_total_voters": 1751.583967666032,
+            "candidates": {
+                "Adrienne Adams": 15.0,
+                "Andrew Cuomo": 242.0,
+                "Zohran Mamdani": 202.0,
+                "WRITE-IN": 11.0
+            },
+            "reporting": 0.2683285578517085
+        },
+        "51": {
+            "electoral_districts": {
+                "51051": {
+                    "total": 135.0,
+                    "candidates": {
+                        "Adrienne Adams": 5.0,
+                        "Andrew Cuomo": 46.0,
+                        "Zohran Mamdani": 82.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 2280.612907593041,
+                    "reporting": 0.05919461367184797
+                },
+                "51053": {
+                    "total": 157.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 60.0,
+                        "Zohran Mamdani": 92.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 358.25359306276897,
+                    "reporting": 0.4382370562086514
+                }
+            },
+            "total": 292.0,
+            "approx_total_voters": 2638.8665006558103,
+            "candidates": {
+                "Adrienne Adams": 8.0,
+                "Andrew Cuomo": 106.0,
+                "Zohran Mamdani": 174.0,
+                "WRITE-IN": 4.0
+            },
+            "reporting": 0.11065357035963443
+        },
+        "59": {
+            "electoral_districts": {
+                "59052": {
+                    "total": 127.0,
+                    "candidates": {
+                        "Adrienne Adams": 9.0,
+                        "Andrew Cuomo": 51.0,
+                        "Zohran Mamdani": 65.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 227.41601265550648,
+                    "reporting": 0.5584479233323895
+                },
+                "59055": {
+                    "total": 119.0,
+                    "candidates": {
+                        "Adrienne Adams": 0.0,
+                        "Andrew Cuomo": 61.0,
+                        "Zohran Mamdani": 55.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 417.3331659969647,
+                    "reporting": 0.2851438843009796
+                },
+                "59057": {
+                    "total": 103.0,
+                    "candidates": {
+                        "Adrienne Adams": 7.0,
+                        "Andrew Cuomo": 23.0,
+                        "Zohran Mamdani": 72.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 1240.633501708797,
+                    "reporting": 0.08302210109442643
+                },
+                "59058": {
+                    "total": 78.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 16.0,
+                        "Zohran Mamdani": 57.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 316.4913187652404,
+                    "reporting": 0.2464522575352439
+                },
+                "59059": {
+                    "total": 87.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 3.0,
+                        "Zohran Mamdani": 73.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 1155.4215691149423,
+                    "reporting": 0.0752971922331711
+                },
+                "59060": {
+                    "total": 106.0,
+                    "candidates": {
+                        "Adrienne Adams": 2.0,
+                        "Andrew Cuomo": 27.0,
+                        "Zohran Mamdani": 74.0,
+                        "WRITE-IN": 3.0
+                    },
+                    "approx_total_voters": 124.26225006442164,
+                    "reporting": 0.8530346098275713
+                },
+                "59061": {
+                    "total": 123.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 43.0,
+                        "Zohran Mamdani": 76.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 212.60675736639715,
+                    "reporting": 0.5785328816620217
+                },
+                "59062": {
+                    "total": 30.0,
+                    "candidates": {
+                        "Adrienne Adams": 3.0,
+                        "Andrew Cuomo": 13.0,
+                        "Zohran Mamdani": 12.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 225.54781435461706,
+                    "reporting": 0.13300949107328774
+                },
+                "59065": {
+                    "total": 147.0,
+                    "candidates": {
+                        "Adrienne Adams": 8.0,
+                        "Andrew Cuomo": 73.0,
+                        "Zohran Mamdani": 64.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 298.5250597323191,
+                    "reporting": 0.49242097173286453
+                },
+                "59066": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Adrienne Adams": 4.0,
+                        "Andrew Cuomo": 25.0,
+                        "Zohran Mamdani": 84.0,
+                        "WRITE-IN": 1.0
+                    },
+                    "approx_total_voters": 255.38639205094336,
+                    "reporting": 0.44638243676374023
+                },
+                "59068": {
+                    "total": 128.0,
+                    "candidates": {
+                        "Adrienne Adams": 6.0,
+                        "Andrew Cuomo": 39.0,
+                        "Zohran Mamdani": 81.0,
+                        "WRITE-IN": 2.0
+                    },
+                    "approx_total_voters": 717.4094479146966,
+                    "reporting": 0.17841973000503308
+                }
+            },
+            "total": 1162.0,
+            "approx_total_voters": 5191.033289724846,
+            "candidates": {
+                "Adrienne Adams": 52.0,
+                "Andrew Cuomo": 374.0,
+                "Zohran Mamdani": 713.0,
+                "WRITE-IN": 23.0
+            },
+            "reporting": 0.22384753384264897
+        }
+    },
+    "total": 15347.0,
+    "approx_total_voters": 54958.66173978087,
+    "candidates": {
+        "Adrienne Adams": 653.0,
+        "Andrew Cuomo": 6943.0,
+        "Zohran Mamdani": 7388.0,
+        "WRITE-IN": 363.0
+    },
+    "reporting": 0.2792462464363709,
+    "last_updated": "2025-06-09 21:23:37.128598"
+}

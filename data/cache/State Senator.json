@@ -1,1436 +1,1704 @@
 {
-    "districts": {
-        "41020": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 58,
-                "Nachman Carl Caller (Republican)": 18,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 2
+    "assembly_districts": {
+        "41": {
+            "electoral_districts": {
+                "41020": {
+                    "total": 82.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 58,
+                        "Nachman Carl Caller (Republican)": 18,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 82.82828282828282,
+                    "reporting": 0.9900000000000001
+                },
+                "41021": {
+                    "total": 90.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 50,
+                        "Nachman Carl Caller (Republican)": 32,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 90.9090909090909,
+                    "reporting": 0.99
+                },
+                "41022": {
+                    "total": 17.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 12,
+                        "Nachman Carl Caller (Republican)": 5,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 17.171717171717173,
+                    "reporting": 0.9899999999999999
+                },
+                "41023": {
+                    "total": 106.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 68,
+                        "Nachman Carl Caller (Republican)": 31,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 107.07070707070707,
+                    "reporting": 0.99
+                },
+                "41024": {
+                    "total": 94.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 57,
+                        "Nachman Carl Caller (Republican)": 25,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 5
+                    },
+                    "approx_total_voters": 94.94949494949495,
+                    "reporting": 0.99
+                },
+                "41025": {
+                    "total": 99.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 66,
+                        "Nachman Carl Caller (Republican)": 27,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 100.0,
+                    "reporting": 0.99
+                },
+                "41026": {
+                    "total": 86.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 60,
+                        "Nachman Carl Caller (Republican)": 23,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 86.86868686868686,
+                    "reporting": 0.99
+                },
+                "41027": {
+                    "total": 94.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 59,
+                        "Nachman Carl Caller (Republican)": 31,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 94.94949494949495,
+                    "reporting": 0.99
+                },
+                "41028": {
+                    "total": 86.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 50,
+                        "Nachman Carl Caller (Republican)": 27,
+                        "Nachman Carl Caller (Conservative)": 8,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 86.86868686868686,
+                    "reporting": 0.99
+                },
+                "41029": {
+                    "total": 96.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 57,
+                        "Nachman Carl Caller (Republican)": 29,
+                        "Nachman Carl Caller (Conservative)": 8,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 96.96969696969697,
+                    "reporting": 0.99
+                },
+                "41030": {
+                    "total": 133.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 107,
+                        "Nachman Carl Caller (Republican)": 25,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 134.34343434343435,
+                    "reporting": 0.9899999999999999
+                },
+                "41031": {
+                    "total": 51.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 38,
+                        "Nachman Carl Caller (Republican)": 10,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 51.515151515151516,
+                    "reporting": 0.99
+                },
+                "41036": {
+                    "total": 68.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 32,
+                        "Nachman Carl Caller (Republican)": 33,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 68.68686868686869,
+                    "reporting": 0.9899999999999999
+                },
+                "41037": {
+                    "total": 60.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 19,
+                        "Nachman Carl Caller (Republican)": 34,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 60.60606060606061,
+                    "reporting": 0.99
+                },
+                "41040": {
+                    "total": 87.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 47,
+                        "Nachman Carl Caller (Republican)": 39,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 87.87878787878788,
+                    "reporting": 0.99
+                },
+                "41041": {
+                    "total": 139.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 112,
+                        "Nachman Carl Caller (Republican)": 24,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 140.40404040404042,
+                    "reporting": 0.9899999999999999
+                },
+                "41042": {
+                    "total": 77.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 39,
+                        "Nachman Carl Caller (Republican)": 35,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 77.77777777777777,
+                    "reporting": 0.9900000000000001
+                },
+                "41043": {
+                    "total": 80.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 20,
+                        "Nachman Carl Caller (Republican)": 57,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 80.8080808080808,
+                    "reporting": 0.9900000000000001
+                },
+                "41044": {
+                    "total": 78.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 29,
+                        "Nachman Carl Caller (Republican)": 47,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 78.78787878787878,
+                    "reporting": 0.9900000000000001
+                },
+                "41045": {
+                    "total": 87.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 37,
+                        "Nachman Carl Caller (Republican)": 43,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 87.87878787878788,
+                    "reporting": 0.99
+                },
+                "41046": {
+                    "total": 103.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 25,
+                        "Nachman Carl Caller (Republican)": 72,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 104.04040404040404,
+                    "reporting": 0.99
+                },
+                "41047": {
+                    "total": 141.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 16,
+                        "Nachman Carl Caller (Republican)": 119,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 142.42424242424244,
+                    "reporting": 0.9899999999999999
+                },
+                "41048": {
+                    "total": 118.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 38,
+                        "Nachman Carl Caller (Republican)": 75,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 119.1919191919192,
+                    "reporting": 0.99
+                },
+                "41052": {
+                    "total": 121.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 54,
+                        "Nachman Carl Caller (Republican)": 63,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 122.22222222222223,
+                    "reporting": 0.99
+                },
+                "41053": {
+                    "total": 5.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 5,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 5.05050505050505,
+                    "reporting": 0.9900000000000001
+                },
+                "41054": {
+                    "total": 93.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 91,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 93.93939393939394,
+                    "reporting": 0.99
+                },
+                "41055": {
+                    "total": 55.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 21,
+                        "Nachman Carl Caller (Republican)": 32,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 55.55555555555556,
+                    "reporting": 0.99
+                },
+                "41056": {
+                    "total": 67.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 26,
+                        "Nachman Carl Caller (Republican)": 38,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 67.67676767676768,
+                    "reporting": 0.9899999999999999
+                },
+                "41057": {
+                    "total": 37.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 14,
+                        "Nachman Carl Caller (Republican)": 22,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 37.37373737373738,
+                    "reporting": 0.9899999999999999
+                },
+                "41058": {
+                    "total": 100.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 40,
+                        "Nachman Carl Caller (Republican)": 60,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 101.01010101010101,
+                    "reporting": 0.99
+                },
+                "41061": {
+                    "total": 59.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 27,
+                        "Nachman Carl Caller (Republican)": 30,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 59.5959595959596,
+                    "reporting": 0.99
+                },
+                "41062": {
+                    "total": 10.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 4,
+                        "Nachman Carl Caller (Republican)": 5,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 10.1010101010101,
+                    "reporting": 0.9900000000000001
+                },
+                "41068": {
+                    "total": 15.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 9,
+                        "Nachman Carl Caller (Republican)": 6,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 15.151515151515152,
+                    "reporting": 0.99
+                },
+                "41069": {
+                    "total": 4.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 2,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 4.040404040404041,
+                    "reporting": 0.99
+                },
+                "41070": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "41071": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                }
             },
-            "total": 82
-        },
-        "41021": {
-            "reporting": 0.99,
+            "total": 2638.0,
+            "approx_total_voters": 2664.6464646464647,
             "candidates": {
-                "Sam Sutton (Democratic)": 50,
-                "Nachman Carl Caller (Republican)": 32,
+                "Sam Sutton (Democratic)": 1389,
+                "Nachman Carl Caller (Republican)": 1121,
+                "Nachman Carl Caller (Conservative)": 105,
+                "WRITE-IN": 23
+            },
+            "reporting": 0.99
+        },
+        "42": {
+            "electoral_districts": {
+                "42056": {
+                    "total": 76.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 55,
+                        "Nachman Carl Caller (Republican)": 16,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 76.76767676767678,
+                    "reporting": 0.9899999999999999
+                },
+                "42057": {
+                    "total": 123.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 98,
+                        "Nachman Carl Caller (Republican)": 22,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 124.24242424242425,
+                    "reporting": 0.99
+                }
+            },
+            "total": 199.0,
+            "approx_total_voters": 201.01010101010104,
+            "candidates": {
+                "Sam Sutton (Democratic)": 153,
+                "Nachman Carl Caller (Republican)": 38,
                 "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 2
+                "WRITE-IN": 2
             },
-            "total": 90
+            "reporting": 0.9899999999999999
         },
-        "41022": {
-            "reporting": 0.99,
+        "44": {
+            "electoral_districts": {
+                "44042": {
+                    "total": 29.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 20,
+                        "Nachman Carl Caller (Republican)": 7,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 29.292929292929294,
+                    "reporting": 0.99
+                },
+                "44049": {
+                    "total": 43.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 35,
+                        "Nachman Carl Caller (Republican)": 6,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 43.43434343434343,
+                    "reporting": 0.99
+                },
+                "44050": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "44051": {
+                    "total": 152.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 104,
+                        "Nachman Carl Caller (Republican)": 42,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 153.53535353535355,
+                    "reporting": 0.9899999999999999
+                },
+                "44052": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 2,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                }
+            },
+            "total": 226.0,
+            "approx_total_voters": 228.2828282828283,
             "candidates": {
-                "Sam Sutton (Democratic)": 12,
-                "Nachman Carl Caller (Republican)": 5,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
+                "Sam Sutton (Democratic)": 161,
+                "Nachman Carl Caller (Republican)": 55,
+                "Nachman Carl Caller (Conservative)": 10,
+                "WRITE-IN": 0
             },
-            "total": 17
+            "reporting": 0.99
         },
-        "41023": {
-            "reporting": 0.99,
+        "45": {
+            "electoral_districts": {
+                "45001": {
+                    "total": 91.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 45,
+                        "Nachman Carl Caller (Republican)": 35,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 7
+                    },
+                    "approx_total_voters": 91.91919191919192,
+                    "reporting": 0.99
+                },
+                "45002": {
+                    "total": 175.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 107,
+                        "Nachman Carl Caller (Republican)": 49,
+                        "Nachman Carl Caller (Conservative)": 8,
+                        "WRITE-IN": 11
+                    },
+                    "approx_total_voters": 176.76767676767676,
+                    "reporting": 0.99
+                },
+                "45003": {
+                    "total": 140.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 99,
+                        "Nachman Carl Caller (Republican)": 39,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 141.41414141414143,
+                    "reporting": 0.9899999999999999
+                },
+                "45004": {
+                    "total": 75.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 47,
+                        "Nachman Carl Caller (Republican)": 24,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 75.75757575757576,
+                    "reporting": 0.9899999999999999
+                },
+                "45005": {
+                    "total": 86.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 59,
+                        "Nachman Carl Caller (Republican)": 25,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 86.86868686868686,
+                    "reporting": 0.99
+                },
+                "45006": {
+                    "total": 61.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 30,
+                        "Nachman Carl Caller (Republican)": 25,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 61.61616161616162,
+                    "reporting": 0.99
+                },
+                "45007": {
+                    "total": 154.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 138,
+                        "Nachman Carl Caller (Republican)": 11,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 155.55555555555554,
+                    "reporting": 0.9900000000000001
+                },
+                "45008": {
+                    "total": 162.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 139,
+                        "Nachman Carl Caller (Republican)": 16,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 4
+                    },
+                    "approx_total_voters": 163.63636363636363,
+                    "reporting": 0.9900000000000001
+                },
+                "45009": {
+                    "total": 164.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 147,
+                        "Nachman Carl Caller (Republican)": 15,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 165.65656565656565,
+                    "reporting": 0.9900000000000001
+                },
+                "45010": {
+                    "total": 165.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 129,
+                        "Nachman Carl Caller (Republican)": 29,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 166.66666666666666,
+                    "reporting": 0.9900000000000001
+                },
+                "45011": {
+                    "total": 143.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 136,
+                        "Nachman Carl Caller (Republican)": 7,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 144.44444444444446,
+                    "reporting": 0.9899999999999999
+                },
+                "45013": {
+                    "total": 27.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 25,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 27.272727272727273,
+                    "reporting": 0.99
+                },
+                "45014": {
+                    "total": 148.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 134,
+                        "Nachman Carl Caller (Republican)": 12,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 149.4949494949495,
+                    "reporting": 0.9899999999999999
+                },
+                "45015": {
+                    "total": 146.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 141,
+                        "Nachman Carl Caller (Republican)": 5,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 147.4747474747475,
+                    "reporting": 0.9899999999999999
+                },
+                "45016": {
+                    "total": 348.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 331,
+                        "Nachman Carl Caller (Republican)": 15,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 351.5151515151515,
+                    "reporting": 0.99
+                },
+                "45017": {
+                    "total": 131.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 110,
+                        "Nachman Carl Caller (Republican)": 20,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 132.32323232323233,
+                    "reporting": 0.9899999999999999
+                },
+                "45019": {
+                    "total": 13.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 10,
+                        "Nachman Carl Caller (Republican)": 3,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 13.131313131313131,
+                    "reporting": 0.99
+                },
+                "45022": {
+                    "total": 59.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 42,
+                        "Nachman Carl Caller (Republican)": 15,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 59.5959595959596,
+                    "reporting": 0.99
+                },
+                "45025": {
+                    "total": 90.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 82,
+                        "Nachman Carl Caller (Republican)": 7,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 90.9090909090909,
+                    "reporting": 0.99
+                },
+                "45026": {
+                    "total": 16.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 15,
+                        "Nachman Carl Caller (Republican)": 1,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 16.161616161616163,
+                    "reporting": 0.99
+                },
+                "45027": {
+                    "total": 60.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 34,
+                        "Nachman Carl Caller (Republican)": 21,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 60.60606060606061,
+                    "reporting": 0.99
+                },
+                "45029": {
+                    "total": 79.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 75,
+                        "Nachman Carl Caller (Republican)": 4,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 79.79797979797979,
+                    "reporting": 0.9900000000000001
+                },
+                "45030": {
+                    "total": 72.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 53,
+                        "Nachman Carl Caller (Republican)": 18,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 72.72727272727273,
+                    "reporting": 0.9899999999999999
+                },
+                "45031": {
+                    "total": 80.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 30,
+                        "Nachman Carl Caller (Republican)": 47,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 80.8080808080808,
+                    "reporting": 0.9900000000000001
+                },
+                "45032": {
+                    "total": 98.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 90,
+                        "Nachman Carl Caller (Republican)": 6,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 98.98989898989899,
+                    "reporting": 0.99
+                },
+                "45033": {
+                    "total": 133.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 113,
+                        "Nachman Carl Caller (Republican)": 16,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 134.34343434343435,
+                    "reporting": 0.9899999999999999
+                },
+                "45034": {
+                    "total": 67.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 43,
+                        "Nachman Carl Caller (Republican)": 23,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 67.67676767676768,
+                    "reporting": 0.9899999999999999
+                },
+                "45036": {
+                    "total": 57.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 33,
+                        "Nachman Carl Caller (Republican)": 17,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 57.57575757575758,
+                    "reporting": 0.99
+                },
+                "45037": {
+                    "total": 63.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 23,
+                        "Nachman Carl Caller (Republican)": 37,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 63.63636363636364,
+                    "reporting": 0.99
+                },
+                "45038": {
+                    "total": 152.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 139,
+                        "Nachman Carl Caller (Republican)": 9,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 153.53535353535355,
+                    "reporting": 0.9899999999999999
+                },
+                "45044": {
+                    "total": 63.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 35,
+                        "Nachman Carl Caller (Republican)": 24,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 63.63636363636364,
+                    "reporting": 0.99
+                },
+                "45054": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "45055": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                }
+            },
+            "total": 3318.0,
+            "approx_total_voters": 3351.5151515151506,
             "candidates": {
-                "Sam Sutton (Democratic)": 68,
-                "Nachman Carl Caller (Republican)": 31,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 3
+                "Sam Sutton (Democratic)": 2634,
+                "Nachman Carl Caller (Republican)": 577,
+                "Nachman Carl Caller (Conservative)": 73,
+                "WRITE-IN": 34
             },
-            "total": 106
+            "reporting": 0.9900000000000003
         },
-        "41024": {
-            "reporting": 0.99,
+        "47": {
+            "electoral_districts": {
+                "47019": {
+                    "total": 23.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 10,
+                        "Nachman Carl Caller (Republican)": 12,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 23.232323232323232,
+                    "reporting": 0.99
+                }
+            },
+            "total": 23.0,
+            "approx_total_voters": 23.232323232323232,
             "candidates": {
-                "Sam Sutton (Democratic)": 57,
-                "Nachman Carl Caller (Republican)": 25,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 5
+                "Sam Sutton (Democratic)": 10,
+                "Nachman Carl Caller (Republican)": 12,
+                "Nachman Carl Caller (Conservative)": 1,
+                "WRITE-IN": 0
             },
-            "total": 94
+            "reporting": 0.99
         },
-        "41025": {
-            "reporting": 0.99,
+        "48": {
+            "electoral_districts": {
+                "48001": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                },
+                "48002": {
+                    "total": 96.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 65,
+                        "Nachman Carl Caller (Republican)": 29,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 96.96969696969697,
+                    "reporting": 0.99
+                },
+                "48003": {
+                    "total": 138.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 70,
+                        "Nachman Carl Caller (Republican)": 57,
+                        "Nachman Carl Caller (Conservative)": 11,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 139.3939393939394,
+                    "reporting": 0.9899999999999999
+                },
+                "48004": {
+                    "total": 142.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 95,
+                        "Nachman Carl Caller (Republican)": 42,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 143.43434343434345,
+                    "reporting": 0.9899999999999999
+                },
+                "48005": {
+                    "total": 170.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 133,
+                        "Nachman Carl Caller (Republican)": 31,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 171.7171717171717,
+                    "reporting": 0.99
+                },
+                "48006": {
+                    "total": 146.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 105,
+                        "Nachman Carl Caller (Republican)": 35,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 147.4747474747475,
+                    "reporting": 0.9899999999999999
+                },
+                "48007": {
+                    "total": 265.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 205,
+                        "Nachman Carl Caller (Republican)": 49,
+                        "Nachman Carl Caller (Conservative)": 10,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 267.67676767676767,
+                    "reporting": 0.99
+                },
+                "48008": {
+                    "total": 236.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 179,
+                        "Nachman Carl Caller (Republican)": 52,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 238.3838383838384,
+                    "reporting": 0.99
+                },
+                "48009": {
+                    "total": 107.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 79,
+                        "Nachman Carl Caller (Republican)": 20,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 108.08080808080808,
+                    "reporting": 0.99
+                },
+                "48010": {
+                    "total": 146.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 95,
+                        "Nachman Carl Caller (Republican)": 44,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 147.4747474747475,
+                    "reporting": 0.9899999999999999
+                },
+                "48011": {
+                    "total": 172.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 141,
+                        "Nachman Carl Caller (Republican)": 26,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 173.73737373737373,
+                    "reporting": 0.99
+                },
+                "48012": {
+                    "total": 3.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 1,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 3.0303030303030303,
+                    "reporting": 0.99
+                },
+                "48013": {
+                    "total": 198.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 143,
+                        "Nachman Carl Caller (Republican)": 49,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 200.0,
+                    "reporting": 0.99
+                },
+                "48015": {
+                    "total": 126.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 81,
+                        "Nachman Carl Caller (Republican)": 32,
+                        "Nachman Carl Caller (Conservative)": 11,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 127.27272727272728,
+                    "reporting": 0.99
+                },
+                "48016": {
+                    "total": 119.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 71,
+                        "Nachman Carl Caller (Republican)": 39,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 120.20202020202021,
+                    "reporting": 0.99
+                },
+                "48017": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "48018": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 1,
+                        "Nachman Carl Caller (Republican)": 1,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                },
+                "48022": {
+                    "total": 5.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 3,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 5.05050505050505,
+                    "reporting": 0.9900000000000001
+                },
+                "48023": {
+                    "total": 118.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 71,
+                        "Nachman Carl Caller (Republican)": 35,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 5
+                    },
+                    "approx_total_voters": 119.1919191919192,
+                    "reporting": 0.99
+                },
+                "48024": {
+                    "total": 73.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 49,
+                        "Nachman Carl Caller (Republican)": 18,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 73.73737373737374,
+                    "reporting": 0.9899999999999999
+                },
+                "48025": {
+                    "total": 134.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 90,
+                        "Nachman Carl Caller (Republican)": 34,
+                        "Nachman Carl Caller (Conservative)": 7,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 135.35353535353536,
+                    "reporting": 0.9899999999999999
+                },
+                "48026": {
+                    "total": 182.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 120,
+                        "Nachman Carl Caller (Republican)": 42,
+                        "Nachman Carl Caller (Conservative)": 9,
+                        "WRITE-IN": 11
+                    },
+                    "approx_total_voters": 183.83838383838383,
+                    "reporting": 0.99
+                },
+                "48027": {
+                    "total": 101.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 57,
+                        "Nachman Carl Caller (Republican)": 32,
+                        "Nachman Carl Caller (Conservative)": 9,
+                        "WRITE-IN": 3
+                    },
+                    "approx_total_voters": 102.02020202020202,
+                    "reporting": 0.99
+                },
+                "48028": {
+                    "total": 100.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 79,
+                        "Nachman Carl Caller (Republican)": 15,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 5
+                    },
+                    "approx_total_voters": 101.01010101010101,
+                    "reporting": 0.99
+                },
+                "48029": {
+                    "total": 133.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 120,
+                        "Nachman Carl Caller (Republican)": 11,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 134.34343434343435,
+                    "reporting": 0.9899999999999999
+                },
+                "48030": {
+                    "total": 153.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 127,
+                        "Nachman Carl Caller (Republican)": 22,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 154.54545454545456,
+                    "reporting": 0.9899999999999999
+                },
+                "48031": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 1,
+                        "Nachman Carl Caller (Republican)": 1,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                },
+                "48032": {
+                    "total": 95.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 79,
+                        "Nachman Carl Caller (Republican)": 13,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 95.95959595959596,
+                    "reporting": 0.99
+                },
+                "48033": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 88,
+                        "Nachman Carl Caller (Republican)": 20,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 4
+                    },
+                    "approx_total_voters": 115.15151515151516,
+                    "reporting": 0.99
+                },
+                "48034": {
+                    "total": 230.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 189,
+                        "Nachman Carl Caller (Republican)": 36,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 232.32323232323233,
+                    "reporting": 0.99
+                },
+                "48035": {
+                    "total": 144.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 101,
+                        "Nachman Carl Caller (Republican)": 38,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 145.45454545454547,
+                    "reporting": 0.9899999999999999
+                },
+                "48036": {
+                    "total": 30.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 20,
+                        "Nachman Carl Caller (Republican)": 9,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 30.303030303030305,
+                    "reporting": 0.99
+                },
+                "48037": {
+                    "total": 49.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 29,
+                        "Nachman Carl Caller (Republican)": 18,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 49.494949494949495,
+                    "reporting": 0.99
+                },
+                "48038": {
+                    "total": 163.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 106,
+                        "Nachman Carl Caller (Republican)": 40,
+                        "Nachman Carl Caller (Conservative)": 10,
+                        "WRITE-IN": 7
+                    },
+                    "approx_total_voters": 164.64646464646464,
+                    "reporting": 0.9900000000000001
+                },
+                "48039": {
+                    "total": 114.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 69,
+                        "Nachman Carl Caller (Republican)": 40,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 115.15151515151516,
+                    "reporting": 0.99
+                },
+                "48040": {
+                    "total": 173.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 100,
+                        "Nachman Carl Caller (Republican)": 63,
+                        "Nachman Carl Caller (Conservative)": 8,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 174.74747474747474,
+                    "reporting": 0.99
+                },
+                "48041": {
+                    "total": 197.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 151,
+                        "Nachman Carl Caller (Republican)": 36,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 6
+                    },
+                    "approx_total_voters": 198.989898989899,
+                    "reporting": 0.99
+                },
+                "48042": {
+                    "total": 147.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 93,
+                        "Nachman Carl Caller (Republican)": 44,
+                        "Nachman Carl Caller (Conservative)": 10,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 148.4848484848485,
+                    "reporting": 0.9899999999999999
+                },
+                "48043": {
+                    "total": 80.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 48,
+                        "Nachman Carl Caller (Republican)": 28,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 80.8080808080808,
+                    "reporting": 0.9900000000000001
+                },
+                "48044": {
+                    "total": 164.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 98,
+                        "Nachman Carl Caller (Republican)": 57,
+                        "Nachman Carl Caller (Conservative)": 8,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 165.65656565656565,
+                    "reporting": 0.9900000000000001
+                },
+                "48045": {
+                    "total": 115.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 70,
+                        "Nachman Carl Caller (Republican)": 39,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 2
+                    },
+                    "approx_total_voters": 116.16161616161617,
+                    "reporting": 0.99
+                },
+                "48046": {
+                    "total": 123.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 77,
+                        "Nachman Carl Caller (Republican)": 36,
+                        "Nachman Carl Caller (Conservative)": 9,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 124.24242424242425,
+                    "reporting": 0.99
+                },
+                "48047": {
+                    "total": 195.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 155,
+                        "Nachman Carl Caller (Republican)": 33,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 196.96969696969697,
+                    "reporting": 0.99
+                },
+                "48048": {
+                    "total": 216.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 150,
+                        "Nachman Carl Caller (Republican)": 50,
+                        "Nachman Carl Caller (Conservative)": 11,
+                        "WRITE-IN": 5
+                    },
+                    "approx_total_voters": 218.1818181818182,
+                    "reporting": 0.99
+                },
+                "48049": {
+                    "total": 119.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 64,
+                        "Nachman Carl Caller (Republican)": 44,
+                        "Nachman Carl Caller (Conservative)": 11,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 120.20202020202021,
+                    "reporting": 0.99
+                },
+                "48050": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 1,
+                        "Nachman Carl Caller (Republican)": 1,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                },
+                "48051": {
+                    "total": 145.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 112,
+                        "Nachman Carl Caller (Republican)": 27,
+                        "Nachman Carl Caller (Conservative)": 5,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 146.46464646464648,
+                    "reporting": 0.9899999999999999
+                },
+                "48052": {
+                    "total": 9.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 7,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 9.090909090909092,
+                    "reporting": 0.9899999999999999
+                }
+            },
+            "total": 5693.0,
+            "approx_total_voters": 5750.505050505049,
             "candidates": {
-                "Sam Sutton (Democratic)": 66,
-                "Nachman Carl Caller (Republican)": 27,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
+                "Sam Sutton (Democratic)": 3988,
+                "Nachman Carl Caller (Republican)": 1396,
+                "Nachman Carl Caller (Conservative)": 233,
+                "WRITE-IN": 76
             },
-            "total": 99
+            "reporting": 0.9900000000000002
         },
-        "41026": {
-            "reporting": 0.99,
+        "49": {
+            "electoral_districts": {
+                "49002": {
+                    "total": 15.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 7,
+                        "Nachman Carl Caller (Republican)": 6,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 15.151515151515152,
+                    "reporting": 0.99
+                },
+                "49003": {
+                    "total": 10.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 5,
+                        "Nachman Carl Caller (Republican)": 4,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 10.1010101010101,
+                    "reporting": 0.9900000000000001
+                },
+                "49046": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "49048": {
+                    "total": 11.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 3,
+                        "Nachman Carl Caller (Republican)": 7,
+                        "Nachman Carl Caller (Conservative)": 1,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 11.11111111111111,
+                    "reporting": 0.99
+                },
+                "49051": {
+                    "total": 56.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 31,
+                        "Nachman Carl Caller (Republican)": 19,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 56.56565656565657,
+                    "reporting": 0.99
+                }
+            },
+            "total": 92.0,
+            "approx_total_voters": 92.92929292929293,
+            "candidates": {
+                "Sam Sutton (Democratic)": 46,
+                "Nachman Carl Caller (Republican)": 36,
+                "Nachman Carl Caller (Conservative)": 10,
+                "WRITE-IN": 0
+            },
+            "reporting": 0.99
+        },
+        "51": {
+            "electoral_districts": {
+                "51051": {
+                    "total": 48.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 34,
+                        "Nachman Carl Caller (Republican)": 9,
+                        "Nachman Carl Caller (Conservative)": 4,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 48.484848484848484,
+                    "reporting": 0.99
+                },
+                "51053": {
+                    "total": 68.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 26,
+                        "Nachman Carl Caller (Republican)": 36,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 68.68686868686869,
+                    "reporting": 0.9899999999999999
+                }
+            },
+            "total": 116.0,
+            "approx_total_voters": 117.17171717171718,
             "candidates": {
                 "Sam Sutton (Democratic)": 60,
-                "Nachman Carl Caller (Republican)": 23,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 86
-        },
-        "41027": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 59,
-                "Nachman Carl Caller (Republican)": 31,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 94
-        },
-        "41028": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 50,
-                "Nachman Carl Caller (Republican)": 27,
-                "Nachman Carl Caller (Conservative)": 8,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 86
-        },
-        "41029": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 57,
-                "Nachman Carl Caller (Republican)": 29,
-                "Nachman Carl Caller (Conservative)": 8,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 96
-        },
-        "41030": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 107,
-                "Nachman Carl Caller (Republican)": 25,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 133
-        },
-        "41031": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 38,
-                "Nachman Carl Caller (Republican)": 10,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 51
-        },
-        "41036": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 32,
-                "Nachman Carl Caller (Republican)": 33,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 68
-        },
-        "41037": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 19,
-                "Nachman Carl Caller (Republican)": 34,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 60
-        },
-        "41040": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 47,
-                "Nachman Carl Caller (Republican)": 39,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 87
-        },
-        "41041": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 112,
-                "Nachman Carl Caller (Republican)": 24,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 139
-        },
-        "41042": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 39,
-                "Nachman Carl Caller (Republican)": 35,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 77
-        },
-        "41043": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 20,
-                "Nachman Carl Caller (Republican)": 57,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 80
-        },
-        "41044": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 29,
-                "Nachman Carl Caller (Republican)": 47,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 78
-        },
-        "41045": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 37,
-                "Nachman Carl Caller (Republican)": 43,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 87
-        },
-        "41046": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 25,
-                "Nachman Carl Caller (Republican)": 72,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 103
-        },
-        "41047": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 16,
-                "Nachman Carl Caller (Republican)": 119,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 141
-        },
-        "41048": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 38,
-                "Nachman Carl Caller (Republican)": 75,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 118
-        },
-        "41052": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 54,
-                "Nachman Carl Caller (Republican)": 63,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 121
-        },
-        "41053": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 5,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 5
-        },
-        "41054": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 91,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 93
-        },
-        "41055": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 21,
-                "Nachman Carl Caller (Republican)": 32,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 55
-        },
-        "41056": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 26,
-                "Nachman Carl Caller (Republican)": 38,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 67
-        },
-        "41057": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 14,
-                "Nachman Carl Caller (Republican)": 22,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 37
-        },
-        "41058": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 40,
-                "Nachman Carl Caller (Republican)": 60,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 100
-        },
-        "41061": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 27,
-                "Nachman Carl Caller (Republican)": 30,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 59
-        },
-        "41062": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 4,
-                "Nachman Carl Caller (Republican)": 5,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 10
-        },
-        "41068": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 9,
-                "Nachman Carl Caller (Republican)": 6,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 15
-        },
-        "41069": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 2,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 4
-        },
-        "41070": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "41071": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "42056": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 55,
-                "Nachman Carl Caller (Republican)": 16,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 76
-        },
-        "42057": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 98,
-                "Nachman Carl Caller (Republican)": 22,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 123
-        },
-        "44042": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 20,
-                "Nachman Carl Caller (Republican)": 7,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 29
-        },
-        "44049": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 35,
-                "Nachman Carl Caller (Republican)": 6,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 43
-        },
-        "44050": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "44051": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 104,
-                "Nachman Carl Caller (Republican)": 42,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 152
-        },
-        "44052": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 2,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "45001": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 45,
-                "Nachman Carl Caller (Republican)": 35,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 7
-            },
-            "total": 91
-        },
-        "45002": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 107,
-                "Nachman Carl Caller (Republican)": 49,
-                "Nachman Carl Caller (Conservative)": 8,
-                "WRITE-IN &nbsp": 11
-            },
-            "total": 175
-        },
-        "45003": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 99,
-                "Nachman Carl Caller (Republican)": 39,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 140
-        },
-        "45004": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 47,
-                "Nachman Carl Caller (Republican)": 24,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 75
-        },
-        "45005": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 59,
-                "Nachman Carl Caller (Republican)": 25,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 86
-        },
-        "45006": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 30,
-                "Nachman Carl Caller (Republican)": 25,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 61
-        },
-        "45007": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 138,
-                "Nachman Carl Caller (Republican)": 11,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 154
-        },
-        "45008": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 139,
-                "Nachman Carl Caller (Republican)": 16,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 4
-            },
-            "total": 162
-        },
-        "45009": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 147,
-                "Nachman Carl Caller (Republican)": 15,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 164
-        },
-        "45010": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 129,
-                "Nachman Carl Caller (Republican)": 29,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 165
-        },
-        "45011": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 136,
-                "Nachman Carl Caller (Republican)": 7,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 143
-        },
-        "45013": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 25,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 27
-        },
-        "45014": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 134,
-                "Nachman Carl Caller (Republican)": 12,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 148
-        },
-        "45015": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 141,
-                "Nachman Carl Caller (Republican)": 5,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 146
-        },
-        "45016": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 331,
-                "Nachman Carl Caller (Republican)": 15,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 348
-        },
-        "45017": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 110,
-                "Nachman Carl Caller (Republican)": 20,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 131
-        },
-        "45019": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 10,
-                "Nachman Carl Caller (Republican)": 3,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 13
-        },
-        "45022": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 42,
-                "Nachman Carl Caller (Republican)": 15,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 59
-        },
-        "45025": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 82,
-                "Nachman Carl Caller (Republican)": 7,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 90
-        },
-        "45026": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 15,
-                "Nachman Carl Caller (Republican)": 1,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 16
-        },
-        "45027": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 34,
-                "Nachman Carl Caller (Republican)": 21,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 60
-        },
-        "45029": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 75,
-                "Nachman Carl Caller (Republican)": 4,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 79
-        },
-        "45030": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 53,
-                "Nachman Carl Caller (Republican)": 18,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 72
-        },
-        "45031": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 30,
-                "Nachman Carl Caller (Republican)": 47,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 80
-        },
-        "45032": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 90,
-                "Nachman Carl Caller (Republican)": 6,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 98
-        },
-        "45033": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 113,
-                "Nachman Carl Caller (Republican)": 16,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 133
-        },
-        "45034": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 43,
-                "Nachman Carl Caller (Republican)": 23,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 67
-        },
-        "45036": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 33,
-                "Nachman Carl Caller (Republican)": 17,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 57
-        },
-        "45037": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 23,
-                "Nachman Carl Caller (Republican)": 37,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 63
-        },
-        "45038": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 139,
-                "Nachman Carl Caller (Republican)": 9,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 152
-        },
-        "45044": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 35,
-                "Nachman Carl Caller (Republican)": 24,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 63
-        },
-        "45054": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "45055": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "47019": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 10,
-                "Nachman Carl Caller (Republican)": 12,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 23
-        },
-        "48001": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "48002": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 65,
-                "Nachman Carl Caller (Republican)": 29,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 96
-        },
-        "48003": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 70,
-                "Nachman Carl Caller (Republican)": 57,
-                "Nachman Carl Caller (Conservative)": 11,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 138
-        },
-        "48004": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 95,
-                "Nachman Carl Caller (Republican)": 42,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 142
-        },
-        "48005": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 133,
-                "Nachman Carl Caller (Republican)": 31,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 170
-        },
-        "48006": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 105,
-                "Nachman Carl Caller (Republican)": 35,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 146
-        },
-        "48007": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 205,
-                "Nachman Carl Caller (Republican)": 49,
+                "Nachman Carl Caller (Republican)": 45,
                 "Nachman Carl Caller (Conservative)": 10,
-                "WRITE-IN &nbsp": 1
+                "WRITE-IN": 1
             },
-            "total": 265
+            "reporting": 0.99
         },
-        "48008": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 179,
-                "Nachman Carl Caller (Republican)": 52,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 1
+        "59": {
+            "electoral_districts": {
+                "59052": {
+                    "total": 98.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 48,
+                        "Nachman Carl Caller (Republican)": 47,
+                        "Nachman Carl Caller (Conservative)": 3,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 98.98989898989899,
+                    "reporting": 0.99
+                },
+                "59055": {
+                    "total": 141.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 52,
+                        "Nachman Carl Caller (Republican)": 74,
+                        "Nachman Carl Caller (Conservative)": 15,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 142.42424242424244,
+                    "reporting": 0.9899999999999999
+                },
+                "59057": {
+                    "total": 102.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 39,
+                        "Nachman Carl Caller (Republican)": 49,
+                        "Nachman Carl Caller (Conservative)": 14,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 103.03030303030303,
+                    "reporting": 0.99
+                },
+                "59058": {
+                    "total": 14.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 8,
+                        "Nachman Carl Caller (Republican)": 4,
+                        "Nachman Carl Caller (Conservative)": 2,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 14.141414141414142,
+                    "reporting": 0.99
+                },
+                "59059": {
+                    "total": 6.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 3,
+                        "Nachman Carl Caller (Republican)": 3,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 6.0606060606060606,
+                    "reporting": 0.99
+                },
+                "59060": {
+                    "total": 93.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 22,
+                        "Nachman Carl Caller (Republican)": 60,
+                        "Nachman Carl Caller (Conservative)": 10,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 93.93939393939394,
+                    "reporting": 0.99
+                },
+                "59061": {
+                    "total": 2.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 2,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 2.0202020202020203,
+                    "reporting": 0.99
+                },
+                "59062": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                },
+                "59065": {
+                    "total": 143.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 38,
+                        "Nachman Carl Caller (Republican)": 86,
+                        "Nachman Carl Caller (Conservative)": 19,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 144.44444444444446,
+                    "reporting": 0.9899999999999999
+                },
+                "59066": {
+                    "total": 52.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 10,
+                        "Nachman Carl Caller (Republican)": 35,
+                        "Nachman Carl Caller (Conservative)": 6,
+                        "WRITE-IN": 1
+                    },
+                    "approx_total_voters": 52.525252525252526,
+                    "reporting": 0.99
+                },
+                "59068": {
+                    "total": 0.0,
+                    "candidates": {
+                        "Sam Sutton (Democratic)": 0,
+                        "Nachman Carl Caller (Republican)": 0,
+                        "Nachman Carl Caller (Conservative)": 0,
+                        "WRITE-IN": 0
+                    },
+                    "approx_total_voters": 0,
+                    "reporting": 0
+                }
             },
-            "total": 236
-        },
-        "48009": {
-            "reporting": 0.99,
+            "total": 651.0,
+            "approx_total_voters": 657.5757575757576,
             "candidates": {
-                "Sam Sutton (Democratic)": 79,
-                "Nachman Carl Caller (Republican)": 20,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 1
+                "Sam Sutton (Democratic)": 220,
+                "Nachman Carl Caller (Republican)": 360,
+                "Nachman Carl Caller (Conservative)": 69,
+                "WRITE-IN": 2
             },
-            "total": 107
-        },
-        "48010": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 95,
-                "Nachman Carl Caller (Republican)": 44,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 146
-        },
-        "48011": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 141,
-                "Nachman Carl Caller (Republican)": 26,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 172
-        },
-        "48012": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 1,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 3
-        },
-        "48013": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 143,
-                "Nachman Carl Caller (Republican)": 49,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 198
-        },
-        "48015": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 81,
-                "Nachman Carl Caller (Republican)": 32,
-                "Nachman Carl Caller (Conservative)": 11,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 126
-        },
-        "48016": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 71,
-                "Nachman Carl Caller (Republican)": 39,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 119
-        },
-        "48017": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "48018": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 1,
-                "Nachman Carl Caller (Republican)": 1,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "48022": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 3,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 5
-        },
-        "48023": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 71,
-                "Nachman Carl Caller (Republican)": 35,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 5
-            },
-            "total": 118
-        },
-        "48024": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 49,
-                "Nachman Carl Caller (Republican)": 18,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 73
-        },
-        "48025": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 90,
-                "Nachman Carl Caller (Republican)": 34,
-                "Nachman Carl Caller (Conservative)": 7,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 134
-        },
-        "48026": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 120,
-                "Nachman Carl Caller (Republican)": 42,
-                "Nachman Carl Caller (Conservative)": 9,
-                "WRITE-IN &nbsp": 11
-            },
-            "total": 182
-        },
-        "48027": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 57,
-                "Nachman Carl Caller (Republican)": 32,
-                "Nachman Carl Caller (Conservative)": 9,
-                "WRITE-IN &nbsp": 3
-            },
-            "total": 101
-        },
-        "48028": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 79,
-                "Nachman Carl Caller (Republican)": 15,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 5
-            },
-            "total": 100
-        },
-        "48029": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 120,
-                "Nachman Carl Caller (Republican)": 11,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 133
-        },
-        "48030": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 127,
-                "Nachman Carl Caller (Republican)": 22,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 153
-        },
-        "48031": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 1,
-                "Nachman Carl Caller (Republican)": 1,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "48032": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 79,
-                "Nachman Carl Caller (Republican)": 13,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 95
-        },
-        "48033": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 88,
-                "Nachman Carl Caller (Republican)": 20,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 4
-            },
-            "total": 114
-        },
-        "48034": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 189,
-                "Nachman Carl Caller (Republican)": 36,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 230
-        },
-        "48035": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 101,
-                "Nachman Carl Caller (Republican)": 38,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 144
-        },
-        "48036": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 20,
-                "Nachman Carl Caller (Republican)": 9,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 30
-        },
-        "48037": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 29,
-                "Nachman Carl Caller (Republican)": 18,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 49
-        },
-        "48038": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 106,
-                "Nachman Carl Caller (Republican)": 40,
-                "Nachman Carl Caller (Conservative)": 10,
-                "WRITE-IN &nbsp": 7
-            },
-            "total": 163
-        },
-        "48039": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 69,
-                "Nachman Carl Caller (Republican)": 40,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 114
-        },
-        "48040": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 100,
-                "Nachman Carl Caller (Republican)": 63,
-                "Nachman Carl Caller (Conservative)": 8,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 173
-        },
-        "48041": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 151,
-                "Nachman Carl Caller (Republican)": 36,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 6
-            },
-            "total": 197
-        },
-        "48042": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 93,
-                "Nachman Carl Caller (Republican)": 44,
-                "Nachman Carl Caller (Conservative)": 10,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 147
-        },
-        "48043": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 48,
-                "Nachman Carl Caller (Republican)": 28,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 80
-        },
-        "48044": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 98,
-                "Nachman Carl Caller (Republican)": 57,
-                "Nachman Carl Caller (Conservative)": 8,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 164
-        },
-        "48045": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 70,
-                "Nachman Carl Caller (Republican)": 39,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 2
-            },
-            "total": 115
-        },
-        "48046": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 77,
-                "Nachman Carl Caller (Republican)": 36,
-                "Nachman Carl Caller (Conservative)": 9,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 123
-        },
-        "48047": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 155,
-                "Nachman Carl Caller (Republican)": 33,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 195
-        },
-        "48048": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 150,
-                "Nachman Carl Caller (Republican)": 50,
-                "Nachman Carl Caller (Conservative)": 11,
-                "WRITE-IN &nbsp": 5
-            },
-            "total": 216
-        },
-        "48049": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 64,
-                "Nachman Carl Caller (Republican)": 44,
-                "Nachman Carl Caller (Conservative)": 11,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 119
-        },
-        "48050": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 1,
-                "Nachman Carl Caller (Republican)": 1,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "48051": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 112,
-                "Nachman Carl Caller (Republican)": 27,
-                "Nachman Carl Caller (Conservative)": 5,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 145
-        },
-        "48052": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 7,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 9
-        },
-        "49002": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 7,
-                "Nachman Carl Caller (Republican)": 6,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 15
-        },
-        "49003": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 5,
-                "Nachman Carl Caller (Republican)": 4,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 10
-        },
-        "49046": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "49048": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 3,
-                "Nachman Carl Caller (Republican)": 7,
-                "Nachman Carl Caller (Conservative)": 1,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 11
-        },
-        "49051": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 31,
-                "Nachman Carl Caller (Republican)": 19,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 56
-        },
-        "51051": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 34,
-                "Nachman Carl Caller (Republican)": 9,
-                "Nachman Carl Caller (Conservative)": 4,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 48
-        },
-        "51053": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 26,
-                "Nachman Carl Caller (Republican)": 36,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 68
-        },
-        "59052": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 48,
-                "Nachman Carl Caller (Republican)": 47,
-                "Nachman Carl Caller (Conservative)": 3,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 98
-        },
-        "59055": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 52,
-                "Nachman Carl Caller (Republican)": 74,
-                "Nachman Carl Caller (Conservative)": 15,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 141
-        },
-        "59057": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 39,
-                "Nachman Carl Caller (Republican)": 49,
-                "Nachman Carl Caller (Conservative)": 14,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 102
-        },
-        "59058": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 8,
-                "Nachman Carl Caller (Republican)": 4,
-                "Nachman Carl Caller (Conservative)": 2,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 14
-        },
-        "59059": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 3,
-                "Nachman Carl Caller (Republican)": 3,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 6
-        },
-        "59060": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 22,
-                "Nachman Carl Caller (Republican)": 60,
-                "Nachman Carl Caller (Conservative)": 10,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 93
-        },
-        "59061": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 2,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 2
-        },
-        "59062": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
-        },
-        "59065": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 38,
-                "Nachman Carl Caller (Republican)": 86,
-                "Nachman Carl Caller (Conservative)": 19,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 143
-        },
-        "59066": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 10,
-                "Nachman Carl Caller (Republican)": 35,
-                "Nachman Carl Caller (Conservative)": 6,
-                "WRITE-IN &nbsp": 1
-            },
-            "total": 52
-        },
-        "59068": {
-            "reporting": 0.99,
-            "candidates": {
-                "Sam Sutton (Democratic)": 0,
-                "Nachman Carl Caller (Republican)": 0,
-                "Nachman Carl Caller (Conservative)": 0,
-                "WRITE-IN &nbsp": 0
-            },
-            "total": 0
+            "reporting": 0.9899999999999999
         }
     },
-    "reporting": 0.9900000000000002,
-    "last_updated": "2025-06-05 17:10:12.159253"
+    "total": 12956.0,
+    "approx_total_voters": 13086.868686868685,
+    "candidates": {
+        "Sam Sutton (Democratic)": 8661,
+        "Nachman Carl Caller (Republican)": 3640,
+        "Nachman Carl Caller (Conservative)": 517,
+        "WRITE-IN": 138
+    },
+    "reporting": 0.9900000000000001,
+    "last_updated": "2025-06-09 21:23:37.128598"
 }
