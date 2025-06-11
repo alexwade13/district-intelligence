@@ -32,7 +32,7 @@ export const handleShapeMouseMove = (map, id, key) => {
 export const handleShapeMouseMoveoff = (map) => {
   map.on('mousemove', (e) => {
     const features = map.queryRenderedFeatures(e.point, {
-      layers: ['districts-fill'],
+      layers: ['election-districts-fill'],
     })
     if (features.length === 0) {
       map.getCanvas().style.cursor = ''

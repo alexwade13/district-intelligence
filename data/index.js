@@ -1,7 +1,9 @@
-import districts from './districts'
+import electionDistricts from './shapes/election_districts'
+import assemblyDistricts from './shapes/assembly_districts'
 
 const shapes = {
-  districts: districts,
+  'election-districts': electionDistricts,
+  'assembly-districts': assemblyDistricts
 }
 
 export default shapes

@@ -5,7 +5,7 @@ import { useCombobox, autocomplete } from '@szhsin/react-autocomplete'
 import { Input } from './'
 import shapes from '../data'
 
-const zones = Object.keys(shapes['districts'])
+const zones = Object.keys(shapes['election-districts'])
 
 const Autocomplete = ({ selected, setSelected, zoomTo }) => {
   const [value, setValue] = useState()

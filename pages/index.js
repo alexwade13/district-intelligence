@@ -25,21 +25,24 @@ import {
   candidateColors,
   mapStyles,
 } from '../components/constants'
+import load from '../components/load'
 import shapes from '../data'
-import results from '../data/sample'
+
 
 const Index = () => {
+  const { data, error } = load()
+
   const map = useRef()
   const [selected, setSelected] = useState()
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
   const [showRegions, setShowRegions] = useState()
 
   const setup = () => {
-    addShapes(map.current, 'districts', 0.5)
+    addShapes(map.current, 'election-districts', 0.5)
     addLabels(map.current)
-    handleShapeClick(map.current, 'districts', 'district', setSelected)
-    handleShapeClickOff(map.current, 'districts', 'district', setSelected)
-    handleShapeMouseMove(map.current, 'districts', 'district')
+    handleShapeClick(map.current, 'election-districts', 'election-district', setSelected)
+    handleShapeClickOff(map.current, 'election-districts', 'election-district', setSelected)
+    handleShapeMouseMove(map.current, 'election-districts', 'election-district')
     handleShapeMouseMoveoff(map.current)
   }
 
@@ -61,8 +64,8 @@ const Index = () => {
 
   useEffect(() => {
     const updateSelected = () => {
-      Object.keys(shapes['districts']).forEach((k) => {
-        const districtResults = results.districts[k]
+      Object.keys(shapes['election-districts']).forEach((k) => {
+        const districtResults = data.districts[k]
         let color = '#cccccc'
         let opacity = 0
 
@@ -71,7 +74,7 @@ const Index = () => {
           const leadingCandidate = getMaxKey(districtResults.candidates)
           if (leadingCandidate) {
             color = candidateColors[leadingCandidate] || '#cccccc'
-            opacity = 0.3 + districtResults.reporting * 0.7 // Scale opacity based on reporting
+            opacity = districtResults.reporting > 0.3 ? 1 : 0 // Scale opacity based on reporting
           }
         } else if (
           districtResults.candidates[selectedCandidate] !== undefined
@@ -93,7 +96,7 @@ const Index = () => {
         // If candidate not in district, keep opacity at 0 (invisible)
 
         map.current.setFeatureState(
-          { source: 'districts', id: shapes['districts'][k].id },
+          { source: 'election-districts', id: shapes['election-districts'][k].id },
           {
             color,
             opacity,
@@ -103,16 +106,19 @@ const Index = () => {
       })
     }
 
-    if (map.current) {
-      if (!map.current.isStyleLoaded()) {
-        map.current.once('idle', () => {
+    if (data) {
+      if (map.current) {
+        if (!map.current.isStyleLoaded()) {
+          map.current.once('idle', () => {
+            updateSelected()
+          })
+        } else {
           updateSelected()
-        })
-      } else {
-        updateSelected()
+        }
       }
     }
-  }, [selected, selectedCandidate])
+    
+  }, [data, selected, selectedCandidate])
 
   // const zoomTo = () => {
   //   if (selected) {
