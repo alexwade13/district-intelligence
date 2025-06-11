@@ -17,6 +17,11 @@ import {
   handleShapeClickOff,
   handleShapeMouseMove,
   handleShapeMouseMoveoff,
+  createShapeMouseMoveHandler,
+  createShapeMouseMoveOffHandler,
+  createShapeClickHandler,
+  createShapeClickOffHandler,
+  updateShapeVisibility,
   getMaxKey,
 } from '../components/utils'
 import { googleProtocol, createGoogleStyle } from 'maplibre-google-maps'
@@ -24,26 +29,23 @@ import {
   boroughColors,
   candidateColors,
   mapStyles,
+  scaleLookup,
 } from '../components/constants'
 import load from '../components/load'
 import shapes from '../data'
-
 
 const Index = () => {
   const { data, error } = load()
 
   const map = useRef()
-  const [selected, setSelected] = useState()
+  const [selected, setSelected] = useState({})
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
-  const [showRegions, setShowRegions] = useState()
+  const [scale, setScale] = useState('Election district')
 
   const setup = () => {
     addShapes(map.current, 'election-districts', 0.5)
+    addShapes(map.current, 'assembly-districts', 0.5)
     addLabels(map.current)
-    handleShapeClick(map.current, 'election-districts', 'election-district', setSelected)
-    handleShapeClickOff(map.current, 'election-districts', 'election-district', setSelected)
-    handleShapeMouseMove(map.current, 'election-districts', 'election-district')
-    handleShapeMouseMoveoff(map.current)
   }
 
   useEffect(() => {
@@ -62,6 +64,68 @@ const Index = () => {
     return () => map.current.remove()
   }, [])
 
+  useEffect(() => {
+    if (!map.current) return
+
+    const layers = ['election-district', 'assembly-district']
+    const handlers = {}
+
+    layers.forEach((layer) => {
+      handlers[layer] = {}
+      handlers[layer].move = createShapeMouseMoveHandler(map.current, layer)
+      handlers[layer].moveOff = createShapeMouseMoveOffHandler(map.current)
+      handlers[layer].click = createShapeClickHandler(
+        map.current,
+        layer,
+        setSelected,
+      )
+      handlers[layer].clickOff = createShapeClickOffHandler(
+        map.current,
+        layer,
+        setSelected,
+      )
+
+      const addHandlers = () => {
+        map.current.on('mousemove', `${layer}s-fill`, handlers[layer].move)
+        map.current.on('click', `${layer}s-fill`, handlers[layer].click)
+        map.current.on('mousemove', handlers[layer].moveOff)
+        map.current.on('click', handlers[layer].clickOff)
+      }
+
+      if (!map.current.isStyleLoaded()) {
+        map.current.once('idle', () => {
+          addHandlers()
+        })
+      } else {
+        addHandlers()
+      }
+    })
+
+    return () => {
+      layers.forEach((layer) => {
+        map.current.off('mousemove', `${layer}s-fill`, handlers[layer].move)
+        map.current.off('click', `${layer}s-fill`, handlers[layer].click)
+        map.current.off('mousemove', handlers[layer].moveOff)
+        map.current.off('click', handlers[layer].clickOff)
+      })
+    }
+  }, [map.current, scale])
+
+  useEffect(() => {
+    if (!map.current) return
+
+    const layers = ['election-district', 'assembly-district']
+
+    updateShapeVisibility(map.current, `${scaleLookup[scale]}s`, 'visible')
+
+    layers.forEach((l) => {
+      if (!(l == scaleLookup[scale])) {
+        updateShapeVisibility(map.current, `${l}s`, 'none')
+      }
+    })
+  }, [map.current, scale])
+
+  
   useEffect(() => {
     const updateSelected = () => {
       Object.keys(shapes['election-districts']).forEach((k) => {
@@ -94,13 +158,15 @@ const Index = () => {
           opacity = 0.3 + candidateVoteShare * 0.7 * districtResults.reporting
         }
         // If candidate not in district, keep opacity at 0 (invisible)
-
         map.current.setFeatureState(
-          { source: 'election-districts', id: shapes['election-districts'][k].id },
+          {
+            source: 'election-districts',
+            id: shapes['election-districts'][k].id,
+          },
           {
             color,
             opacity,
-            'line-width': selected === k ? 1.5 : 0.5,
+            'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
           },
         )
       })
@@ -117,7 +183,6 @@ const Index = () => {
         }
       }
     }
-    
   }, [data, selected, selectedCandidate])
 
   // const zoomTo = () => {
@@ -170,7 +235,7 @@ const Index = () => {
             width: ['calc(100vw)', '400px', '400px', '400px'],
           }}
         >
-          <Results selected={selected} />
+          <Results selected={selected} scale={scale} />
         </Box>
       </Box>
       <Box sx={{ position: 'absolute', top: 0, right: 0 }}>
@@ -186,6 +251,8 @@ const Index = () => {
           <Options
             selectedCandidate={selectedCandidate}
             setSelectedCandidate={setSelectedCandidate}
+            scale={scale}
+            setScale={setScale}
           />
         </Box>
       </Box>

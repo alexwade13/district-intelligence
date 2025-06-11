@@ -30,8 +30,6 @@ def to_geojson_with_ids(gdf, name, path):
     with open(path, 'w') as f:
         json.dump(geojson, f)
 
-print(f'[shapes] doing aggregation for {ver}')
-
 # load the metadata
 sheet_id = '1nCooUVXPQSCV6asm0AXaksBpswvvxujiwm8VthPJBAY'
 encoded_sheet_name = urllib.parse.quote(f'All Districts')
@@ -39,11 +37,11 @@ csv_url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:cs
 df = pd.read_csv(csv_url)
 
 df.set_index(df.columns[0], inplace=True)
-df.columns = ['borough', 'assembly_district']
-
-# write districts to json
-df['id'] = df['election_district']
+df['id'] = df.index
+df = df[['borough', 'id']]
 df.to_json(f'data/shapes/election_districts.json', orient='index')
+
+df = pd.read_csv(csv_url)
 
 grouped = df.groupby('assembly_district').agg({'borough': 'first'})
 grouped['id'] = grouped.index
@@ -60,18 +58,20 @@ gdf = gdf.merge(df, on='election_district')
 # save out the filtered districts
 election_districts = gdf[['election_district', 'geometry']].copy()
 election_districts['election_district'] = election_districts['election_district'].astype(str)
+election_districts = election_districts.rename(columns={'election_district': 'election-district'})
 to_geojson_with_ids(
     election_districts,
-    'election_district',
-    f'public/shapes/election_districts.json',
+    'election-district',
+    f'public/shapes/election-districts.json',
 )
 
 # save out shapes dissolved by borough
 assembly_districts = gdf.dissolve(by='assembly_district', as_index=False)[['assembly_district', 'geometry']].copy()
+assembly_districts = assembly_districts.rename(columns={'assembly_district': 'assembly-district'})
 assembly_districts.set_crs('EPSG:4326', inplace=True)
 to_geojson_with_ids(
     assembly_districts,
-    'assembly_district',
-    f'public/shapes/assembly_districts.json',
+    'assembly-district',
+    f'public/shapes/assembly-districts.json',
 )
 

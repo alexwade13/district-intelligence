@@ -2,7 +2,12 @@ import { Box } from 'theme-ui'
 import { Select } from './'
 import { candidateColors } from '../components/constants'
 
-const Options = ({ selectedCandidate, setSelectedCandidate }) => {
+const Options = ({
+  selectedCandidate,
+  setSelectedCandidate,
+  scale,
+  setScale,
+}) => {
   const allCandidates = Object.keys(candidateColors)
 
   return (
@@ -46,7 +51,8 @@ const Options = ({ selectedCandidate, setSelectedCandidate }) => {
         Show results by
         <Select
           id='scale-select'
-          value={'Election district'}
+          value={scale}
+          onChange={(e) => setScale(e.target.value)}
         >
           <option value='Election district'>Election district</option>
           <option value='Assembly district'>Assembly district</option>

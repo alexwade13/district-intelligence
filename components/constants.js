@@ -15,18 +15,18 @@ export const boroughColorsDarker = {
 }
 
 export const candidateColors = {
-  'Adrienne Adams': 'rgb(143,73,183)',
-  'Selma Bartholomew': '#ffffb3',
-  'Michael Blake': '#bebada',
-  'Andrew Cuomo': 'rgb(22,96,168)',
-  'Brad Lander': 'rgb(239,75,48)',
-  'Zohran Kwame Mamdani': 'rgb(255,171,0)',
-  'Zellnor Myrie': 'rgb(107,178,61)',
-  'Paperboy Prince': '#fccde5',
-  'Jessica Ramos': '#d9d9d9',
-  'Scott Stringer': 'rgb(204,102,51)',
-  'Whitney Tilson': '#ccebc5',
-  'Write In': '#ffed6f',
+  'Adrienne Adams': '#8f49b7',
+  'Selma Bartholomew': '#a6cee3',
+  'Michael Blake': '#fc9a98',
+  'Andrew Cuomo': '#1660a8',
+  'Brad Lander': '#ef4b30',
+  'Zohran Kwame Mamdani': '#ffab00',
+  'Zellnor Myrie': '#6bb23d',
+  'Paperboy Prince': '#cab2d5',
+  'Jessica Ramos': '#f9c295',
+  'Scott Stringer': '#cc6633',
+  'Whitney Tilson': '#b2df8a',
+  'Write In': '#a5a5a5',
 }
 
 export const mapStyles = {
@@ -34,4 +34,9 @@ export const mapStyles = {
     'https://api.maptiler.com/maps/01968205-0dc7-71df-87a7-8b67f7828379/style.json?key=Hja3c1GFKU3rNXLE62TK',
   monochrome:
     'https://api.maptiler.com/maps/01961350-1791-703e-8753-2c795c604620/style.json?key=Hja3c1GFKU3rNXLE62TK',
+}
+
+export const scaleLookup = {
+  'Assembly district': 'assembly-district',
+  'Election district': 'election-district',
 }

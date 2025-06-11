@@ -40,6 +40,73 @@ export const handleShapeMouseMoveoff = (map) => {
   })
 }
 
+export const createShapeClickHandler = (map, key, setSelected) => {
+  const id = `${key}s`
+  return (e) => {
+    const selected = String(e.features[0].properties[key])
+    if (Object.keys(shapes[id]).includes(selected)) {
+      setSelected((prev) => {
+        const obj = { ...prev }
+        obj[key] = selected
+        return obj
+      })
+    }
+  }
+}
+
+export const createShapeClickOffHandler = (map, key, setSelected) => {
+  const id = `${key}s`
+  return (e) => {
+    const features = map.queryRenderedFeatures(e.point, {
+      layers: [`${id}-fill`],
+    })
+
+    if (features.length === 0) {
+      setSelected((prev) => {
+        const obj = { ...prev }
+        obj[key] = null
+        return obj
+      })
+    }
+  }
+}
+
+export const createShapeMouseMoveHandler = (map, key) => {
+  const id = `${key}s`
+  return (e) => {
+    if (
+      Object.keys(shapes[id]).includes(String(e.features[0].properties[key]))
+    ) {
+      map.getCanvas().style.cursor = 'pointer'
+    } else {
+      map.getCanvas().style.cursor = ''
+    }
+  }
+}
+
+export const createShapeMouseMoveOffHandler = (map) => {
+  return (e) => {
+    const features = map.queryRenderedFeatures(e.point, {
+      layers: [`election-districts-fill`, `assembly-districts-fill`],
+    })
+    if (features.length === 0) {
+      map.getCanvas().style.cursor = ''
+    }
+  }
+}
+
+export const updateShapeVisibility = (map, id, value, version) => {
+  if (!map.isStyleLoaded()) {
+    map.once('idle', () => {
+      map.setLayoutProperty(`${id}-fill`, 'visibility', value)
+      map.setLayoutProperty(`${id}-line`, 'visibility', value)
+    })
+  } else {
+    map.setLayoutProperty(`${id}-fill`, 'visibility', value)
+    map.setLayoutProperty(`${id}-line`, 'visibility', value)
+  }
+}
+
 export const createGoogleStyle = (id, mapType, key, mapId) => {
   const style = {
     version: 8,
