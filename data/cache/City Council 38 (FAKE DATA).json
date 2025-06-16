@@ -1,0 +1,1698 @@
+{
+    "all": {
+        "all": {
+            "total": 30300.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 17972.0,
+                "Ling Ye": 11935.0,
+                "WRITE-IN": 393.0
+            },
+            "approx_total_voters": 428800.1625858431,
+            "reporting": 0.07066228664018785
+        }
+    },
+    "assembly_districts": {
+        "49": {
+            "total": 8974.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 5318.0,
+                "Ling Ye": 3510.0,
+                "WRITE-IN": 146.0
+            },
+            "approx_total_voters": 223240.73819378842,
+            "reporting": 0.040198756161655164
+        },
+        "51": {
+            "total": 9797.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 5773.0,
+                "Ling Ye": 3917.0,
+                "WRITE-IN": 107.0
+            },
+            "approx_total_voters": 127360.88188110353,
+            "reporting": 0.0769231482642048
+        },
+        "61": {
+            "total": 11529.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 6881.0,
+                "Ling Ye": 4508.0,
+                "WRITE-IN": 140.0
+            },
+            "approx_total_voters": 78198.5425109512,
+            "reporting": 0.14743241535972923
+        }
+    },
+    "election_districts": {
+        "49001": {
+            "total": 263.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 165.0,
+                "Ling Ye": 93.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 358.0350479832675,
+            "reporting": 0.7345649580436916
+        },
+        "49002": {
+            "total": 156.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 113.0,
+                "Ling Ye": 39.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 200.92504189541197,
+            "reporting": 0.7764089459849564
+        },
+        "49003": {
+            "total": 137.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 91.0,
+                "Ling Ye": 46.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 657.0911545656385,
+            "reporting": 0.20849466477837775
+        },
+        "49004": {
+            "total": 96.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 64.0,
+                "Ling Ye": 29.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 609.4364538373318,
+            "reporting": 0.15752257580841056
+        },
+        "49005": {
+            "total": 72.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 36.0,
+                "Ling Ye": 31.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 81.00001597748803,
+            "reporting": 0.8888887135529779
+        },
+        "49006": {
+            "total": 161.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 94.0,
+                "Ling Ye": 67.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 591.9903349308155,
+            "reporting": 0.2719638995775424
+        },
+        "49007": {
+            "total": 107.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 87.0,
+                "Ling Ye": 19.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 243.40148771433536,
+            "reporting": 0.4396029005606531
+        },
+        "49008": {
+            "total": 104.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 48.0,
+                "Ling Ye": 54.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 395.3008515234249,
+            "reporting": 0.2630907563168685
+        },
+        "49009": {
+            "total": 27.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 24.0,
+                "Ling Ye": 0.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 75.14430214832221,
+            "reporting": 0.3593086798079054
+        },
+        "49010": {
+            "total": 52.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 9.0,
+                "Ling Ye": 41.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 212.402694975798,
+            "reporting": 0.24481798597670845
+        },
+        "49011": {
+            "total": 294.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 179.0,
+                "Ling Ye": 113.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 1185.473815185909,
+            "reporting": 0.24800210366004094
+        },
+        "49012": {
+            "total": 172.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 25.0,
+                "Ling Ye": 143.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 236.26359049302712,
+            "reporting": 0.7280004491639022
+        },
+        "49013": {
+            "total": 202.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 186.0,
+                "Ling Ye": 16.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 299.30781279559267,
+            "reporting": 0.6748905018993024
+        },
+        "49014": {
+            "total": 19.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 14.0,
+                "Ling Ye": 0.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 8871.49945534155,
+            "reporting": 0.002141689811924641
+        },
+        "49015": {
+            "total": 175.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 165.0,
+                "Ling Ye": 8.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 2406.9201066998467,
+            "reporting": 0.07270702484593239
+        },
+        "49016": {
+            "total": 73.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 21.0,
+                "Ling Ye": 47.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 281.9044200463459,
+            "reporting": 0.2589530167281471
+        },
+        "49017": {
+            "total": 162.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 35.0,
+                "Ling Ye": 126.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 247.13312840965824,
+            "reporting": 0.6555171337913952
+        },
+        "49018": {
+            "total": 102.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 34.0,
+                "Ling Ye": 63.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 163.234552362908,
+            "reporting": 0.6248677043156311
+        },
+        "49019": {
+            "total": 239.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 159.0,
+                "Ling Ye": 76.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 2528.0387276087636,
+            "reporting": 0.09453969094297332
+        },
+        "49020": {
+            "total": 57.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 4.0,
+                "Ling Ye": 51.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 347.3082199787709,
+            "reporting": 0.16411935197929983
+        },
+        "49021": {
+            "total": 110.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 74.0,
+                "Ling Ye": 33.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 382.569050766775,
+            "reporting": 0.28752979306488424
+        },
+        "49022": {
+            "total": 210.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 154.0,
+                "Ling Ye": 52.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 330.29287275636847,
+            "reporting": 0.6357993687465996
+        },
+        "49023": {
+            "total": 63.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 53.0,
+                "Ling Ye": 8.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 72.70372206755235,
+            "reporting": 0.8665306013007672
+        },
+        "49024": {
+            "total": 312.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 179.0,
+                "Ling Ye": 130.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 498.0842779958717,
+            "reporting": 0.626400016590337
+        },
+        "49025": {
+            "total": 240.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 142.0,
+                "Ling Ye": 95.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 255.02800998885755,
+            "reporting": 0.9410731002076433
+        },
+        "49026": {
+            "total": 190.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 149.0,
+                "Ling Ye": 39.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 991.260939491783,
+            "reporting": 0.19167505994679113
+        },
+        "49027": {
+            "total": 139.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 39.0,
+                "Ling Ye": 95.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 266.8006456946636,
+            "reporting": 0.5209882443803253
+        },
+        "49028": {
+            "total": 178.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 132.0,
+                "Ling Ye": 42.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 347.8751290685482,
+            "reporting": 0.5116778554322158
+        },
+        "49029": {
+            "total": 219.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 92.0,
+                "Ling Ye": 123.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 7319.408431127111,
+            "reporting": 0.029920450820678735
+        },
+        "49030": {
+            "total": 110.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 76.0,
+                "Ling Ye": 31.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 212.1262247793124,
+            "reporting": 0.5185591744464391
+        },
+        "49031": {
+            "total": 72.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 9.0,
+                "Ling Ye": 61.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 105.83972822392113,
+            "reporting": 0.6802738556515594
+        },
+        "49032": {
+            "total": 210.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 100.0,
+                "Ling Ye": 106.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 255.32842831208424,
+            "reporting": 0.8224701079635365
+        },
+        "49033": {
+            "total": 196.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 132.0,
+                "Ling Ye": 60.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 270.0216680848595,
+            "reporting": 0.7258676734727941
+        },
+        "49034": {
+            "total": 273.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 124.0,
+                "Ling Ye": 149.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 639.6364555158303,
+            "reporting": 0.4268049415348615
+        },
+        "49035": {
+            "total": 295.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 198.0,
+                "Ling Ye": 93.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 433.094239292755,
+            "reporting": 0.6811450562855245
+        },
+        "49036": {
+            "total": 304.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 199.0,
+                "Ling Ye": 100.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 638.2169364167503,
+            "reporting": 0.4763270647545
+        },
+        "49037": {
+            "total": 48.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 27.0,
+                "Ling Ye": 20.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 125.530334393094,
+            "reporting": 0.3823776956547381
+        },
+        "49038": {
+            "total": 271.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 152.0,
+                "Ling Ye": 115.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 555.620801044883,
+            "reporting": 0.4877427185777889
+        },
+        "49039": {
+            "total": 272.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 172.0,
+                "Ling Ye": 98.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 286.53987104751246,
+            "reporting": 0.9492570754835666
+        },
+        "49040": {
+            "total": 177.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 89.0,
+                "Ling Ye": 84.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 573.9338402069022,
+            "reporting": 0.3083979155788963
+        },
+        "49041": {
+            "total": 277.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 159.0,
+                "Ling Ye": 116.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 1373.038693205547,
+            "reporting": 0.20174231168482626
+        },
+        "49042": {
+            "total": 128.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 65.0,
+                "Ling Ye": 58.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 244.29203347585076,
+            "reporting": 0.5239630542952327
+        },
+        "49043": {
+            "total": 209.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 172.0,
+                "Ling Ye": 36.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 1078.6728711456683,
+            "reporting": 0.1937566111012129
+        },
+        "49044": {
+            "total": 94.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 28.0,
+                "Ling Ye": 65.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 140.67703783693614,
+            "reporting": 0.6681971801891281
+        },
+        "49045": {
+            "total": 216.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 190.0,
+                "Ling Ye": 25.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 417.2786845714242,
+            "reporting": 0.5176396686110335
+        },
+        "49046": {
+            "total": 172.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 144.0,
+                "Ling Ye": 27.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 272.8445015547848,
+            "reporting": 0.6303956979886725
+        },
+        "49047": {
+            "total": 101.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 88.0,
+                "Ling Ye": 11.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 159.8127778203575,
+            "reporting": 0.6319895153410835
+        },
+        "49048": {
+            "total": 100.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 26.0,
+                "Ling Ye": 73.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 182416.0973923867,
+            "reporting": 0.0005481972338488017
+        },
+        "49049": {
+            "total": 183.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 78.0,
+                "Ling Ye": 100.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 197.83798068942136,
+            "reporting": 0.9249993320912684
+        },
+        "49050": {
+            "total": 272.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 130.0,
+                "Ling Ye": 139.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 1559.1753390559786,
+            "reporting": 0.1744511942862601
+        },
+        "49051": {
+            "total": 176.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 45.0,
+                "Ling Ye": 131.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 215.7096031187193,
+            "reporting": 0.8159117510551236
+        },
+        "49052": {
+            "total": 296.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 197.0,
+                "Ling Ye": 96.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 383.73271375763966,
+            "reporting": 0.7713702517084575
+        },
+        "49053": {
+            "total": 191.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 151.0,
+                "Ling Ye": 37.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 229.8457444197668,
+            "reporting": 0.8309921094348265
+        },
+        "51001": {
+            "total": 161.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 89.0,
+                "Ling Ye": 69.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 220.34850060881024,
+            "reporting": 0.7306607467496545
+        },
+        "51002": {
+            "total": 307.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 177.0,
+                "Ling Ye": 130.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 1575.3817124186435,
+            "reporting": 0.19487340596881164
+        },
+        "51003": {
+            "total": 215.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 67.0,
+                "Ling Ye": 145.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 887.8145985622087,
+            "reporting": 0.24216767819338245
+        },
+        "51004": {
+            "total": 309.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 182.0,
+                "Ling Ye": 125.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 916.6894760808308,
+            "reporting": 0.33708252146744766
+        },
+        "51005": {
+            "total": 71.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 62.0,
+                "Ling Ye": 6.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 157.3223724713386,
+            "reporting": 0.45130262711322233
+        },
+        "51006": {
+            "total": 177.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 123.0,
+                "Ling Ye": 54.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 15894.736838292003,
+            "reporting": 0.011135761592075522
+        },
+        "51007": {
+            "total": 101.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 41.0,
+                "Ling Ye": 57.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 432.3316083856365,
+            "reporting": 0.2336169691065215
+        },
+        "51008": {
+            "total": 283.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 175.0,
+                "Ling Ye": 105.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 882.5034404423753,
+            "reporting": 0.3206786365140284
+        },
+        "51009": {
+            "total": 133.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 8.0,
+                "Ling Ye": 125.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 3725.2395158980066,
+            "reporting": 0.03570240233746125
+        },
+        "51010": {
+            "total": 238.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 183.0,
+                "Ling Ye": 51.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 283.5423534693517,
+            "reporting": 0.8393807735877652
+        },
+        "51011": {
+            "total": 157.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 36.0,
+                "Ling Ye": 120.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 720.6617439620826,
+            "reporting": 0.21785532715645373
+        },
+        "51012": {
+            "total": 192.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 77.0,
+                "Ling Ye": 115.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 343.6085708665585,
+            "reporting": 0.5587753516036822
+        },
+        "51013": {
+            "total": 171.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 166.0,
+                "Ling Ye": 3.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 215.56190194996697,
+            "reporting": 0.7932756134230528
+        },
+        "51014": {
+            "total": 93.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 41.0,
+                "Ling Ye": 51.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 166.06015764128887,
+            "reporting": 0.5600380086407715
+        },
+        "51015": {
+            "total": 274.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 199.0,
+                "Ling Ye": 74.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 5623.524350473017,
+            "reporting": 0.04872389322488713
+        },
+        "51016": {
+            "total": 309.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 175.0,
+                "Ling Ye": 132.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 309.94043067404357,
+            "reporting": 0.996965769609346
+        },
+        "51017": {
+            "total": 289.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 178.0,
+                "Ling Ye": 110.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 2595.392047001089,
+            "reporting": 0.11135119271631133
+        },
+        "51018": {
+            "total": 164.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 125.0,
+                "Ling Ye": 38.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 431.1943553180748,
+            "reporting": 0.3803389306407403
+        },
+        "51019": {
+            "total": 206.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 101.0,
+                "Ling Ye": 103.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 346.27144402080194,
+            "reporting": 0.5949090043579358
+        },
+        "51020": {
+            "total": 175.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 26.0,
+                "Ling Ye": 148.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 331.9165222303871,
+            "reporting": 0.5272410027197455
+        },
+        "51021": {
+            "total": 155.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 92.0,
+                "Ling Ye": 60.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 359.18072462760637,
+            "reporting": 0.43153763376556986
+        },
+        "51022": {
+            "total": 243.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 193.0,
+                "Ling Ye": 48.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 428.5876218808946,
+            "reporting": 0.5669785770610292
+        },
+        "51023": {
+            "total": 53.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 15.0,
+                "Ling Ye": 36.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 67.55022763707925,
+            "reporting": 0.7846013530072483
+        },
+        "51024": {
+            "total": 241.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 154.0,
+                "Ling Ye": 86.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 484.4856301207737,
+            "reporting": 0.49743477415403003
+        },
+        "51025": {
+            "total": 131.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 117.0,
+                "Ling Ye": 10.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 155.2264151087971,
+            "reporting": 0.8439285279389015
+        },
+        "51026": {
+            "total": 239.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 196.0,
+                "Ling Ye": 42.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 328.4833901170894,
+            "reporting": 0.7275862560807331
+        },
+        "51027": {
+            "total": 180.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 81.0,
+                "Ling Ye": 95.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 410.08683405877656,
+            "reporting": 0.43893142878661917
+        },
+        "51028": {
+            "total": 261.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 139.0,
+                "Ling Ye": 120.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 3604.556399008448,
+            "reporting": 0.07240835517840605
+        },
+        "51029": {
+            "total": 207.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 184.0,
+                "Ling Ye": 20.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 870.2520465231478,
+            "reporting": 0.23786212376863858
+        },
+        "51030": {
+            "total": 132.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 18.0,
+                "Ling Ye": 113.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 337.86522973988946,
+            "reporting": 0.3906883229790238
+        },
+        "51031": {
+            "total": 306.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 179.0,
+                "Ling Ye": 125.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 560.8780723595908,
+            "reporting": 0.5455731202196419
+        },
+        "51032": {
+            "total": 131.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 46.0,
+                "Ling Ye": 83.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 1393.1509358863311,
+            "reporting": 0.09403144815508235
+        },
+        "51033": {
+            "total": 104.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 82.0,
+                "Ling Ye": 20.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 108.233413662273,
+            "reporting": 0.9608862594366397
+        },
+        "51034": {
+            "total": 277.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 181.0,
+                "Ling Ye": 95.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 1203.2935437948736,
+            "reporting": 0.23020151768321995
+        },
+        "51035": {
+            "total": 251.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 172.0,
+                "Ling Ye": 79.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 438.5045542646171,
+            "reporting": 0.5723999843534878
+        },
+        "51036": {
+            "total": 216.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 77.0,
+                "Ling Ye": 135.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 352.7411831241237,
+            "reporting": 0.6123469850811075
+        },
+        "51037": {
+            "total": 225.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 111.0,
+                "Ling Ye": 114.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 1237.0311589651399,
+            "reporting": 0.1818870918241281
+        },
+        "51038": {
+            "total": 129.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 113.0,
+                "Ling Ye": 11.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 129.06844768077036,
+            "reporting": 0.9994696792128495
+        },
+        "51039": {
+            "total": 168.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 107.0,
+                "Ling Ye": 59.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 298.38841557616786,
+            "reporting": 0.5630245385887497
+        },
+        "51040": {
+            "total": 148.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 8.0,
+                "Ling Ye": 139.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 266.95069000973376,
+            "reporting": 0.5544095053457382
+        },
+        "51041": {
+            "total": 147.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 108.0,
+                "Ling Ye": 36.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 227.9594972495658,
+            "reporting": 0.6448513958559364
+        },
+        "51042": {
+            "total": 77.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 60.0,
+                "Ling Ye": 12.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 679.3100891969348,
+            "reporting": 0.11335029646185246
+        },
+        "51043": {
+            "total": 164.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 137.0,
+                "Ling Ye": 23.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 266.9404863538089,
+            "reporting": 0.6143691511171921
+        },
+        "51044": {
+            "total": 121.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 36.0,
+                "Ling Ye": 82.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 249.19971128738314,
+            "reporting": 0.48555433461341324
+        },
+        "51045": {
+            "total": 70.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 1.0,
+                "Ling Ye": 69.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 114.71458836437688,
+            "reporting": 0.6102100961880589
+        },
+        "51046": {
+            "total": 178.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 129.0,
+                "Ling Ye": 48.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 258.3774294044851,
+            "reporting": 0.6889146641417516
+        },
+        "51047": {
+            "total": 103.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 90.0,
+                "Ling Ye": 11.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 518.5451769345482,
+            "reporting": 0.19863264491032162
+        },
+        "51048": {
+            "total": 313.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 189.0,
+                "Ling Ye": 123.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 72074.31573784808,
+            "reporting": 0.004342739806763585
+        },
+        "51049": {
+            "total": 164.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 133.0,
+                "Ling Ye": 29.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 320.6812453587204,
+            "reporting": 0.5114112607880962
+        },
+        "51050": {
+            "total": 230.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 134.0,
+                "Ling Ye": 94.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 2862.5906672498845,
+            "reporting": 0.08034680006169481
+        },
+        "51051": {
+            "total": 141.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 104.0,
+                "Ling Ye": 36.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 344.2958309290583,
+            "reporting": 0.4095315346094123
+        },
+        "51052": {
+            "total": 124.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 74.0,
+                "Ling Ye": 47.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 204.16264646927505,
+            "reporting": 0.6073588981354681
+        },
+        "51053": {
+            "total": 143.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 82.0,
+                "Ling Ye": 56.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 145.2318995447768,
+            "reporting": 0.9846321672320434
+        },
+        "61001": {
+            "total": 175.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 110.0,
+                "Ling Ye": 65.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 6727.143365739629,
+            "reporting": 0.026014013747833853
+        },
+        "61002": {
+            "total": 191.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 162.0,
+                "Ling Ye": 26.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 197.85618725939014,
+            "reporting": 0.965347622662911
+        },
+        "61003": {
+            "total": 262.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 118.0,
+                "Ling Ye": 139.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 723.4714354379128,
+            "reporting": 0.36214283960141846
+        },
+        "61004": {
+            "total": 269.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 183.0,
+                "Ling Ye": 83.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 466.8396578639378,
+            "reporting": 0.5762149711762514
+        },
+        "61005": {
+            "total": 154.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 6.0,
+                "Ling Ye": 147.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 915.182323299473,
+            "reporting": 0.1682724808809566
+        },
+        "61006": {
+            "total": 263.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 169.0,
+                "Ling Ye": 92.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 294.8789265148549,
+            "reporting": 0.8918914725727307
+        },
+        "61007": {
+            "total": 154.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 138.0,
+                "Ling Ye": 13.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 333.74737410523085,
+            "reporting": 0.4614268514108029
+        },
+        "61008": {
+            "total": 239.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 142.0,
+                "Ling Ye": 97.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 264.4095819041399,
+            "reporting": 0.9039006766655228
+        },
+        "61009": {
+            "total": 317.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 190.0,
+                "Ling Ye": 126.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 6057.383784313885,
+            "reporting": 0.05233282408502804
+        },
+        "61010": {
+            "total": 143.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 74.0,
+                "Ling Ye": 66.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 172.70657687880873,
+            "reporting": 0.8279939454786694
+        },
+        "61011": {
+            "total": 160.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 133.0,
+                "Ling Ye": 27.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 343.52440407595196,
+            "reporting": 0.46576021412622726
+        },
+        "61012": {
+            "total": 124.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 9.0,
+                "Ling Ye": 113.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 226.7768495657416,
+            "reporting": 0.5467930268784026
+        },
+        "61013": {
+            "total": 273.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 156.0,
+                "Ling Ye": 117.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 9854.98442185106,
+            "reporting": 0.02770171806610755
+        },
+        "61014": {
+            "total": 94.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 21.0,
+                "Ling Ye": 68.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 280.47424394500706,
+            "reporting": 0.33514663834312963
+        },
+        "61015": {
+            "total": 248.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 153.0,
+                "Ling Ye": 92.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 540.6058085832916,
+            "reporting": 0.4587446084789717
+        },
+        "61016": {
+            "total": 229.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 119.0,
+                "Ling Ye": 108.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 461.4465949042634,
+            "reporting": 0.49626544551165397
+        },
+        "61017": {
+            "total": 191.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 162.0,
+                "Ling Ye": 24.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 211.7699654608224,
+            "reporting": 0.9019220434983504
+        },
+        "61018": {
+            "total": 255.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 129.0,
+                "Ling Ye": 123.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 3467.737200100231,
+            "reporting": 0.07353498413681103
+        },
+        "61019": {
+            "total": 242.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 191.0,
+                "Ling Ye": 49.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 333.70486949150984,
+            "reporting": 0.7251916951908818
+        },
+        "61020": {
+            "total": 263.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 182.0,
+                "Ling Ye": 79.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 680.8492722215422,
+            "reporting": 0.3862822664726624
+        },
+        "61021": {
+            "total": 262.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 189.0,
+                "Ling Ye": 72.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 4684.871936068448,
+            "reporting": 0.055924687712994525
+        },
+        "61022": {
+            "total": 106.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 15.0,
+                "Ling Ye": 91.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 484.7256216081072,
+            "reporting": 0.21868041480526335
+        },
+        "61023": {
+            "total": 197.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 126.0,
+                "Ling Ye": 67.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 492.1636539501301,
+            "reporting": 0.4002733611449528
+        },
+        "61024": {
+            "total": 178.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 115.0,
+                "Ling Ye": 60.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 318.5220803170516,
+            "reporting": 0.5588309602361687
+        },
+        "61025": {
+            "total": 179.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 31.0,
+                "Ling Ye": 146.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 188.36991545371296,
+            "reporting": 0.9502578985017628
+        },
+        "61026": {
+            "total": 122.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 12.0,
+                "Ling Ye": 108.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 223.12410330695437,
+            "reporting": 0.5467809088835338
+        },
+        "61027": {
+            "total": 289.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 170.0,
+                "Ling Ye": 119.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 763.4774159038334,
+            "reporting": 0.37853117064094277
+        },
+        "61028": {
+            "total": 182.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 173.0,
+                "Ling Ye": 8.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 208.32036136108397,
+            "reporting": 0.8736543984989418
+        },
+        "61029": {
+            "total": 203.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 187.0,
+                "Ling Ye": 12.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 273.7579915071278,
+            "reporting": 0.7415308641125624
+        },
+        "61030": {
+            "total": 148.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 46.0,
+                "Ling Ye": 102.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 489.97949466233644,
+            "reporting": 0.3020534565471815
+        },
+        "61031": {
+            "total": 204.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 166.0,
+                "Ling Ye": 37.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 1561.7953456928726,
+            "reporting": 0.13061890635197004
+        },
+        "61032": {
+            "total": 328.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 200.0,
+                "Ling Ye": 127.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 751.4183178276959,
+            "reporting": 0.4365078574983743
+        },
+        "61033": {
+            "total": 111.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 21.0,
+                "Ling Ye": 86.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 198.40188993383944,
+            "reporting": 0.5594704770051075
+        },
+        "61034": {
+            "total": 108.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 76.0,
+                "Ling Ye": 27.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 205.5302528925929,
+            "reporting": 0.5254700876393084
+        },
+        "61035": {
+            "total": 264.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 115.0,
+                "Ling Ye": 149.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 451.5864400965881,
+            "reporting": 0.5846056846692165
+        },
+        "61036": {
+            "total": 91.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 0.0,
+                "Ling Ye": 86.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 133.84788253123773,
+            "reporting": 0.6798762765541861
+        },
+        "61037": {
+            "total": 276.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 170.0,
+                "Ling Ye": 106.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 20879.044087491286,
+            "reporting": 0.013218995986763238
+        },
+        "61038": {
+            "total": 157.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 149.0,
+                "Ling Ye": 3.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 331.73883489782827,
+            "reporting": 0.4732638554311984
+        },
+        "61039": {
+            "total": 302.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 196.0,
+                "Ling Ye": 102.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 429.73375463234544,
+            "reporting": 0.7027607134523868
+        },
+        "61040": {
+            "total": 227.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 173.0,
+                "Ling Ye": 50.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 305.5393969148668,
+            "reporting": 0.7429483801175715
+        },
+        "61041": {
+            "total": 297.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 176.0,
+                "Ling Ye": 119.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 2874.3532488585333,
+            "reporting": 0.10332759208282594
+        },
+        "61042": {
+            "total": 119.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 105.0,
+                "Ling Ye": 10.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 1022.5628695197449,
+            "reporting": 0.11637426269534834
+        },
+        "61043": {
+            "total": 331.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 179.0,
+                "Ling Ye": 147.0,
+                "WRITE-IN": 5.0
+            },
+            "approx_total_voters": 1468.06074356098,
+            "reporting": 0.22546750974153476
+        },
+        "61044": {
+            "total": 107.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 9.0,
+                "Ling Ye": 95.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 174.8846121243846,
+            "reporting": 0.6118319885336597
+        },
+        "61045": {
+            "total": 211.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 153.0,
+                "Ling Ye": 55.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 357.4775702128314,
+            "reporting": 0.5902468226870204
+        },
+        "61046": {
+            "total": 178.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 166.0,
+                "Ling Ye": 10.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 650.0801221488375,
+            "reporting": 0.2738124024029863
+        },
+        "61047": {
+            "total": 239.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 192.0,
+                "Ling Ye": 44.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 860.377660586432,
+            "reporting": 0.2777849901833783
+        },
+        "61048": {
+            "total": 196.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 79.0,
+                "Ling Ye": 113.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 478.50581099834403,
+            "reporting": 0.4096084007654367
+        },
+        "61060": {
+            "total": 44.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 4.0,
+                "Ling Ye": 36.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 48.33071890155255,
+            "reporting": 0.9103940723419813
+        },
+        "61061": {
+            "total": 241.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 141.0,
+                "Ling Ye": 99.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 759.7298016207683,
+            "reporting": 0.3172180418431172
+        },
+        "61062": {
+            "total": 180.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 111.0,
+                "Ling Ye": 69.0,
+                "WRITE-IN": 0.0
+            },
+            "approx_total_voters": 290.3890792403904,
+            "reporting": 0.6198580210758962
+        },
+        "61063": {
+            "total": 162.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 92.0,
+                "Ling Ye": 68.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 442.9780945092425,
+            "reporting": 0.36570657106526505
+        },
+        "61064": {
+            "total": 123.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 70.0,
+                "Ling Ye": 52.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 193.04382427569936,
+            "reporting": 0.6371610201025396
+        },
+        "61065": {
+            "total": 171.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 137.0,
+                "Ling Ye": 33.0,
+                "WRITE-IN": 1.0
+            },
+            "approx_total_voters": 330.31671860393163,
+            "reporting": 0.5176849683017063
+        },
+        "61066": {
+            "total": 250.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 112.0,
+                "Ling Ye": 136.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 258.79204627536933,
+            "reporting": 0.966026597795768
+        },
+        "61067": {
+            "total": 143.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 33.0,
+                "Ling Ye": 108.0,
+                "WRITE-IN": 2.0
+            },
+            "approx_total_voters": 876.5534737269744,
+            "reporting": 0.16313893480107422
+        },
+        "61068": {
+            "total": 89.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 51.0,
+                "Ling Ye": 34.0,
+                "WRITE-IN": 4.0
+            },
+            "approx_total_voters": 115.58499619837579,
+            "reporting": 0.7699961320866543
+        },
+        "61069": {
+            "total": 206.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 150.0,
+                "Ling Ye": 53.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 907.9903152838418,
+            "reporting": 0.2268746665382697
+        },
+        "61100": {
+            "total": 62.0,
+            "candidates": {
+                "Alexa Avil\u00e9s": 44.0,
+                "Ling Ye": 15.0,
+                "WRITE-IN": 3.0
+            },
+            "approx_total_voters": 157.08918373833612,
+            "reporting": 0.39468026075731333
+        }
+    }
+}

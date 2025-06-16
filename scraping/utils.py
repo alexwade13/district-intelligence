@@ -45,7 +45,7 @@ def get_elections(url: str):
         election_to_link[race_title] = urljoin(url, total_tag_links[0]['href'])
     return election_to_link
 
-def get_per_ed_results(per_ad_url: str, format='dict'): 
+def get_per_ed_results(per_ad_url: str, format='grouped'): 
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts. 
 
@@ -90,12 +90,52 @@ def get_per_ed_results(per_ad_url: str, format='dict'):
     df = pd.concat(data)
     if format == 'df':
         return df
-    if format == 'dict':
+    elif format == 'nested':
         output = get_nested_dict(df)
         output['last_updated'] = str(pd.Timestamp.now())
         return output
+    elif format == 'grouped':
+        output = get_grouped_dict(df)
+        output['last_updated'] = str(pd.Timestamp.now())
     else:
         raise ValueError("Unrecognized format", format)
+
+def get_grouped_dict(df):
+    """Useful helper function to get a dictionary output with several non-nested groups.
+        - Parameters
+            - column, the col to groupby on.
+        - Returns
+            - grouped_dict: a dictionary with several separate groups. 
+        """
+    def _get_one_grouped_dict(df, column):
+        assert column in df.columns or column == 'ALL', f"Column {column} not in dataframe columns {df.columns}."
+
+        output = {}
+        for g, gdf in df.assign(ALL='all').groupby(column):
+            cand_df = gdf[[c for c in gdf.columns if not c in ["ED", "AD", "Reported %", "ElectDist", "ALL"]]]
+            total_voters = cand_df.sum(axis=1) / gdf["Reported %"] # The total voters (including those who have not been reported)
+            valid_eds = gdf.eval("`Reported %` > 0") & (cand_df.sum(axis=1) > 0) # For EDs with 0% reporting, we should drop.
+
+            group_res = {}
+            group_res['total'] = float(cand_df.sum().sum())
+            group_res['candidates'] = cand_df.sum().to_dict()
+            if not valid_eds.any():
+                group_res['approx_total_voters'] = 0
+                group_res['reporting'] = 0
+            else:
+                group_res['approx_total_voters'] = float(total_voters.fillna(0).sum())
+                group_res['reporting'] = float(np.average(gdf.loc[valid_eds]["Reported %"], weights=total_voters.loc[valid_eds]))
+            output[g] = group_res
+        
+        return output
+
+    DICT_GROUPS = ['ALL', 'AD', 'ElectDist']
+    GROUP_NAMES = ['all', 'assembly_districts', 'election_districts']
+    output = {}
+    for group, name in zip(DICT_GROUPS, GROUP_NAMES):
+        output[name] = _get_one_grouped_dict(df, group)
+    return output
+
 
 def get_nested_dict(df, subsets=[("AD", "assembly_districts"), ("ElectDist", "electoral_districts")]):
         """Useful helper function to get a nested dictionary from a dataframe.
