@@ -3,7 +3,7 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const load = () => {
-  const { data, error } = useSWR('/results/sample.json', fetcher, {
+  const { data, error } = useSWR('/results/Mayoral (FAKE DATA).json', fetcher, {
     refreshInterval: 5000,
   })
 

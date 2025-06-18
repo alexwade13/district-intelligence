@@ -42,6 +42,8 @@ const Index = () => {
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
   const [scale, setScale] = useState('Election district')
 
+  console.log(selected)
+
   const setup = () => {
     addShapes(map.current, 'election-districts', 0.5)
     addShapes(map.current, 'assembly-districts', 0.5)
@@ -128,48 +130,96 @@ const Index = () => {
   
   useEffect(() => {
     const updateSelected = () => {
-      Object.keys(shapes['election-districts']).forEach((k) => {
-        const districtResults = data.districts[k]
-        let color = '#cccccc'
-        let opacity = 0
+      if (scale == 'Election district') {
+        Object.keys(shapes['election-districts']).forEach((k) => {
+          const districtResults = data.election_districts[k]
+          let color = '#cccccc'
+          let opacity = 0
 
-        if (selectedCandidate === 'All Candidates') {
-          // Show leading candidate for each district
-          const leadingCandidate = getMaxKey(districtResults.candidates)
-          if (leadingCandidate) {
-            color = candidateColors[leadingCandidate] || '#cccccc'
-            opacity = districtResults.reporting > 0.3 ? 1 : 0 // Scale opacity based on reporting
+          if (selectedCandidate === 'All Candidates') {
+            // Show leading candidate for each district
+            const leadingCandidate = getMaxKey(districtResults.candidates)
+            if (leadingCandidate) {
+              color = candidateColors[leadingCandidate] || '#cccccc'
+              opacity = districtResults.reporting > 0.3 ? 1 : 0 // Scale opacity based on reporting
+            }
+          } else if (
+            districtResults.candidates[selectedCandidate] !== undefined
+          ) {
+            // Show only the selected candidate's results
+            const totalVotes = Object.values(districtResults.candidates).reduce(
+              (a, b) => a + b,
+              0,
+            )
+            const candidateVoteShare =
+              totalVotes > 0
+                ? districtResults.candidates[selectedCandidate] / totalVotes
+                : 0
+
+            // Show the candidate's color with opacity based on vote share and reporting
+            color = candidateColors[selectedCandidate] || '#cccccc'
+            opacity = candidateVoteShare
           }
-        } else if (
-          districtResults.candidates[selectedCandidate] !== undefined
-        ) {
-          // Show only the selected candidate's results
-          const totalVotes = Object.values(districtResults.candidates).reduce(
-            (a, b) => a + b,
-            0,
+          // If candidate not in district, keep opacity at 0 (invisible)
+          map.current.setFeatureState(
+            {
+              source: 'election-districts',
+              id: shapes['election-districts'][k].id,
+            },
+            {
+              color,
+              opacity,
+              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
+            },
           )
-          const candidateVoteShare =
-            totalVotes > 0
-              ? districtResults.candidates[selectedCandidate] / totalVotes
-              : 0
+        })
+      }
 
-          // Show the candidate's color with opacity based on vote share and reporting
-          color = candidateColors[selectedCandidate] || '#cccccc'
-          opacity = 0.3 + candidateVoteShare * 0.7 * districtResults.reporting
-        }
-        // If candidate not in district, keep opacity at 0 (invisible)
-        map.current.setFeatureState(
-          {
-            source: 'election-districts',
-            id: shapes['election-districts'][k].id,
-          },
-          {
-            color,
-            opacity,
-            'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
-          },
-        )
-      })
+      if (scale == 'Assembly district') {
+        Object.keys(shapes['assembly-districts']).forEach((k) => {
+          const districtResults = data.assembly_districts[k]
+          let color = '#cccccc'
+          let opacity = 0
+
+          if (selectedCandidate === 'All Candidates') {
+            // Show leading candidate for each district
+            const leadingCandidate = getMaxKey(districtResults.candidates)
+            if (leadingCandidate) {
+              color = candidateColors[leadingCandidate] || '#cccccc'
+              opacity = districtResults.reporting > 0.3 ? 1 : 0 // Scale opacity based on reporting
+            }
+          } else if (
+            districtResults.candidates[selectedCandidate] !== undefined
+          ) {
+            // Show only the selected candidate's results
+            const totalVotes = Object.values(districtResults.candidates).reduce(
+              (a, b) => a + b,
+              0,
+            )
+            const candidateVoteShare =
+              totalVotes > 0
+                ? districtResults.candidates[selectedCandidate] / totalVotes
+                : 0
+
+            // Show the candidate's color with opacity based on vote share and reporting
+            color = candidateColors[selectedCandidate] || '#cccccc'
+            opacity = candidateVoteShare
+          }
+          // If candidate not in district, keep opacity at 0 (invisible)
+          map.current.setFeatureState(
+            {
+              source: 'assembly-districts',
+              id: shapes['assembly-districts'][k].id,
+            },
+            {
+              color,
+              opacity,
+              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
+            },
+          )
+        })
+      }
+      
     }
 
     if (data) {
@@ -183,7 +233,7 @@ const Index = () => {
         }
       }
     }
-  }, [data, selected, selectedCandidate])
+  }, [data, selected, selectedCandidate, scale])
 
   // const zoomTo = () => {
   //   if (selected) {

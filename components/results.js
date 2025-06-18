@@ -15,16 +15,20 @@ const Results = ({ selected, scale }) => {
     let totalReporting
     let thisSelected = selected[scaleLookup[scale]]
 
-    if (!thisSelected || !data.districts[thisSelected]) {
-      Object.entries(data.districts).forEach((entry) => {
-        for (const [candidate, votes] of Object.entries(entry[1].candidates)) {
-          totals[candidate] = (totals[candidate] || 0) + votes
-        }
-      })
+    if (!thisSelected || !(data.election_districts[thisSelected] || data.assembly_districts[thisSelected])) {
+      totals = data.all.all.candidates
       totalReporting = data.reporting
     } else {
-      totals = data.districts[thisSelected].candidates
-      totalReporting = data.districts[thisSelected].reporting
+      if (scale == 'Election district') {
+        totals = data.election_districts[thisSelected].candidates
+        totalReporting = data.election_districts[thisSelected].reporting
+      }
+      if (scale == 'Assembly district') {
+        console.log('hi')
+        totals = data.assembly_districts[thisSelected].candidates
+        totalReporting = data.assembly_districts[thisSelected].reporting
+      }
+      
     }
 
     const total = Object.values(totals).reduce((a, b) => a + b, 0)
@@ -43,7 +47,7 @@ const Results = ({ selected, scale }) => {
             }}
           >
             <Box>Election Results</Box>
-            {thisSelected && data.districts[thisSelected] && (
+            {thisSelected && (scale == 'Election district' ? data.election_districts[thisSelected] : data.assembly_districts[thisSelected]) && (
               <Box sx={{ ml: 'auto' }}>
                 {thisSelected.slice(0, 2)}-{thisSelected.slice(2, 5)}
               </Box>
