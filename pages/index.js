@@ -31,7 +31,7 @@ import {
   candidateColors,
   mapStyles,
   scaleLookup,
-  raceLookup
+  raceLookup,
 } from '../components/constants'
 import load from '../components/load'
 import shapes from '../data'
@@ -39,7 +39,7 @@ import shapes from '../data'
 const Index = () => {
   const { data, error } = load(
     '/results/Mayoral (FAKE DATA).json',
-    '/results/City Council 38 (FAKE DATA).json'
+    '/results/City Council 38 (FAKE DATA).json',
   )
 
   const map = useRef()
@@ -140,7 +140,6 @@ const Index = () => {
   useEffect(() => {
     const updateSelected = () => {
       if (scale == 'Election district') {
-
         Object.keys(shapes['election-districts']).forEach((k) => {
           const districtResults = data[raceLookup[race]].election_districts[k]
           let color = '#cccccc'
@@ -158,10 +157,9 @@ const Index = () => {
               districtResults.candidates[selectedCandidate] !== undefined
             ) {
               // Show only the selected candidate's results
-              const totalVotes = Object.values(districtResults.candidates).reduce(
-                (a, b) => a + b,
-                0,
-              )
+              const totalVotes = Object.values(
+                districtResults.candidates,
+              ).reduce((a, b) => a + b, 0)
               const candidateVoteShare =
                 totalVotes > 0
                   ? districtResults.candidates[selectedCandidate] / totalVotes
@@ -217,10 +215,9 @@ const Index = () => {
               districtResults.candidates[selectedCandidate] !== undefined
             ) {
               // Show only the selected candidate's results
-              const totalVotes = Object.values(districtResults.candidates).reduce(
-                (a, b) => a + b,
-                0,
-              )
+              const totalVotes = Object.values(
+                districtResults.candidates,
+              ).reduce((a, b) => a + b, 0)
               const candidateVoteShare =
                 totalVotes > 0
                   ? districtResults.candidates[selectedCandidate] / totalVotes
@@ -326,16 +323,15 @@ const Index = () => {
         </Box>
       </Box>
       <Box sx={{ position: 'absolute', top: 0, right: 0 }}>
-        
-          <Options
-            selectedCandidate={selectedCandidate}
-            setSelectedCandidate={setSelectedCandidate}
-            scale={scale}
-            setScale={setScale}
-            race={race}
-            setRace={setRace}
-          />
-        </Box>
+        <Options
+          selectedCandidate={selectedCandidate}
+          setSelectedCandidate={setSelectedCandidate}
+          scale={scale}
+          setScale={setScale}
+          race={race}
+          setRace={setRace}
+        />
+      </Box>
       <Box
         sx={{
           position: 'absolute',

@@ -32,7 +32,7 @@ export const candidateColors = {
 }
 
 export const candidates = {
-  'Mayoral': [
+  Mayoral: [
     'Adrienne Adams',
     'Selma Bartholomew',
     'Michael Blake',
@@ -45,15 +45,12 @@ export const candidates = {
     'Scott Stringer',
     'Whitney Tilson',
   ],
-  'City Council 38': [
-    'Alexa Avilés',
-    'Ling Ye',
-  ]
+  'City Council 38': ['Alexa Avilés', 'Ling Ye'],
 }
 
 export const raceLookup = {
-  'Mayoral': 'mayoral',
-  'City Council 38': 'council'
+  Mayoral: 'mayoral',
+  'City Council 38': 'council',
 }
 
 export const mapStyles = {

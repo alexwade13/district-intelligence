@@ -12,8 +12,8 @@ const load = (path1, path2) => {
   })
 
   return {
-    data: { 'mayoral': data1, 'council': data2 },
-    error: { 'mayoral': error1, 'council': error2 },
+    data: { mayoral: data1, council: data2 },
+    error: { mayoral: error1, council: error2 },
   }
 }
 

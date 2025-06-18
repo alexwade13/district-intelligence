@@ -8,7 +8,7 @@ import load from './load'
 const Results = ({ selected, scale, race }) => {
   const { data, error } = load(
     '/results/Mayoral (FAKE DATA).json',
-    '/results/City Council 38 (FAKE DATA).json'
+    '/results/City Council 38 (FAKE DATA).json',
   )
 
   const thisData = data[raceLookup[race]]
@@ -54,21 +54,23 @@ const Results = ({ selected, scale, race }) => {
               display: 'flex',
             }}
           >
-            <Box sx={{textTransform: 'uppercase'}}>Early Results</Box>
+            <Box sx={{ textTransform: 'uppercase' }}>Early Results</Box>
             {thisSelected &&
               (scale == 'Election district'
                 ? thisData.election_districts[thisSelected]
                 : thisData.assembly_districts[thisSelected]) && (
                 <Box sx={{ ml: 'auto' }}>
-                  {scale == 'Assembly district' ? `AD ${thisSelected}` : `${thisSelected.slice(0, 2)}-${thisSelected.slice(2, 5)}`}
+                  {scale == 'Assembly district'
+                    ? `AD ${thisSelected}`
+                    : `${thisSelected.slice(0, 2)}-${thisSelected.slice(2, 5)}`}
                 </Box>
               )}
-              {!(thisSelected &&
+            {!(
+              thisSelected &&
               (scale == 'Election district'
                 ? thisData.election_districts[thisSelected]
-                : thisData.assembly_districts[thisSelected])) &&  <Box sx={{ ml: 'auto', textTransform: 'intial' }}>
-                  Total
-                </Box>}
+                : thisData.assembly_districts[thisSelected])
+            ) && <Box sx={{ ml: 'auto', textTransform: 'intial' }}>Total</Box>}
           </Box>
           <Box sx={{ mt: [3] }}>
             {sortedTotals.map((k, v) => {
