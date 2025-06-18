@@ -22,16 +22,21 @@ logger = setup_logger()
 def fetch_data():
     try:
         elections_dict = get_elections(URL_TO_QUERY)
-        for election, link in elections_dict.items():
+        logger.info(f"Success. elections_dict:\n{json.dumps(elections_dict, indent=4)}")
+    except Exception as e:
+        logger.error(f"Error fetching data on get_elections({URL_TO_QUERY}):\n{e}")
+        return False
+    for election, link in elections_dict.items():
+        try:
             results_dict = get_per_ed_results(link)
             fname = f"data/cache/{election}.json"
             with open(fname, "w") as f:
                 json.dump(results_dict, f, indent=4)
-            logger.info(f"Sucess. stored data in: {fname}")
-        return True
-    except requests.RequestException as e: 
-        logger.error(f"Error fetching data: {e}")
-        return False
+            logger.info(f"Sucess. Stored data in: {fname}")
+        except Exception as e: 
+            logger.error(f"Error fetching data on get_per_ed_results({link}):\n{e}")
+            continue
+    return True
 
 def main():
     assert POLL_INTERVAL_SECONDS >= 60, "We shouldn't pull from the BOE website more than once a minute."

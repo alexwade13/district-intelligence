@@ -4,29 +4,46 @@ from urllib.parse import urljoin
 import pandas as pd
 from io import StringIO
 import numpy as np
+import random
+import time
+
+def safe_get_request(url, avg_wait_secs=1.0):
+    """Requests from a url but ensures a random amount of time between requests. 
+    
+    - Parameters
+        - url: the url being requested.
+        - avg_wait_secs: We will wait between 0.5-1.5x avg_wait_secs before requesting.
+    - Returns
+        - response: the output from requests.get(url)
+    """
+    time.sleep(avg_wait_secs * (0.5 + random.random()))
+    return requests.get(url)
 
 def get_elections(url: str):
     """Given the root url, ie https://enr.boenyc.gov, output a dict, from election name to per_ad link, ie: 
     {"State Senator": "https://enr.boenyc.gov/CD27280AD0.html", ...}
     
     The values returned are able to be passed directly in get_per_ed_results below. 
+    
+    TODO @chrispan-68: some sub-pages don't follow the format, ie: https://web.archive.org/web/20210625211942/https://web.enrboenyc.us/OF18AD0PY1.html
 
     - Parameters
         - url: root url of the boenyc election night results website.
     - Returns
         - election_to_link: the dictionary described above. 
     """
-    response = requests.get(url)
+    response = safe_get_request(url)
     soup = BeautifulSoup(response.text, "html.parser")
     races_table = soup.find_all("table")[-1] # this table contains each race with AD Details links.
 
     race_to_url = {}
     for row in races_table.find_all('tr'):
+
         cells = row.find_all('td')
         if len(cells) < 7:
             continue  # skip rows that don’t match expected format
 
-        race_title = cells[2].get_text(strip=True)
+        race_title = f"{cells[2].get_text(strip=True)} ({cells[3].get_text(strip=True)})"
         ad_link_tag = cells[6].find('a')
 
         assert ad_link_tag, f"Couldn't find AD Details for row: {row.prettify()}"
@@ -37,11 +54,12 @@ def get_elections(url: str):
     election_to_link = {} # we still need to click on the 'Total' link in the AD Details page.
     for race_title, sub_link in race_to_url.items():
         sub_url = urljoin(url, sub_link)
-        sub_response = requests.get(sub_url)
+        sub_response = safe_get_request(sub_url)
         sub_soup = BeautifulSoup(sub_response.text, "html.parser")
 
         total_tag_links = [tag_link for tag_link in sub_soup.find_all("a", href=True) if tag_link.text == 'Total']
-        assert len(total_tag_links) == 1, f"Expected 1 'Total' sublink but found {len(total_tag_links)} in {sub_url}"
+        if len(total_tag_links) != 1:
+            continue
         election_to_link[race_title] = urljoin(url, total_tag_links[0]['href'])
     return election_to_link
 
@@ -60,14 +78,14 @@ def get_per_ed_results(per_ad_url: str, format='grouped'):
     TODO @chrispan-68: Use regex for identifying the link. 
     TODO @chrispan-68: Add asserts and readable errors.
     """
-    response = requests.get(per_ad_url)
+    response = safe_get_request(per_ad_url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
     data = []
     for link in soup.find_all("a", href=True):
         if link.text.startswith("AD"):
             subpage = urljoin(per_ad_url, link["href"]) # one AD's results.
-            subpage_df = pd.read_html(StringIO(requests.get(subpage).text))[-1].dropna(
+            subpage_df = pd.read_html(StringIO(safe_get_request(subpage).text))[-1].dropna(
                 axis=1, how="all"
             )
             columns = ["ED", "Reported %"] + list(subpage_df.iloc[0][2:] + " " + subpage_df.iloc[1][2:])
