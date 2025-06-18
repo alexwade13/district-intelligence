@@ -15,7 +15,13 @@ const Results = ({ selected, scale }) => {
     let totalReporting
     let thisSelected = selected[scaleLookup[scale]]
 
-    if (!thisSelected || !(data.election_districts[thisSelected] || data.assembly_districts[thisSelected])) {
+    if (
+      !thisSelected ||
+      !(
+        data.election_districts[thisSelected] ||
+        data.assembly_districts[thisSelected]
+      )
+    ) {
       totals = data.all.all.candidates
       totalReporting = data.reporting
     } else {
@@ -28,7 +34,6 @@ const Results = ({ selected, scale }) => {
         totals = data.assembly_districts[thisSelected].candidates
         totalReporting = data.assembly_districts[thisSelected].reporting
       }
-      
     }
 
     const total = Object.values(totals).reduce((a, b) => a + b, 0)
@@ -47,11 +52,14 @@ const Results = ({ selected, scale }) => {
             }}
           >
             <Box>Election Results</Box>
-            {thisSelected && (scale == 'Election district' ? data.election_districts[thisSelected] : data.assembly_districts[thisSelected]) && (
-              <Box sx={{ ml: 'auto' }}>
-                {thisSelected.slice(0, 2)}-{thisSelected.slice(2, 5)}
-              </Box>
-            )}
+            {thisSelected &&
+              (scale == 'Election district'
+                ? data.election_districts[thisSelected]
+                : data.assembly_districts[thisSelected]) && (
+                <Box sx={{ ml: 'auto' }}>
+                  {thisSelected.slice(0, 2)}-{thisSelected.slice(2, 5)}
+                </Box>
+              )}
           </Box>
           <Box sx={{ mt: [3] }}>
             {sortedTotals.map((k, v) => {

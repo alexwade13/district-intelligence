@@ -127,7 +127,6 @@ const Index = () => {
     })
   }, [map.current, scale])
 
-  
   useEffect(() => {
     const updateSelected = () => {
       if (scale == 'Election district') {
@@ -219,7 +218,6 @@ const Index = () => {
           )
         })
       }
-      
     }
 
     if (data) {
