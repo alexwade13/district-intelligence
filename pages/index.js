@@ -48,10 +48,12 @@ const Index = () => {
   const [scale, setScale] = useState('Election district')
   const [race, setRace] = useState('Mayoral')
 
-  const setup = () => {
+  const setup = async () => {
     addShapes(map.current, 'election-districts', 0.5)
     addShapes(map.current, 'assembly-districts', 0.5)
     addLabels(map.current)
+    const image = await map.current.loadImage('/patterns/cross-hatch.png')
+    map.current.addImage('pattern', image.data)
   }
 
   useEffect(() => {
@@ -66,6 +68,7 @@ const Index = () => {
     map.current.on('load', () => {
       setup()
     })
+
 
     return () => map.current.remove()
   }, [])
@@ -209,7 +212,7 @@ const Index = () => {
               const leadingCandidate = getMaxKey(districtResults.candidates)
               if (leadingCandidate) {
                 color = candidateColors[leadingCandidate] || '#cccccc'
-                opacity = districtResults.reporting > 0.1 ? 1 : 0 // Scale opacity based on reporting
+                opacity = districtResults.reporting > 0.3 ? 1 : 0 // Scale opacity based on reporting
               }
             } else if (
               districtResults.candidates[selectedCandidate] !== undefined
@@ -319,7 +322,7 @@ const Index = () => {
             width: ['calc(100vw)', '400px', '400px', '400px'],
           }}
         >
-          <Results selected={selected} scale={scale} race={race} />
+          <Results selected={selected} scale={scale} race={race} setSelectedCandidate={setSelectedCandidate}/>
         </Box>
       </Box>
       <Box sx={{ position: 'absolute', top: 0, right: 0 }}>
@@ -342,9 +345,21 @@ const Index = () => {
         }}
       >
         <Image
-          sx={{ mr: [5], width: 200, height: 200 }}
+          sx={{ mb: [-1], mr: [5], width: 200, height: 200 }}
           src='/logos/nycdsa-square-transparent.png'
         />
+
+      </Box>
+       <Box
+        sx={{
+          position: 'absolute',
+          bottom: 0,
+          let: 0,
+          zIndex: 1000,
+          borderRadius: 2,
+        }}
+      >
+        <Box sx={{textAlign: 'center', ml: [5], mb: [6], fontSize: [4, 4, 4, 4], fontFamily: 'heading'}}>JOIN DSA</Box>
       </Box>
       <Box
         id='map'

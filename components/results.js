@@ -5,7 +5,7 @@ import { formatPercent, formatDate } from './utils'
 import { color } from 'd3-color'
 import load from './load'
 
-const Results = ({ selected, scale, race }) => {
+const Results = ({ selected, setSelectedCandidate, scale, race }) => {
   const { data, error } = load(
     '/results/Mayoral (FAKE DATA).json',
     '/results/City Council 38 (FAKE DATA).json',
@@ -104,7 +104,9 @@ const Results = ({ selected, scale, race }) => {
                         sx={{
                           zIndex: 2,
                           fontSize: [3, 3, 3, 3],
+                          cursor: 'pointer'
                         }}
+                        onClick={() => setSelectedCandidate(k[0])}
                       >
                         {k[0]}
                       </Box>
