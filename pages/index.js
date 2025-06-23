@@ -362,13 +362,14 @@ const Index = () => {
           sx={{
             textAlign: 'center',
             ml: [2, 5, 5, 5],
-            fontSize: [3, 4, 4, 4],
+            fontSize: [3, 5, 5, 5],
             fontFamily: 'heading',
             bg: 'black',
             borderRadius: '2px',
             color: 'white',
             px: ['5px', '10px', '10px', '10px'],
-            py: [1],
+            pt: [1],
+            pb: ['6px'],
             '&:hover': {
               color: 'rgb(200,200,200)',
               textDecoration: 'none',
