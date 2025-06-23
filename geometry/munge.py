@@ -48,7 +48,7 @@ grouped['id'] = grouped.index
 grouped.to_json(f'data/shapes/assembly_districts.json', orient='index')
 
 # load the geometry
-geojson_path = 'geometry/raw/districts-all.geojson'
+geojson_path = 'geometry/raw/districts-all-25b.geojson'
 gdf = gpd.read_file(geojson_path)
 gdf.rename(columns={'ElectDist': 'election_district'}, inplace=True)
 
