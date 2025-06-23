@@ -350,7 +350,7 @@ const Index = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: [4, 6, 6, 6],
+          bottom: ['27px', 6, 6, 6],
           left: ['initial', 0, 0, 0],
           right: [4, 'initial', 'initial', 'initial'],
           zIndex: 1000,
@@ -362,12 +362,12 @@ const Index = () => {
           sx={{
             textAlign: 'center',
             ml: [2, 5, 5, 5],
-            fontSize: [3, 5, 5, 5],
+            fontSize: [4, 5, 5, 5],
             fontFamily: 'heading',
             bg: 'black',
             borderRadius: '2px',
             color: 'white',
-            px: ['5px', '10px', '10px', '10px'],
+            px: ['10px', '10px', '10px', '10px'],
             pt: [1],
             pb: ['6px'],
             '&:hover': {
