@@ -350,9 +350,9 @@ const Index = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom: [9, 6, 6, 6],
+          bottom: [4, 6, 6, 6],
           left: ['initial', 0, 0, 0],
-          right: [3, 'initial', 'initial', 'initial'],
+          right: [4, 'initial', 'initial', 'initial'],
           zIndex: 1000,
           borderRadius: 2,
         }}

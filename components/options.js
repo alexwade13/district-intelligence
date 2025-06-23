@@ -41,6 +41,7 @@ const Options = ({
               id='race-select'
               value={race}
               onChange={(e) => setRace(e.target.value)}
+              sx={{width: ['50%', '100%', '100%', '100%']}}
             >
               <option>Mayoral</option>
               <option>City Council 38</option>
