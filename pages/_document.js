@@ -32,6 +32,14 @@ class MyDocument extends Document {
           <meta name='twitter:description' content={description} />
           {/*<meta name='twitter:image' content={card} />*/}
           <meta name='twitter:card' content='summary_large_image' />
+          <style>{`
+            html, body {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              overflow: hidden;
+            }
+          `}</style>
         </Head>
         <body>
           <InitializeColorMode />
