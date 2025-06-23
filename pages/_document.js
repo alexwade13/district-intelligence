@@ -12,7 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title>{title}</title>
           <meta name='description' content={description} />
           <link
             rel='alternate icon'
@@ -36,7 +35,6 @@ class MyDocument extends Document {
             html, body {
               margin: 0;
               padding: 0;
-              height: 100%;
               overflow: hidden;
             }
           `}</style>

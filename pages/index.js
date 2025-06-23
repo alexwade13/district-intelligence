@@ -119,15 +119,25 @@ const Index = () => {
   useEffect(() => {
     if (!map.current) return
 
-    const layers = ['election-district', 'assembly-district']
+    const update = () => {
+      const layers = ['election-district', 'assembly-district']
 
-    updateShapeVisibility(map.current, `${scaleLookup[scale]}s`, 'visible')
+      updateShapeVisibility(map.current, `${scaleLookup[scale]}s`, 'visible')
 
-    layers.forEach((l) => {
-      if (!(l == scaleLookup[scale])) {
-        updateShapeVisibility(map.current, `${l}s`, 'none')
-      }
-    })
+      layers.forEach((l) => {
+        if (!(l == scaleLookup[scale])) {
+          updateShapeVisibility(map.current, `${l}s`, 'none')
+        }
+      })
+    }
+
+    if (!map.current.isStyleLoaded()) {
+      map.current.once('idle', () => {
+        update()
+      })
+    } else {
+      update()
+    }
   }, [map.current, scale])
 
   useEffect(() => {
@@ -371,6 +381,8 @@ const Index = () => {
       <Box
         id='map'
         sx={{
+          touchAction: 'pan-x pan-y',
+          userSelect: 'none',
           zIndex: -1,
           position: 'absolute',
           top: 0,
