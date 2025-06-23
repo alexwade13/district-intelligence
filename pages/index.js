@@ -59,7 +59,7 @@ const Index = () => {
       style: mapStyles.monochrome,
       center: [-73.956, 40.7228],
       zoom: 10.4,
-      minZoom: 10,
+      minZoom: 9,
     })
 
     map.current.on('load', () => {
