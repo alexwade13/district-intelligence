@@ -19,9 +19,18 @@ const load = () => {
     },
   )
 
+  const { data: data3, error: error3 } = useSWR(
+    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/status.json',
+    fetcher,
+    {
+      refreshInterval: 5000,
+    },
+  )
+
+
   return {
-    data: { mayoral: data1, council: data2 },
-    error: { mayoral: error1, council: error2 },
+    data: { mayoral: data1, council: data2, status: data3 },
+    error: { mayoral: error1, council: error2, status: error3 },
   }
 }
 

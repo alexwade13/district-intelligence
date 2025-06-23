@@ -287,6 +287,13 @@ const Index = () => {
 
   return (
     <>
+      {(data.status && data.status.error) && <Box sx={{position: 'absolute', top: 0, left: 0, zIndex: 2000}}>
+        <Box sx={{bg: 'rgb(255,255,255,0.9)', width: '100vw', height: '100vh'}}>
+          <Box sx={{fontFamily: 'heading', lineHeight: '1.2em', letterSpacing: 'heading', fontSize: [5, 6, 6, 6], position: 'absolute', textAlign: 'center', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
+            Sorry, we're currently experiencing technical difficulties
+          </Box>
+        </Box>
+      </Box>}
       <Box
         sx={{
           position: 'absolute',

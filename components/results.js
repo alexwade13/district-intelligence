@@ -12,6 +12,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
   const [showResults, setShowResults] = useState(true)
 
   const thisData = data[raceLookup[race]]
+  const thisStatus = data.status
 
   if (!thisData) {
     return (
@@ -77,7 +78,6 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
                 : thisData.assembly_districts[thisSelected]) && (
                 <Box
                   sx={{
-                    display: ['none', 'initial', 'initial', 'initial'],
                     ml: 'auto',
                   }}
                 >
@@ -94,8 +94,8 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
             ) && (
               <Box
                 sx={{
-                  display: ['none', 'initial', 'initial', 'initial'],
                   ml: 'auto',
+                  display: ['none', 'initial', 'initial', 'initial'],
                   textTransform: 'intial',
                 }}
               >
@@ -107,7 +107,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               sx={{
                 cursor: 'pointer',
                 ml: 'auto',
-                mt: [-2],
+                mt: ['-4px', -2, -2, -2],
                 display: ['initial', 'none', 'none', 'none'],
               }}
             >
@@ -188,7 +188,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               {formatPercent(totalReporting)} REPORTING
             </Box>
             <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
-              LAST UPDATED {formatDate(thisData.last_updated)}
+              LAST UPDATED {formatDate(thisStatus ? thisStatus.last_updated : '')}
             </Box>
           </Box>
         </Box>
