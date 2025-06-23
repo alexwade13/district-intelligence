@@ -16,7 +16,7 @@ const addShapes = (map, key, width) => {
         'case',
         ['boolean', ['feature-state', 'usePattern'], false],
         '#00000000',
-        ['coalesce', ['feature-state', 'color'], '#cccccc']
+        ['coalesce', ['feature-state', 'color'], '#cccccc'],
       ],
     },
     layout: {

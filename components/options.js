@@ -50,6 +50,7 @@ const Options = ({
       </Box>
       <Box
         sx={{
+          display: ['none', 'block', 'block', 'block'],
           borderRadius: [0, '2px', '2px', '2px'],
           bg: 'rgb(255,255,255,0.9)',
           mr: [0, 4, 4, 4],

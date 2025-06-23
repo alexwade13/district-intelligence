@@ -1,4 +1,6 @@
-import { Box } from 'theme-ui'
+import { useState } from 'react'
+import { Box, IconButton } from 'theme-ui'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Row, Column } from './'
 import { candidateColors, scaleLookup, raceLookup } from './constants'
 import { formatPercent, formatDate } from './utils'
@@ -6,15 +8,28 @@ import { color } from 'd3-color'
 import load from './load'
 
 const Results = ({ selected, setSelectedCandidate, scale, race }) => {
-  const { data, error } = load(
-    '/results/Mayoral (FAKE DATA).json',
-    '/results/City Council 38 (FAKE DATA).json',
-  )
+  const { data, error } = load()
+  const [showResults, setShowResults] = useState(true)
 
   const thisData = data[raceLookup[race]]
 
   if (!thisData) {
-    return <></>
+    return (
+      <>
+        <Box sx={{ px: [4], py: [4] }}>
+          <Box
+            sx={{
+              fontSize: [3, 3, 3, 3],
+              fontFamily: 'heading',
+              letterSpacing: 'heading',
+              display: 'flex',
+            }}
+          >
+            LOADING...
+          </Box>
+        </Box>
+      </>
+    )
   } else {
     let totals = {}
     let totalReporting
@@ -52,6 +67,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               fontFamily: 'heading',
               letterSpacing: 'heading',
               display: 'flex',
+              mb: [2],
             }}
           >
             <Box sx={{ textTransform: 'uppercase' }}>Early Results</Box>
@@ -59,7 +75,12 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               (scale == 'Election district'
                 ? thisData.election_districts[thisSelected]
                 : thisData.assembly_districts[thisSelected]) && (
-                <Box sx={{ ml: 'auto' }}>
+                <Box
+                  sx={{
+                    display: ['none', 'initial', 'initial', 'initial'],
+                    ml: 'auto',
+                  }}
+                >
                   {scale == 'Assembly district'
                     ? `AD ${thisSelected}`
                     : `${thisSelected.slice(0, 2)}-${thisSelected.slice(2, 5)}`}
@@ -70,9 +91,31 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               (scale == 'Election district'
                 ? thisData.election_districts[thisSelected]
                 : thisData.assembly_districts[thisSelected])
-            ) && <Box sx={{ ml: 'auto', textTransform: 'intial' }}>Total</Box>}
+            ) && (
+              <Box
+                sx={{
+                  display: ['none', 'initial', 'initial', 'initial'],
+                  ml: 'auto',
+                  textTransform: 'intial',
+                }}
+              >
+                Total
+              </Box>
+            )}
+            <IconButton
+              onClick={() => setShowResults((prev) => !prev)}
+              sx={{
+                cursor: 'pointer',
+                ml: 'auto',
+                mt: [-2],
+                display: ['initial', 'none', 'none', 'none'],
+              }}
+            >
+              {showResults && <ChevronUp size={28} />}
+              {!showResults && <ChevronDown size={28} />}
+            </IconButton>
           </Box>
-          <Box sx={{ mt: [3] }}>
+          <Box sx={{ display: showResults ? 'initial' : 'none', mt: [4] }}>
             {sortedTotals.map((k, v) => {
               return (
                 <Box key={k} sx={{ mb: [2] }}>
@@ -104,7 +147,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
                         sx={{
                           zIndex: 2,
                           fontSize: [3, 3, 3, 3],
-                          cursor: 'pointer'
+                          cursor: 'pointer',
                         }}
                         onClick={() => setSelectedCandidate(k[0])}
                       >
@@ -137,7 +180,8 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
             sx={{
               zIndex: 2,
               fontSize: [3, 3, 3, 3],
-              mt: [5],
+              mt: [4],
+              display: [showResults ? 'block' : 'none'],
             }}
           >
             <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
