@@ -82,7 +82,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
                 >
                   {scale == 'Assembly district'
                     ? `AD ${thisSelected}`
-                    : `${thisSelected.slice(0, 2)}-${thisSelected.slice(2, 5)}`}
+                    : `ED ${thisSelected.slice(0, 2)}-${thisSelected.slice(2, 5)}`}
                 </Box>
               )}
             {!(
@@ -98,7 +98,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
                   textTransform: 'intial',
                 }}
               >
-                Total
+                ALL {scale == 'Assembly district' ? 'ADS' : 'EDS'}
               </Box>
             )}
             <IconButton

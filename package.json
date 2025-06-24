@@ -16,6 +16,7 @@
     "@theme-ui/presets": "^0.17.2",
     "d3-color": "^3.1.0",
     "d3-format": "^3.1.0",
+    "d3-interpolate": "^3.0.1",
     "d3-scale": "^4.0.2",
     "d3-scale-chromatic": "^3.1.0",
     "d3-time-format": "^4.1.0",

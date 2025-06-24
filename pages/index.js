@@ -3,6 +3,8 @@ import { Box, Container, IconButton, Switch, Image, Link } from 'theme-ui'
 import { Search, X, ChevronUp, ChevronDown } from 'lucide-react'
 import { Themed } from '@theme-ui/mdx'
 import maplibregl from 'maplibre-gl'
+import { scaleLinear } from 'd3-scale'
+import { interpolateLab } from 'd3-interpolate'
 import {
   Row,
   Column,
@@ -44,14 +46,25 @@ const Index = () => {
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
   const [scale, setScale] = useState('Assembly district')
   const [race, setRace] = useState('Mayoral')
+  const [candidateColorScales, setCandidateColorScales] = useState({})
 
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
     addShapes(map.current, 'assembly-districts', 0.25)
     addLabels(map.current)
-    const image = await map.current.loadImage('/patterns/cross-hatch.png')
-    map.current.addImage('pattern', image.data)
   }
+
+  useEffect(() => {
+    const candidateColorScales = {}
+    candidates[race].forEach((d) => {
+      candidateColorScales[d] = scaleLinear()
+        .domain([0, 1])
+        .interpolate(interpolateLab)
+        .range(['white', candidateColors[d]])
+    })
+
+    setCandidateColorScales(candidateColorScales)
+  }, [race])
 
   useEffect(() => {
     map.current = new maplibregl.Map({
@@ -166,17 +179,16 @@ const Index = () => {
               districtResults.candidates[selectedCandidate] !== undefined
             ) {
               // Show only the selected candidate's results
-              const totalVotes = Object.values(
-                districtResults.candidates,
-              ).reduce((a, b) => a + b, 0)
+              const totalVotes = districtResults.total
               const candidateVoteShare =
                 totalVotes > 0
                   ? districtResults.candidates[selectedCandidate] / totalVotes
                   : 0
 
               // Show the candidate's color with opacity based on vote share and reporting
-              color = candidateColors[selectedCandidate] || '#cccccc'
-              opacity = candidateVoteShare
+              color =
+                candidateColorScales[selectedCandidate](candidateVoteShare)
+              opacity = 1
             }
             // If candidate not in district, keep opacity at 0 (invisible)
             map.current.setFeatureState(
@@ -224,17 +236,16 @@ const Index = () => {
               districtResults.candidates[selectedCandidate] !== undefined
             ) {
               // Show only the selected candidate's results
-              const totalVotes = Object.values(
-                districtResults.candidates,
-              ).reduce((a, b) => a + b, 0)
+              const totalVotes = districtResults.total
               const candidateVoteShare =
                 totalVotes > 0
                   ? districtResults.candidates[selectedCandidate] / totalVotes
                   : 0
 
               // Show the candidate's color with opacity based on vote share and reporting
-              color = candidateColors[selectedCandidate] || '#cccccc'
-              opacity = candidateVoteShare
+              color =
+                candidateColorScales[selectedCandidate](candidateVoteShare)
+              opacity = 1
             }
             // If candidate not in district, keep opacity at 0 (invisible)
             map.current.setFeatureState(
@@ -287,13 +298,29 @@ const Index = () => {
 
   return (
     <>
-      {(data.status && data.status.error) && <Box sx={{position: 'absolute', top: 0, left: 0, zIndex: 2000}}>
-        <Box sx={{bg: 'rgb(255,255,255,0.9)', width: '100vw', height: '100vh'}}>
-          <Box sx={{fontFamily: 'heading', lineHeight: '1.2em', letterSpacing: 'heading', fontSize: [5, 6, 6, 6], position: 'absolute', textAlign: 'center', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
-            Sorry, we're currently experiencing technical difficulties
+      {data.status && data.status.error && (
+        <Box sx={{ position: 'absolute', top: 0, left: 0, zIndex: 2000 }}>
+          <Box
+            sx={{ bg: 'rgb(255,255,255,0.9)', width: '100vw', height: '100vh' }}
+          >
+            <Box
+              sx={{
+                fontFamily: 'heading',
+                lineHeight: '1.2em',
+                letterSpacing: 'heading',
+                fontSize: [5, 6, 6, 6],
+                position: 'absolute',
+                textAlign: 'center',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              Sorry, we're currently experiencing technical difficulties
+            </Box>
           </Box>
         </Box>
-      </Box>}
+      )}
       <Box
         sx={{
           position: 'absolute',
@@ -369,7 +396,7 @@ const Index = () => {
           sx={{
             textAlign: 'center',
             ml: [2, 5, 5, 5],
-            fontSize: [20, 5, 5, 5],
+            fontSize: [20, 32, 32, 32],
             fontFamily: 'heading',
             bg: 'black',
             borderRadius: '2px',

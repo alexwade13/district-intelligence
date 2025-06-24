@@ -27,7 +27,6 @@ const load = () => {
     },
   )
 
-
   return {
     data: { mayoral: data1, council: data2, status: data3 },
     error: { mayoral: error1, council: error2, status: error3 },
