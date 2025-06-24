@@ -23,6 +23,12 @@ class MyDocument extends Document {
             type='image/svg+xml'
             href='/favicon/nycdsa-red-circle.svg'
           />
+          <link rel='mask-icon' href='/favicon/nycdsa-red-circle.svg' />
+          <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/favicon/nycdsa-red-circle-180x180.png'
+          />
           <meta property='og:title' content={title} />
           <meta property='og:description' content={description} />
           {/*<meta property='og:image' content={card} />*/}

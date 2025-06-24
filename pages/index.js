@@ -13,7 +13,7 @@ import {
   Autocomplete,
   Results,
   Options,
-  Colorbar
+  Colorbar,
 } from '../components'
 import { addLabels, addShapes } from '../components/layers'
 import {
@@ -42,8 +42,6 @@ import shapes from '../data'
 
 const Index = () => {
   const { data, error } = load()
-
-
 
   const map = useRef()
   const [selected, setSelected] = useState({})
@@ -371,28 +369,32 @@ const Index = () => {
           setRace={setRace}
         />
       </Box>
-      {(selectedCandidate && candidateColorScales[selectedCandidate]) && <Box
-        sx={{
-          position: 'absolute',
-          right: ['24px'],
-          top: ['380px'],
-          zIndex: 5000,
-          color: 'black',
-          fontSize: [0, 0, 0, 1],
-          fontFamily: 'heading',
-          textTransform: 'uppercase',
-          letterSpacing: 'mono',
-          display: ['none', 'block', 'block', 'block']
-        }}
-      >
-        <Colorbar
-          horizontal={true}
-          bottom={true}
-          colormap={range(0, 1, 0.1).map(candidateColorScales[selectedCandidate])}
-          clim={[0, 1]}
-          format={(d) => `${d * 100}%`}
-        />
-      </Box>}
+      {selectedCandidate && candidateColorScales[selectedCandidate] && (
+        <Box
+          sx={{
+            position: 'absolute',
+            right: ['24px'],
+            top: ['380px'],
+            zIndex: 5000,
+            color: 'black',
+            fontSize: [0, 0, 0, 1],
+            fontFamily: 'heading',
+            textTransform: 'uppercase',
+            letterSpacing: 'mono',
+            display: ['none', 'block', 'block', 'block'],
+          }}
+        >
+          <Colorbar
+            horizontal={true}
+            bottom={true}
+            colormap={range(0, 1, 0.1).map(
+              candidateColorScales[selectedCandidate],
+            )}
+            clim={[0, 1]}
+            format={(d) => `${d * 100}%`}
+          />
+        </Box>
+      )}
       <Box
         sx={{
           position: 'absolute',
