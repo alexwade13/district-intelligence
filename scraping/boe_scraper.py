@@ -116,7 +116,7 @@ def main():
         "--poll-interval",
         type=int,
         help="How often to poll the website and attempt to refresh data (seconds).",
-        default=120,
+        default=300,
     )
     parser.add_argument(
         "--output",
