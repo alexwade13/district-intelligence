@@ -12,7 +12,7 @@ const load = () => {
   )
 
   const { data: data2, error: error2 } = useSWR(
-    '/results/City Council 38 (FAKE DATA).json',
+    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/City+Council+38+(FAKE+DATA).json',
     fetcher,
     {
       refreshInterval: 5000,
