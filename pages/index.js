@@ -5,6 +5,7 @@ import { Themed } from '@theme-ui/mdx'
 import maplibregl from 'maplibre-gl'
 import { scaleLinear } from 'd3-scale'
 import { interpolateLab } from 'd3-interpolate'
+import { range } from 'd3-array'
 import {
   Row,
   Column,
@@ -12,6 +13,7 @@ import {
   Autocomplete,
   Results,
   Options,
+  Colorbar
 } from '../components'
 import { addLabels, addShapes } from '../components/layers'
 import {
@@ -41,12 +43,17 @@ import shapes from '../data'
 const Index = () => {
   const { data, error } = load()
 
+
+
   const map = useRef()
   const [selected, setSelected] = useState({})
   const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
   const [scale, setScale] = useState('Assembly district')
   const [race, setRace] = useState('Mayoral')
   const [candidateColorScales, setCandidateColorScales] = useState({})
+
+  console.log(candidateColorScales)
+  console.log(candidateColorScales[selectedCandidate])
 
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
@@ -364,6 +371,28 @@ const Index = () => {
           setRace={setRace}
         />
       </Box>
+      {(selectedCandidate && candidateColorScales[selectedCandidate]) && <Box
+        sx={{
+          position: 'absolute',
+          right: ['24px'],
+          top: ['380px'],
+          zIndex: 5000,
+          color: 'black',
+          fontSize: [0, 0, 0, 1],
+          fontFamily: 'heading',
+          textTransform: 'uppercase',
+          letterSpacing: 'mono',
+          display: ['none', 'block', 'block', 'block']
+        }}
+      >
+        <Colorbar
+          horizontal={true}
+          bottom={true}
+          colormap={range(0, 1, 0.1).map(candidateColorScales[selectedCandidate])}
+          clim={[0, 1]}
+          format={(d) => `${d * 100}%`}
+        />
+      </Box>}
       <Box
         sx={{
           position: 'absolute',
