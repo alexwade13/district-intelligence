@@ -188,7 +188,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               {formatPercent(totalReporting)} REPORTING
             </Box>
             <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
-              LAST UPDATED {formatDate(thisStatus ? thisStatus.last_updated : '')}
+              LAST UPDATED {formatDate(thisData ? thisData.last_updated : '')}
             </Box>
           </Box>
         </Box>
