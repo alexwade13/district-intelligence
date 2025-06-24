@@ -152,5 +152,5 @@ export const formatPercent = (v) => {
 
 export const formatDate = (date) => {
   date = new Date(date)
-  return date.toLocaleTimeString()
+  return date.toLocaleString()
 }
