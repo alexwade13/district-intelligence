@@ -70,7 +70,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               mb: [2],
             }}
           >
-            <Box sx={{ textTransform: 'uppercase' }}>Early Results</Box>
+            <Box sx={{ textTransform: 'uppercase' }}>1st Round Results</Box>
             {thisSelected &&
               (scale == 'Election district'
                 ? thisData.election_districts[thisSelected]
@@ -187,7 +187,10 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               {formatPercent(totalReporting)} REPORTING
             </Box>
             <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
-              LAST UPDATED {formatDate(thisData ? thisData.last_updated : '')}
+              LAST UPDATED: {formatDate(thisData ? thisData.last_updated : '')}
+            </Box>
+            <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
+              DATA SOURCE: NYC BOE
             </Box>
           </Box>
         </Box>
