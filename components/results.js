@@ -12,7 +12,6 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
   const [showResults, setShowResults] = useState(true)
 
   const thisData = data[raceLookup[race]]
-  const thisStatus = data.status
 
   if (!thisData) {
     return (
