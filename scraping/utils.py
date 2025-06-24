@@ -144,7 +144,7 @@ def get_elections(url: str, whitelist=None):
     return election_to_link
 
 
-def get_election_results(per_ad_url: str, format="grouped", incomplete_okay=False):
+def get_election_results(per_ad_url: str, format="grouped"):
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts.
 
@@ -153,7 +153,6 @@ def get_election_results(per_ad_url: str, format="grouped", incomplete_okay=Fals
     - Parameters
         - per_ad_url: the url of the subpage with AD totals, ie: https://enr.boenyc.gov/CD27280AD0.html
         - format: 'dict' or 'df', depending on whether you want to do get_nested_dict post-formatting
-        - incomplete_okay: sometimes, in the archive full results aren't cached, this toggles whether to return partial results or throw on any error.
     - Returns
         - df: Dataframe consisting of ElectDist (XXYY) where XX is AD, and YYY is the ED, with columns for each candidate.
 

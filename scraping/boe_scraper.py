@@ -33,23 +33,19 @@ logger = setup_logger()
 
 def gen_dummy_data():
     elect_dists = json.load(open("data/shapes/districts.json", "r")).keys()
-    results_dict = get_grouped_dict(
-        pd.DataFrame(
-            {
-                "ElectDist": elect_dists,
-                "Reported %": np.random.rand(len(elect_dists)),
-                "Nicola (Democratic)": np.round(np.random.rand(len(elect_dists)) * 100),
-                "Jeremy (Democratic)": np.round(np.random.rand(len(elect_dists)) * 80),
-                "Chris (Republican >:) )": np.round(np.random.rand(len(elect_dists)) * 60),
-                "WRITE-IN": np.round(np.random.rand(len(elect_dists)) * 5),
-            }
-        ).assign(
-            AD=lambda df: df.ElectDist.str[:2].astype(int),
-            ED=lambda df: df.ElectDist.str[2:].astype(int),
-        )
+    return pd.DataFrame(
+        {
+            "ElectDist": elect_dists,
+            "Reported %": np.random.rand(len(elect_dists)),
+            "Nicola (Democratic)": np.round(np.random.rand(len(elect_dists)) * 100),
+            "Jeremy (Democratic)": np.round(np.random.rand(len(elect_dists)) * 80),
+            "Chris (Republican >:) )": np.round(np.random.rand(len(elect_dists)) * 60),
+            "WRITE-IN": np.round(np.random.rand(len(elect_dists)) * 5),
+        }
+    ).assign(
+        AD=lambda df: df.ElectDist.str[:2].astype(int),
+        ED=lambda df: df.ElectDist.str[2:].astype(int),
     )
-    results_dict["last_updated"] = str(pd.Timestamp.now())
-    return results_dict
 
 
 def fetch_data(args):
@@ -91,10 +87,15 @@ def fetch_data(args):
     for election, link in elections_dict.items():
         try:
             if args.dummy_data:
-                results_dict = gen_dummy_data()
+                results_df = gen_dummy_data()
                 election += " (FAKE DATA)"
             else:
-                results_dict = get_election_results(link)
+                results_df = get_election_results(link, format="df")
+            if args.local_csv:
+                results_df.to_csv(f"csv_data/{election}.csv")
+            results_dict = get_grouped_dict(results_df)
+            results_dict["last_updated"] = str(pd.Timestamp.now())
+
             fname = write_output(results_dict, election)
             logger.info(f"Sucess. Stored data in: {fname}")
         except Exception as e:
@@ -127,6 +128,11 @@ def main():
         "--dummy-data",
         action='store_true',
         help="Whether to use dummy data instead of actually pulling from the website. Useful for testing.",
+    )
+    parser.add_argument(
+        "--local-csv",
+        action='store_true',
+        help="Whether to also store a csv locally. (Useful if you want to upload things to drive.)"
     )
 
     args = parser.parse_args()
