@@ -95,6 +95,7 @@ const Index = () => {
 
     const layers = ['assembly-district', 'election-district']
     const handlers = {}
+    const foo = 2
 
     layers.forEach((layer) => {
       handlers[layer] = {}
