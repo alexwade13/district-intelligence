@@ -8,7 +8,27 @@ import random
 import time
 
 
-def safe_get_request(url, avg_wait_secs=1.0, timeout=None):
+TRANSLATION_DICT = {}
+TRANSLATION_DICT["Member of the City Council 38th Council District (Democratic)"] = {
+    "Alexa Aviles (Democratic)": "Alexa Avilés",
+    "Ling Ye (Democratic)": "Ling Ye",
+    "WRITE-IN": "WRITE-IN",
+}
+TRANSLATION_DICT["Mayor (Democratic)"] = {
+    "Zohran Kwame Mamdani (Democratic)": "Zohran Kwame Mamdani", 
+    "Scott M. Stringer (Democratic)": "Scott Stringer", 
+    "Selma K. Bartholomew (Democratic)": "Selma Bartholomew", 
+    "Zellnor Myrie (Democratic)": "Zellnor Myrie",
+    "Adrienne E. Adams (Democratic)": "Adrienne Adams", 
+    "Andrew M. Cuomo (Democratic)": "Andrew Cuomo", 
+    "Jessica Ramos (Democratic)": "Jessica Ramos", 
+    "Whitney R. Tilson (Democratic)": "Whitney Tilson", 
+    "Michael Blake (Democratic)": "Michael Blake", 
+    "Brad Lander (Democratic)": "Brad Lander",
+    "Paperboy Love Prince (Democratic)": "Paperboy Price", 
+    "WRITE-IN": "WRITE-IN"
+}
+def safe_get_request(url, avg_wait_secs=0.1, timeout=None):
     """Requests from a url but ensures a random amount of time between requests.
 
     - Parameters
@@ -144,7 +164,7 @@ def get_elections(url: str, whitelist=None):
     return election_to_link
 
 
-def get_election_results(per_ad_url: str, format="grouped"):
+def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts.
 
@@ -168,7 +188,7 @@ def get_election_results(per_ad_url: str, format="grouped"):
             subpage = urljoin(per_ad_url, link["href"])  # one AD's results.
             subpage_df = pd.read_html(StringIO(safe_get_request(subpage).text))[-1].dropna(
                 axis=1, how="all"
-            )
+            ).replace("-", 0.0)
             columns = ["ED", "Reported %"] + list(
                 subpage_df.iloc[0][2:] + " " + subpage_df.iloc[1][2:]
             )
@@ -191,6 +211,7 @@ def get_election_results(per_ad_url: str, format="grouped"):
                     ElectDist=lambda df: df.AD * 1000
                     + df.ED  # AD * 1000 + ED (To match with geodata)
                 )
+                .rename(columns=TRANSLATION_DICT[election_name])
             )
     df = pd.concat(data)
     if format == "df":
@@ -202,6 +223,7 @@ def get_election_results(per_ad_url: str, format="grouped"):
     elif format == "grouped":
         output = get_grouped_dict(df)
         output["last_updated"] = str(pd.Timestamp.now())
+        return output
     else:
         raise ValueError("Unrecognized format", format)
 
@@ -227,7 +249,7 @@ def get_grouped_dict(df):
             total_voters = (
                 cand_df.sum(axis=1) / gdf["Reported %"]
             )  # The total voters (including those who have not been reported)
-            valid_eds = gdf.eval("`Reported %` > 0") & (
+            valid_eds = gdf.eval("`Reported %` > 1e-10") & (
                 cand_df.sum(axis=1) > 0
             )  # For EDs with 0% reporting, we should drop.
 
@@ -238,7 +260,8 @@ def get_grouped_dict(df):
                 group_res["approx_total_voters"] = 0
                 group_res["reporting"] = 0
             else:
-                group_res["approx_total_voters"] = float(total_voters.fillna(0).sum())
+                # huge bug but only affects reporting percentage.
+                group_res["approx_total_voters"] = str(float(total_voters.fillna(0).sum())) if str(float(total_voters.fillna(0).sum())) != 'inf' else str(cand_df.sum(axis=1))
                 group_res["reporting"] = float(
                     np.average(
                         gdf.loc[valid_eds]["Reported %"], weights=total_voters.loc[valid_eds]

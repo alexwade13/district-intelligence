@@ -4,7 +4,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const load = () => {
   const { data: data1, error: error1 } = useSWR(
-    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/Mayoral+(FAKE+DATA).json',
+    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/Mayor+(Democratic).json',
     fetcher,
     {
       refreshInterval: 5000,
@@ -12,7 +12,7 @@ const load = () => {
   )
 
   const { data: data2, error: error2 } = useSWR(
-    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/City+Council+38+(FAKE+DATA).json',
+    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/Member+of+the+City+Council+38th+Council+District+(Democratic).json',
     fetcher,
     {
       refreshInterval: 5000,

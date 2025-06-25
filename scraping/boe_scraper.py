@@ -90,7 +90,7 @@ def fetch_data(args):
                 results_df = gen_dummy_data()
                 election += " (FAKE DATA)"
             else:
-                results_df = get_election_results(link, format="df")
+                results_df = get_election_results(election, link, format="df")
             if args.local_csv:
                 results_df.to_csv(f"csv_data/{election}.csv")
             results_dict = get_grouped_dict(results_df)
@@ -110,7 +110,7 @@ def main():
         description="Scrapes the board of elections NYC website for election data.",
     )
     parser.add_argument(
-        "--url", type=str, help="The root level URL to query", default="https://enr.boenyc.gov"
+        "--url", type=str, help="The root level URL to query", default="https://enr.boenyc.gov/index.html"
     )
     parser.add_argument(
         "--poll-interval",
