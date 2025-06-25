@@ -9,7 +9,12 @@ import load from './load'
 
 const Results = ({ selected, setSelectedCandidate, scale, race }) => {
   const { data, error } = load()
-  const [showResults, setShowResults] = useState(true)
+  const [showResults, setShowResults] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !window.matchMedia('(max-width: 40em)').matches
+    }
+    return true
+  })
 
   const thisData = data[raceLookup[race]]
 
@@ -23,6 +28,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               fontFamily: 'heading',
               letterSpacing: 'heading',
               display: 'flex',
+              mb: [2],
             }}
           >
             LOADING...
@@ -106,7 +112,7 @@ const Results = ({ selected, setSelectedCandidate, scale, race }) => {
               sx={{
                 cursor: 'pointer',
                 ml: 'auto',
-                mt: ['-4px', -2, -2, -2],
+                mt: ['-5px', -2, -2, -2],
                 display: ['initial', 'none', 'none', 'none'],
               }}
             >

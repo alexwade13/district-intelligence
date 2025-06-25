@@ -50,9 +50,6 @@ const Index = () => {
   const [race, setRace] = useState('Mayoral')
   const [candidateColorScales, setCandidateColorScales] = useState({})
 
-  console.log(candidateColorScales)
-  console.log(candidateColorScales[selectedCandidate])
-
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
     addShapes(map.current, 'assembly-districts', 0.25)
