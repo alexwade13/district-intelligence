@@ -14,13 +14,13 @@ class MyDocument extends Document {
         <Head>
           <meta name='description' content={description} />
           <link
-            rel='alternate icon'
+            rel='icon'
             type='image/png'
             href='/favicon/nycdsa-red-circle.png'
           />
           <link
             rel='icon'
-            type='image/svg+xml'
+            type='image/ske vg+xml'
             href='/favicon/nycdsa-red-circle.svg'
           />
           <link rel='mask-icon' href='/favicon/nycdsa-red-circle.svg' />
