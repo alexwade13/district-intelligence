@@ -28,7 +28,7 @@ TRANSLATION_DICT["Mayor (Democratic)"] = {
     "Paperboy Love Prince (Democratic)": "Paperboy Price", 
     "WRITE-IN": "WRITE-IN"
 }
-def safe_get_request(url, avg_wait_secs=0.1, timeout=None):
+def safe_get_request(url, avg_wait_secs=1.0, timeout=None):
     """Requests from a url but ensures a random amount of time between requests.
 
     - Parameters
