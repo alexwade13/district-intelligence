@@ -69,11 +69,17 @@ const Index = () => {
   }, [race])
 
   useEffect(() => {
+    const isMobile =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(max-width: 40em)').matches
+
+    const defaultZoom = isMobile ? 9.8 : 10.4
+
     map.current = new maplibregl.Map({
       container: 'map',
       style: mapStyles.monochrome,
       center: [-73.956, 40.7228],
-      zoom: 10.4,
+      zoom: defaultZoom,
       minZoom: 9,
     })
 
