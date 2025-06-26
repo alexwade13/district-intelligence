@@ -28,7 +28,6 @@ import {
   updateShapeVisibility,
   getMaxKey,
 } from '../components/utils'
-import { googleProtocol, createGoogleStyle } from 'maplibre-google-maps'
 import {
   boroughColors,
   candidates,
