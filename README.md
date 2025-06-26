@@ -2,7 +2,7 @@
 
 This is a package for scraping data from the NYC Board of Elections and rendering it in a live map of election results. It was originally built to show first round results for the 2025 NYC Democratic Mayoral Primary and District 38 City Council races, both of which featured DSA-endorsed candidates. It may be expanded in the future.
 
-The project consists of scraping tools written in Python and a web app written in Javascript. The web app is built with React, Next.js, maplibre, and D3. The web app is organized into the `pages`, `components`, `data`, and `public` folders. The scraping is done in the `scraping` folder. The preprocessing of
+The project consists of scraping tools written in Python and a web app written in Javascript. The web app is built with React, Next.js, maplibre, and D3. The code is organized as follows:
 
 Web app
 - `pages`
