@@ -5,3 +5,4 @@ sandbox.ipynb
 __pycache__
 csv_data/
 public/results/
+.env.local

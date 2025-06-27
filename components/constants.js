@@ -53,11 +53,11 @@ export const raceLookup = {
   'City Council 38': 'council',
 }
 
+const maptilerKey = process.env.NEXT_PUBLIC_MAPTILER_KEY
+
 export const mapStyles = {
-  color:
-    'https://api.maptiler.com/maps/01968205-0dc7-71df-87a7-8b67f7828379/style.json?key=Hja3c1GFKU3rNXLE62TK',
-  monochrome:
-    'https://api.maptiler.com/maps/01961350-1791-703e-8753-2c795c604620/style.json?key=Hja3c1GFKU3rNXLE62TK',
+  color: `https://api.maptiler.com/maps/01968205-0dc7-71df-87a7-8b67f7828379/style.json?key=${maptilerKey}`,
+  monochrome: `https://api.maptiler.com/maps/01961350-1791-703e-8753-2c795c604620/style.json?key=${maptilerKey}`,
 }
 
 export const scaleLookup = {
