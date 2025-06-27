@@ -18,6 +18,27 @@ BOE_ELECTION_WHITELIST = [
     }, # Alexa Avilés
 ]
 
+# candidate name formatting.
+TRANSLATION_DICT = {}
+TRANSLATION_DICT["Member of the City Council 38th Council District (Democratic)"] = {
+    "Alexa Aviles (Democratic)": "Alexa Avilés",
+    "Ling Ye (Democratic)": "Ling Ye",
+    "WRITE-IN": "WRITE-IN",
+}
+TRANSLATION_DICT["Mayor (Democratic)"] = {
+    "Zohran Kwame Mamdani (Democratic)": "Zohran Kwame Mamdani", 
+    "Scott M. Stringer (Democratic)": "Scott Stringer", 
+    "Selma K. Bartholomew (Democratic)": "Selma Bartholomew", 
+    "Zellnor Myrie (Democratic)": "Zellnor Myrie",
+    "Adrienne E. Adams (Democratic)": "Adrienne Adams", 
+    "Andrew M. Cuomo (Democratic)": "Andrew Cuomo", 
+    "Jessica Ramos (Democratic)": "Jessica Ramos", 
+    "Whitney R. Tilson (Democratic)": "Whitney Tilson", 
+    "Michael Blake (Democratic)": "Michael Blake", 
+    "Brad Lander (Democratic)": "Brad Lander",
+    "Paperboy Love Prince (Democratic)": "Paperboy Price", 
+    "WRITE-IN": "WRITE-IN"
+}
 
 def setup_logger():
     logger = logging.getLogger()
@@ -79,7 +100,11 @@ def fetch_data(args):
             return fname
 
     try:
-        elections_dict = get_elections(args.url, whitelist=BOE_ELECTION_WHITELIST)
+        if args.scrape_all_elections:
+            whitelist = None
+        else: 
+            whitelist = BOE_ELECTION_WHITELIST
+        elections_dict = get_elections(args.url, whitelist=whitelist)
         logger.info(f"Success. elections_dict:\n{json.dumps(elections_dict, indent=4)}")
     except Exception as e:
         logger.error(f"Error fetching data on get_elections({args.url}):\n{e}")
@@ -90,7 +115,7 @@ def fetch_data(args):
                 results_df = gen_dummy_data()
                 election += " (FAKE DATA)"
             else:
-                results_df = get_election_results(election, link, format="df")
+                results_df = get_election_results(election, link, format="df", candidate_rename_dict=TRANSLATION_DICT)
             if args.local_csv:
                 results_df.to_csv(f"csv_data/{election}.csv")
             results_dict = get_grouped_dict(results_df)
@@ -133,6 +158,12 @@ def main():
         "--local-csv",
         action='store_true',
         help="Whether to also store a csv locally. (Useful if you want to upload things to drive.)"
+    )
+
+    parser.add_argument(
+        "--scrape-all-elections", 
+        action='store_true',
+        help="Whether to ignore the whitelist and collect data on all elections",
     )
 
     args = parser.parse_args()

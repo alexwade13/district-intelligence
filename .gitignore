@@ -3,3 +3,5 @@
 node_modules/
 sandbox.ipynb
 __pycache__
+csv_data/
+public/results/

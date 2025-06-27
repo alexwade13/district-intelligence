@@ -7,27 +7,6 @@ import numpy as np
 import random
 import time
 
-
-TRANSLATION_DICT = {}
-TRANSLATION_DICT["Member of the City Council 38th Council District (Democratic)"] = {
-    "Alexa Aviles (Democratic)": "Alexa Avilés",
-    "Ling Ye (Democratic)": "Ling Ye",
-    "WRITE-IN": "WRITE-IN",
-}
-TRANSLATION_DICT["Mayor (Democratic)"] = {
-    "Zohran Kwame Mamdani (Democratic)": "Zohran Kwame Mamdani", 
-    "Scott M. Stringer (Democratic)": "Scott Stringer", 
-    "Selma K. Bartholomew (Democratic)": "Selma Bartholomew", 
-    "Zellnor Myrie (Democratic)": "Zellnor Myrie",
-    "Adrienne E. Adams (Democratic)": "Adrienne Adams", 
-    "Andrew M. Cuomo (Democratic)": "Andrew Cuomo", 
-    "Jessica Ramos (Democratic)": "Jessica Ramos", 
-    "Whitney R. Tilson (Democratic)": "Whitney Tilson", 
-    "Michael Blake (Democratic)": "Michael Blake", 
-    "Brad Lander (Democratic)": "Brad Lander",
-    "Paperboy Love Prince (Democratic)": "Paperboy Price", 
-    "WRITE-IN": "WRITE-IN"
-}
 def safe_get_request(url, avg_wait_secs=1.0, timeout=None):
     """Requests from a url but ensures a random amount of time between requests.
 
@@ -148,6 +127,10 @@ def get_elections(url: str, whitelist=None):
 
         ad_link_tag = cells[6].find("a")
 
+        # county committee has a different format
+        if position == "County Committee": 
+            continue
+        
         assert ad_link_tag, f"Couldn't find any links for row: {row.prettify()}"
         assert (
             ad_link_tag.text == "AD Details"
@@ -164,7 +147,7 @@ def get_elections(url: str, whitelist=None):
     return election_to_link
 
 
-def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
+def get_election_results(election_name: str, per_ad_url: str, format="grouped", candidate_rename_dict=None):
     """Given a url that points to the per AD totals for a race, return a dataframe with per ED results.
     This page should contain a table where each column is a candidate and the rows are Assembly Districts.
 
@@ -173,6 +156,8 @@ def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
     - Parameters
         - per_ad_url: the url of the subpage with AD totals, ie: https://enr.boenyc.gov/CD27280AD0.html
         - format: 'dict' or 'df', depending on whether you want to do get_nested_dict post-formatting
+        - candidate_rename_dict: mapping between the raw scraped `name (party)` to the displayed name.
+                                 The first level is by election_name, and the next level is by party name.
     - Returns
         - df: Dataframe consisting of ElectDist (XXYY) where XX is AD, and YYY is the ED, with columns for each candidate.
 
@@ -192,7 +177,7 @@ def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
             columns = ["ED", "Reported %"] + list(
                 subpage_df.iloc[0][2:] + " " + subpage_df.iloc[1][2:]
             )
-            data.append(
+            subpage_df = (
                 subpage_df.iloc[2:-1]
                 .set_axis(columns, axis=1)
                 .astype({col: int for col in columns[2:]})  # all vote counts are ints.
@@ -211,8 +196,10 @@ def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
                     ElectDist=lambda df: df.AD * 1000
                     + df.ED  # AD * 1000 + ED (To match with geodata)
                 )
-                .rename(columns=TRANSLATION_DICT[election_name])
             )
+            if candidate_rename_dict is not None and election_name in candidate_rename_dict:
+                subpage_df = subpage_df.rename(columns=candidate_rename_dict[election_name])
+            data.append(subpage_df)
     df = pd.concat(data)
     if format == "df":
         return df
@@ -227,11 +214,11 @@ def get_election_results(election_name: str, per_ad_url: str, format="grouped"):
     else:
         raise ValueError("Unrecognized format", format)
 
-
-def get_grouped_dict(df):
+def get_grouped_dict(df, ad_min_votes_cutoff=5):
     """Useful helper function to get a dictionary output with several non-nested groups.
     - Parameters
-        - column, the col to groupby on.
+        - df: input dataframe
+        - ad_min_votes_cutoff: don't count ADs if their total votes is less than some value.
     - Returns
         - grouped_dict: a dictionary with several separate groups.
     """
@@ -243,16 +230,20 @@ def get_grouped_dict(df):
 
         output = {}
         for g, gdf in df.assign(ALL="all").groupby(column):
-            cand_df = gdf[
-                [c for c in gdf.columns if not c in ["ED", "AD", "Reported %", "ElectDist", "ALL"]]
-            ]
-            total_voters = (
+            # only candidate names.
+            cand_cols = [c for c in gdf.columns if not c in ["ED", "AD", "Reported %", "ElectDist", "ALL"]]
+            # filter out bad data
+            valid_eds = gdf.eval("`Reported %` > 0") & (gdf[cand_cols].sum(axis=1) > 0)
+            # only candidate data.
+            cand_df = gdf[cand_cols]
+            total_voters = np.where(valid_eds, (
                 cand_df.sum(axis=1) / gdf["Reported %"]
-            )  # The total voters (including those who have not been reported)
-            valid_eds = gdf.eval("`Reported %` > 1e-10") & (
-                cand_df.sum(axis=1) > 0
-            )  # For EDs with 0% reporting, we should drop.
-
+            ), 0)
+            
+            if column == "AD" and float(cand_df.sum().sum()) < ad_min_votes_cutoff:
+                # skip ads with low # votes.
+                continue
+            
             group_res = {}
             group_res["total"] = float(cand_df.sum().sum())
             group_res["candidates"] = cand_df.sum().to_dict()
@@ -260,11 +251,18 @@ def get_grouped_dict(df):
                 group_res["approx_total_voters"] = 0
                 group_res["reporting"] = 0
             else:
-                # huge bug but only affects reporting percentage.
-                group_res["approx_total_voters"] = str(float(total_voters.fillna(0).sum())) if str(float(total_voters.fillna(0).sum())) != 'inf' else str(cand_df.sum(axis=1))
+                group_res["approx_total_voters"] = float(total_voters.sum())
+                if np.average(
+                        gdf["Reported %"], weights=total_voters
+                ) == 0: 
+                    print(gdf["Reported %"])
+                    print(total_voters)
+                    assert 1 == 0
+
+
                 group_res["reporting"] = float(
                     np.average(
-                        gdf.loc[valid_eds]["Reported %"], weights=total_voters.loc[valid_eds]
+                        gdf["Reported %"], weights=total_voters
                     )
                 )
             output[g] = group_res
@@ -277,7 +275,6 @@ def get_grouped_dict(df):
     for group, name in zip(DICT_GROUPS, GROUP_NAMES):
         output[name] = _get_one_grouped_dict(df, group)
     return output
-
 
 def get_nested_dict(
     df, subsets=[("AD", "assembly_districts"), ("ElectDist", "electoral_districts")]
