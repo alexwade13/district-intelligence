@@ -1,8 +1,10 @@
+const maptilerKey = process.env.NEXT_PUBLIC_MAPTILER_KEY
+
 const addLabels = (map) => {
   if (!map.getSource('openmaptiles')) {
     map.addSource('openmaptiles', {
       type: 'vector',
-      url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=Hja3c1GFKU3rNXLE62TK',
+      url: `https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=${maptilerKey}`,
     })
   }
 
