@@ -116,7 +116,7 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
             }}
           >
             <Box sx={{ textTransform: 'uppercase' }}>
-              Progressive Evolution Tracker
+              Electoral Performance Analysis
             </Box>
             {thisSelected && evolutionData && evolutionData[thisSelected] && (
                 <Box
@@ -239,7 +239,7 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
             {(() => {
               const getMethodologyContent = () => {
                 switch(selectedIndicator) {
-                  case 'Progressive Growth (2021-2025)':
+                  case 'Performance Change (2021-2025)':
                     return {
                       title: 'Growth Categories',
                       content: (

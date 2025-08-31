@@ -3,8 +3,8 @@ import path from 'path';
 
 function processEvolutionData() {
   try {
-    const data2021Path = path.join(process.cwd(), '../district_candidate_research/past_left_candidate_performance/src/AD_36_PE2021_CVR_Final_Output/AD36_Mayor_ED_Tally.csv');
-    const data2025Path = path.join(process.cwd(), '../district_candidate_research/past_left_candidate_performance/src/AD_36_2025_Primary_CVR_2025-07-17_Output/AD36_Mayor_ED_Tally.csv');
+    const data2021Path = path.join(process.cwd(), 'data/csv/AD36_Mayor_ED_Tally_2021.csv');
+    const data2025Path = path.join(process.cwd(), 'data/csv/AD36_Mayor_ED_Tally_2025.csv');
     
     const results = {};
     

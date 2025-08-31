@@ -15,7 +15,7 @@ export const boroughColorsDarker = {
 }
 
 export const progressiveColors = {
-  'Progressive Growth (2021-2025)': '#00ff00',
+  'Performance Change (2021-2025)': '#00ff00',
   'Maya Wiley 2021 Baseline': '#ff6600',
   'Zohran Mamdani 2025 Current': '#cc0000',
   'Growth Percentage': '#32cd32',
@@ -33,7 +33,7 @@ export const evolutionColors = {
 
 export const progressiveIndicators = {
   'Progressive Evolution': [
-    'Progressive Growth (2021-2025)',
+    'Performance Change (2021-2025)',
     'Maya Wiley 2021 Baseline',
     'Zohran Mamdani 2025 Current',
     'Growth Percentage',

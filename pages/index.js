@@ -45,7 +45,7 @@ const Index = () => {
 
   const map = useRef()
   const [selected, setSelected] = useState({})
-  const [selectedIndicator, setSelectedIndicator] = useState('Progressive Growth (2021-2025)')
+  const [selectedIndicator, setSelectedIndicator] = useState('Performance Change (2021-2025)')
   const [scale, setScale] = useState('Election district')
   const [progressiveColorScales, setProgressiveColorScales] = useState({})
 
@@ -163,7 +163,7 @@ const Index = () => {
 
   useEffect(() => {
     if (!progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
-      setSelectedIndicator('Progressive Growth (2021-2025)')
+      setSelectedIndicator('Performance Change (2021-2025)')
     }
   }, [])
 
@@ -178,7 +178,7 @@ const Index = () => {
           const edData = evolutionData ? evolutionData[k] : null
           
           if (edData) {
-            if (selectedIndicator === 'Progressive Growth (2021-2025)') {
+            if (selectedIndicator === 'Performance Change (2021-2025)') {
               color = evolutionColors[edData.trendCategory] || '#cccccc'
               opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
             } else if (selectedIndicator === 'Maya Wiley 2021 Baseline') {
