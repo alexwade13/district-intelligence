@@ -3,33 +3,42 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const load = () => {
+  // Try to load from local files first, fallback to remote if needed
   const { data: data1, error: error1 } = useSWR(
-    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/Mayor+(Democratic).json',
+    '/api/data/mayoral',
     fetcher,
     {
-      refreshInterval: 5000,
+      refreshInterval: 30000, // Reduced refresh rate for local data
     },
   )
 
   const { data: data2, error: error2 } = useSWR(
-    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/Member+of+the+City+Council+38th+Council+District+(Democratic).json',
+    '/api/data/council',
     fetcher,
     {
-      refreshInterval: 5000,
+      refreshInterval: 30000,
     },
   )
 
   const { data: data3, error: error3 } = useSWR(
-    'https://dsa-ewg-live-election-results.s3.us-east-1.amazonaws.com/results/status.json',
+    '/api/data/status',
     fetcher,
     {
-      refreshInterval: 5000,
+      refreshInterval: 30000,
+    },
+  )
+
+  const { data: data4, error: error4 } = useSWR(
+    '/api/data/progressive-evolution',
+    fetcher,
+    {
+      refreshInterval: 30000,
     },
   )
 
   return {
-    data: { mayoral: data1, council: data2, status: data3 },
-    error: { mayoral: error1, council: error2, status: error3 },
+    data: { mayoral: data1, council: data2, status: data3, 'progressive-evolution': data4 },
+    error: { mayoral: error1, council: error2, status: error3, 'progressive-evolution': error4 },
   }
 }
 

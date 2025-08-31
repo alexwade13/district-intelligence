@@ -1,54 +1,18 @@
 import { Box } from 'theme-ui'
 import { Select } from './'
-import { candidates, candidateColors } from '../components/constants'
+import { progressiveIndicators, progressiveColors } from '../components/constants'
 
 const Options = ({
-  selectedCandidate,
-  setSelectedCandidate,
+  selectedIndicator,
+  setSelectedIndicator,
   scale,
   setScale,
-  race,
-  setRace,
 }) => {
-  const allCandidates = candidates[race]
+  const allIndicators = progressiveIndicators['Progressive Evolution']
 
   return (
     <>
-      <Box
-        sx={{
-          borderRadius: [0, '2px', '2px', '2px'],
-          bg: 'rgb(255,255,255,0.9)',
-          mr: [0, 4, 4, 4],
-          mt: [0, 4, 4, 4],
-          width: ['calc(100vw)', '400px', '400px', '400px'],
-        }}
-      >
-        <Box sx={{ px: [4], py: [4] }}>
-          <Box sx={{}}>
-            <Box
-              as='label'
-              htmlFor='race-select'
-              sx={{
-                fontSize: [3, 3, 3, 3],
-                fontFamily: 'heading',
-                letterSpacing: 'heading',
-                textTransform: 'uppercase',
-              }}
-            >
-              Select race
-            </Box>
-            <Select
-              id='race-select'
-              value={race}
-              onChange={(e) => setRace(e.target.value)}
-              sx={{ width: ['50%', '100%', '100%', '100%'] }}
-            >
-              <option>Mayoral</option>
-              <option>City Council 38</option>
-            </Select>
-          </Box>
-        </Box>
-      </Box>
+
       <Box
         sx={{
           display: ['none', 'block', 'block', 'block'],
@@ -63,7 +27,7 @@ const Options = ({
           <Box sx={{ mb: [4] }}>
             <Box
               as='label'
-              htmlFor='candidate-select'
+              htmlFor='indicator-select'
               sx={{
                 fontSize: [3, 3, 3, 3],
                 fontFamily: 'heading',
@@ -71,17 +35,17 @@ const Options = ({
                 textTransform: 'uppercase',
               }}
             >
-              Filter by Candidate
+              Data View
             </Box>
             <Select
-              id='candidate-select'
-              value={selectedCandidate}
-              onChange={(e) => setSelectedCandidate(e.target.value)}
+              id='indicator-select'
+              value={selectedIndicator}
+              onChange={(e) => setSelectedIndicator(e.target.value)}
             >
-              <option value='All Candidates'>All Candidates</option>
-              {allCandidates.map((candidate) => (
-                <option key={candidate} value={candidate}>
-                  {candidate}
+
+              {allIndicators.map((indicator) => (
+                <option key={indicator} value={indicator}>
+                  {indicator}
                 </option>
               ))}
             </Select>

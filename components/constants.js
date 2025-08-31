@@ -1,63 +1,55 @@
 export const boroughColors = {
-  'The Bronx': '#77a9b8',
-  Queens: '#f5d578',
-  Manhattan: '#82c3f5',
-  'Staten Island': '#f7746d',
-  Brooklyn: '#f29357',
+  'The Bronx': '#ff9999',
+  Queens: '#ff7777', 
+  Manhattan: '#ff5555',
+  'Staten Island': '#ff3333',
+  Brooklyn: '#ff1111',
 }
 
 export const boroughColorsDarker = {
-  'The Bronx': '#227a94',
-  Queens: '#b88f18',
-  Manhattan: '#2480c7',
-  'Staten Island': '#bf2119',
-  Brooklyn: '#ba5718',
+  'The Bronx': '#cc0000',
+  Queens: '#b30000',
+  Manhattan: '#990000',
+  'Staten Island': '#800000',
+  Brooklyn: '#660000',
 }
 
-export const candidateColors = {
-  'Adrienne Adams': '#8f49b7',
-  'Selma Bartholomew': '#a6cee3',
-  'Michael Blake': '#fc9a98',
-  'Andrew Cuomo': '#1660a8',
-  'Brad Lander': '#ef4b30',
-  'Zohran Kwame Mamdani': '#ffab00',
-  'Zellnor Myrie': '#6bb23d',
-  'Paperboy Prince': '#cab2d5',
-  'Jessica Ramos': '#f9c295',
-  'Scott Stringer': '#cc6633',
-  'Whitney Tilson': '#b2df8a',
-  'Alexa Avilés': 'rgb(199,72,82)',
-  'Ling Ye': 'rgb(58,59,115)',
-  'Write In': '#a5a5a5',
+export const progressiveColors = {
+  'Progressive Growth (2021-2025)': '#00ff00',
+  'Maya Wiley 2021 Baseline': '#ff6600',
+  'Zohran Mamdani 2025 Current': '#cc0000',
+  'Growth Percentage': '#32cd32',
+  'Vote Share Change': '#00ff7f',
+  'Moderate/Conservative': '#708090',
 }
 
-export const candidates = {
-  Mayoral: [
-    'Adrienne Adams',
-    'Selma Bartholomew',
-    'Michael Blake',
-    'Andrew Cuomo',
-    'Brad Lander',
-    'Zohran Kwame Mamdani',
-    'Zellnor Myrie',
-    'Paperboy Prince',
-    'Jessica Ramos',
-    'Scott Stringer',
-    'Whitney Tilson',
+export const evolutionColors = {
+  'Major Growth': '#006400',
+  'Growth': '#32cd32',
+  'Stable': '#ffd700',
+  'Decline': '#ff8c00',
+  'Major Decline': '#ff0000',
+}
+
+export const progressiveIndicators = {
+  'Progressive Evolution': [
+    'Progressive Growth (2021-2025)',
+    'Maya Wiley 2021 Baseline',
+    'Zohran Mamdani 2025 Current',
+    'Growth Percentage',
+    'Vote Share Change',
   ],
-  'City Council 38': ['Alexa Avilés', 'Ling Ye'],
 }
 
-export const raceLookup = {
-  Mayoral: 'mayoral',
-  'City Council 38': 'council',
+export const analysisLookup = {
+  'Progressive Evolution': 'progressive-evolution',
 }
 
 const maptilerKey = process.env.NEXT_PUBLIC_MAPTILER_KEY
 
 export const mapStyles = {
-  color: `https://api.maptiler.com/maps/01968205-0dc7-71df-87a7-8b67f7828379/style.json?key=${maptilerKey}`,
-  monochrome: `https://api.maptiler.com/maps/01961350-1791-703e-8753-2c795c604620/style.json?key=${maptilerKey}`,
+  color: `https://api.maptiler.com/maps/streets-v2/style.json?key=${maptilerKey}`,
+  monochrome: `https://api.maptiler.com/maps/basic-v2/style.json?key=${maptilerKey}`,
 }
 
 export const scaleLookup = {

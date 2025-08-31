@@ -30,11 +30,12 @@ import {
 } from '../components/utils'
 import {
   boroughColors,
-  candidates,
-  candidateColors,
+  progressiveIndicators,
+  progressiveColors,
+  evolutionColors,
   mapStyles,
   scaleLookup,
-  raceLookup,
+  analysisLookup,
 } from '../components/constants'
 import load from '../components/load'
 import shapes from '../data'
@@ -44,10 +45,9 @@ const Index = () => {
 
   const map = useRef()
   const [selected, setSelected] = useState({})
-  const [selectedCandidate, setSelectedCandidate] = useState('All Candidates')
-  const [scale, setScale] = useState('Assembly district')
-  const [race, setRace] = useState('Mayoral')
-  const [candidateColorScales, setCandidateColorScales] = useState({})
+  const [selectedIndicator, setSelectedIndicator] = useState('Progressive Growth (2021-2025)')
+  const [scale, setScale] = useState('Election district')
+  const [progressiveColorScales, setProgressiveColorScales] = useState({})
 
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
@@ -56,16 +56,16 @@ const Index = () => {
   }
 
   useEffect(() => {
-    const candidateColorScales = {}
-    candidates[race].forEach((d) => {
-      candidateColorScales[d] = scaleLinear()
+    const progressiveColorScales = {}
+    progressiveIndicators['Progressive Evolution'].forEach((d) => {
+      progressiveColorScales[d] = scaleLinear()
         .domain([0, 1])
         .interpolate(interpolateLab)
-        .range(['white', candidateColors[d]])
+        .range(['white', progressiveColors[d] || '#cc0000'])
     })
 
-    setCandidateColorScales(candidateColorScales)
-  }, [race])
+    setProgressiveColorScales(progressiveColorScales)
+  }, [])
 
   useEffect(() => {
     const isMobile =
@@ -162,129 +162,82 @@ const Index = () => {
   }, [map.current, scale])
 
   useEffect(() => {
-    if (!candidates[race].includes(selectedCandidate)) {
-      setSelectedCandidate('All Candidates')
+    if (!progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
+      setSelectedIndicator('Progressive Growth (2021-2025)')
     }
-  }, [race])
+  }, [])
 
   useEffect(() => {
     const updateSelected = () => {
       if (scale == 'Election district') {
         Object.keys(shapes['election-districts']).forEach((k) => {
-          const districtResults = data[raceLookup[race]].election_districts[k]
           let color = '#cccccc'
           let opacity = 0
 
-          if (districtResults) {
-            if (selectedCandidate === 'All Candidates') {
-              // Show leading candidate for each district
-              const leadingCandidate = getMaxKey(districtResults.candidates)
-              if (leadingCandidate) {
-                color = candidateColors[leadingCandidate] || '#cccccc'
-                opacity = districtResults.reporting > 0 ? 1 : 0 // Scale opacity based on reporting
-              }
-            } else if (
-              districtResults.candidates[selectedCandidate] !== undefined
-            ) {
-              // Show only the selected candidate's results
-              const totalVotes = districtResults.total
-              const candidateVoteShare =
-                totalVotes > 0
-                  ? districtResults.candidates[selectedCandidate] / totalVotes
-                  : 0
-
-              // Show the candidate's color with opacity based on vote share and reporting
-              color =
-                candidateColorScales[selectedCandidate](candidateVoteShare)
+          const evolutionData = data['progressive-evolution']
+          const edData = evolutionData ? evolutionData[k] : null
+          
+          if (edData) {
+            if (selectedIndicator === 'Progressive Growth (2021-2025)') {
+              color = evolutionColors[edData.trendCategory] || '#cccccc'
+              opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
+            } else if (selectedIndicator === 'Maya Wiley 2021 Baseline') {
+              const intensity = (edData.progressive2021 || 0) / 100
+              color = progressiveColorScales['Maya Wiley 2021 Baseline'](intensity)
               opacity = 1
+            } else if (selectedIndicator === 'Zohran Mamdani 2025 Current') {
+              const intensity = (edData.progressive2025 || 0) / 100
+              color = progressiveColorScales['Zohran Mamdani 2025 Current'](intensity)
+              opacity = 1
+            } else if (selectedIndicator === 'Growth Percentage') {
+              const maxGrowth = 200
+              const intensity = Math.min(Math.abs(edData.growthPercent || 0) / maxGrowth, 1)
+              color = edData.growthPercent > 0 ? 
+                progressiveColorScales['Growth Percentage'](intensity) : 
+                '#ff4444'
+              opacity = 1
+            } else if (selectedIndicator === 'Vote Share Change') {
+              const intensity = Math.min(Math.abs(edData.growthPoints || 0) / 50, 1)
+              color = progressiveColorScales['Vote Share Change'](intensity)
+              opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
             }
-            // If candidate not in district, keep opacity at 0 (invisible)
-            map.current.setFeatureState(
-              {
-                source: 'election-districts',
-                id: shapes['election-districts'][k].id,
-              },
-              {
-                color,
-                opacity,
-                'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.25,
-              },
-            )
-          } else {
-            map.current.setFeatureState(
-              {
-                source: 'election-districts',
-                id: shapes['election-districts'][k].id,
-              },
-              {
-                color: '#cccccc',
-                opacity: 0,
-                'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.25,
-              },
-            )
           }
+
+          map.current.setFeatureState(
+            {
+              source: 'election-districts',
+              id: shapes['election-districts'][k].id,
+            },
+            {
+              color,
+              opacity,
+              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.25,
+            },
+          )
         })
       }
 
       if (scale == 'Assembly district') {
         Object.keys(shapes['assembly-districts']).forEach((k) => {
-          const districtResults = data[raceLookup[race]].assembly_districts[k]
-          let color = '#cccccc'
-          let opacity = 0
+          let color = '#666666'
+          let opacity = 0.3
 
-          if (districtResults) {
-            if (selectedCandidate === 'All Candidates') {
-              // Show leading candidate for each district
-              const leadingCandidate = getMaxKey(districtResults.candidates)
-              if (leadingCandidate) {
-                color = candidateColors[leadingCandidate] || '#cccccc'
-                opacity = districtResults.reporting > 0 ? 1 : 0 // Scale opacity based on reporting
-              }
-            } else if (
-              districtResults.candidates[selectedCandidate] !== undefined
-            ) {
-              // Show only the selected candidate's results
-              const totalVotes = districtResults.total
-              const candidateVoteShare =
-                totalVotes > 0
-                  ? districtResults.candidates[selectedCandidate] / totalVotes
-                  : 0
-
-              // Show the candidate's color with opacity based on vote share and reporting
-              color =
-                candidateColorScales[selectedCandidate](candidateVoteShare)
-              opacity = 1
-            }
-            // If candidate not in district, keep opacity at 0 (invisible)
-            map.current.setFeatureState(
-              {
-                source: 'assembly-districts',
-                id: shapes['assembly-districts'][k].id,
-              },
-              {
-                color,
-                opacity,
-                'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
-              },
-            )
-          } else {
-            map.current.setFeatureState(
-              {
-                source: 'assembly-districts',
-                id: shapes['assembly-districts'][k].id,
-              },
-              {
-                color: '#cccccc',
-                opacity: 0,
-                'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
-              },
-            )
-          }
+          map.current.setFeatureState(
+            {
+              source: 'assembly-districts',
+              id: shapes['assembly-districts'][k].id,
+            },
+            {
+              color,
+              opacity,
+              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
+            },
+          )
         })
       }
     }
 
-    if (data[raceLookup[race]]) {
+    if (data['progressive-evolution']) {
       if (map.current) {
         if (!map.current.isStyleLoaded()) {
           map.current.once('idle', () => {
@@ -295,7 +248,7 @@ const Index = () => {
         }
       }
     }
-  }, [data, selected, selectedCandidate, scale, race])
+  }, [data, selected, selectedIndicator, scale])
 
   const resetView = () => {
     map.current.flyTo({
@@ -347,12 +300,13 @@ const Index = () => {
             width: ['calc(100vw)', '400px', '400px', '400px'],
           }}
         >
-          <Results
-            selected={selected}
-            scale={scale}
-            race={race}
-            setSelectedCandidate={setSelectedCandidate}
-          />
+                  <Results
+          data={data}
+          selected={selected}
+          scale={scale}
+          setSelectedIndicator={setSelectedIndicator}
+          selectedIndicator={selectedIndicator}
+        />
         </Box>
       </Box>
       <Box
@@ -363,16 +317,14 @@ const Index = () => {
           right: 0,
         }}
       >
-        <Options
-          selectedCandidate={selectedCandidate}
-          setSelectedCandidate={setSelectedCandidate}
-          scale={scale}
-          setScale={setScale}
-          race={race}
-          setRace={setRace}
-        />
+                    <Options
+              selectedIndicator={selectedIndicator}
+              setSelectedIndicator={setSelectedIndicator}
+              scale={scale}
+              setScale={setScale}
+            />
       </Box>
-      {selectedCandidate && candidateColorScales[selectedCandidate] && (
+      {selectedIndicator && progressiveColorScales[selectedIndicator] && (
         <Box
           sx={{
             position: 'absolute',
@@ -391,7 +343,7 @@ const Index = () => {
             horizontal={true}
             bottom={true}
             colormap={range(0, 1, 0.1).map(
-              candidateColorScales[selectedCandidate],
+              progressiveColorScales[selectedIndicator],
             )}
             clim={[0, 1]}
             format={(d) => `${d * 100}%`}
