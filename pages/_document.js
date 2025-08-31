@@ -1,9 +1,9 @@
 import Document, { Html, Main, Head, NextScript } from 'next/document'
 import { InitializeColorMode } from 'theme-ui'
 
-const title = 'Live election tracker | NYC DSA'
+const title = 'District Intelligence | NYC DSA'
 const description =
-  'Tracking live election data for races with DSA-endorsed candidates'
+  'Electoral performance analysis for NYC Assembly districts'
 const url = 'https://results.socialists.nyc/'
 const card = '/public/'
 

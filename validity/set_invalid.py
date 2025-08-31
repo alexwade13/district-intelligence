@@ -17,7 +17,7 @@ if user_response.strip() == "INVALID":
         tmp.flush()
         s3.upload_file(
             tmp.name,
-            "dsa-ewg-live-election-results",
+            "dsa-ewg-district-intelligence",
             f"results/status.json",
             ExtraArgs={
                 "ACL": "public-read",
