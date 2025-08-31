@@ -204,10 +204,6 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
                         }}
                       >
                         {k[1]}
-                        <Box sx={{ color: 'muted' }} as='span'>
-                          {' '}
-                          ({formatPercent(k[1] / total)})
-                        </Box>
                       </Box>
                     </Box>
                   </Box>
