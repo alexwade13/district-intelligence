@@ -1,0 +1,392 @@
+{
+  "23": {
+    "Population": 252980,
+    "Median Age": 39.580076217885114,
+    "Median Household Income": 83782.64064532197,
+    "Renter Units": 51.41237589198017
+  },
+  "24": {
+    "Population": 280416,
+    "Median Age": 41.47158329053977,
+    "Median Household Income": 91058.2071299315,
+    "Renter Units": 47.41853321527345
+  },
+  "25": {
+    "Population": 234503,
+    "Median Age": 43.81232862692588,
+    "Median Household Income": 86219.75925566134,
+    "Renter Units": 49.00790450072592
+  },
+  "26": {
+    "Population": 201778,
+    "Median Age": 46.81221887420832,
+    "Median Household Income": 105451.14189735275,
+    "Renter Units": 29.660915963827506
+  },
+  "27": {
+    "Population": 242481,
+    "Median Age": 42.30517195161683,
+    "Median Household Income": 88745.76070898557,
+    "Renter Units": 46.8717524667285
+  },
+  "28": {
+    "Population": 248316,
+    "Median Age": 42.09105695968041,
+    "Median Household Income": 96650.26591597397,
+    "Renter Units": 53.00096181495474
+  },
+  "29": {
+    "Population": 236237,
+    "Median Age": 40.82097850887033,
+    "Median Household Income": 91459.21287479375,
+    "Renter Units": 42.25844318810465
+  },
+  "30": {
+    "Population": 224113,
+    "Median Age": 41.28338516730399,
+    "Median Household Income": 77953.7198675408,
+    "Renter Units": 63.98821170025435
+  },
+  "31": {
+    "Population": 284131,
+    "Median Age": 39.74192010023544,
+    "Median Household Income": 91366.915856734,
+    "Renter Units": 45.35770043162825
+  },
+  "32": {
+    "Population": 220610,
+    "Median Age": 38.44918680023571,
+    "Median Household Income": 83338.10349417485,
+    "Renter Units": 53.23328183623924
+  },
+  "33": {
+    "Population": 196382,
+    "Median Age": 43.51380676436741,
+    "Median Household Income": 99494.26666015646,
+    "Renter Units": 29.657279142707786
+  },
+  "34": {
+    "Population": 255384,
+    "Median Age": 38.63980358988817,
+    "Median Household Income": 83661.43306499464,
+    "Renter Units": 70.2784537573875
+  },
+  "35": {
+    "Population": 205884,
+    "Median Age": 39.39142089720425,
+    "Median Household Income": 78023.94761942416,
+    "Renter Units": 62.15346386443925
+  },
+  "36": {
+    "Population": 185468,
+    "Median Age": 37.31556215857676,
+    "Median Household Income": 100101.3912503216,
+    "Renter Units": 84.01160391042347
+  },
+  "37": {
+    "Population": 246835,
+    "Median Age": 37.74835618547512,
+    "Median Household Income": 95126.27637430375,
+    "Renter Units": 74.63051998696824
+  },
+  "38": {
+    "Population": 254561,
+    "Median Age": 38.02082526388566,
+    "Median Household Income": 87027.80153133582,
+    "Renter Units": 60.3077749167104
+  },
+  "39": {
+    "Population": 252160,
+    "Median Age": 39.93776887690355,
+    "Median Household Income": 74660.54704949238,
+    "Renter Units": 69.3324995367797
+  },
+  "40": {
+    "Population": 158042,
+    "Median Age": 47.24404082459093,
+    "Median Household Income": 68375.98320378462,
+    "Renter Units": 56.62290584892721
+  },
+  "41": {
+    "Population": 211855,
+    "Median Age": 42.81220835005075,
+    "Median Household Income": 81100.16322552734,
+    "Renter Units": 49.18933738768491
+  },
+  "42": {
+    "Population": 215311,
+    "Median Age": 38.11765910705908,
+    "Median Household Income": 86105.80944219166,
+    "Renter Units": 74.74920943233097
+  },
+  "43": {
+    "Population": 212696,
+    "Median Age": 36.854514424342725,
+    "Median Household Income": 76984.95947737616,
+    "Renter Units": 81.68888380342125
+  },
+  "44": {
+    "Population": 276306,
+    "Median Age": 35.75249433598981,
+    "Median Household Income": 119522.9432223694,
+    "Renter Units": 67.49362755472941
+  },
+  "45": {
+    "Population": 205234,
+    "Median Age": 41.383301012502805,
+    "Median Household Income": 69549.86701033941,
+    "Renter Units": 64.57113704483133
+  },
+  "46": {
+    "Population": 210500,
+    "Median Age": 44.78342707838479,
+    "Median Household Income": 70500.04497862233,
+    "Renter Units": 65.11787647709413
+  },
+  "47": {
+    "Population": 184485,
+    "Median Age": 40.39555411009024,
+    "Median Household Income": 72797.99975607773,
+    "Renter Units": 64.50853350189634
+  },
+  "48": {
+    "Population": 205190,
+    "Median Age": 28.40205273161461,
+    "Median Household Income": 64038.001462059554,
+    "Renter Units": 68.60860589857697
+  },
+  "49": {
+    "Population": 216079,
+    "Median Age": 37.21939846074815,
+    "Median Household Income": 68109.68730880835,
+    "Renter Units": 65.76500299256966
+  },
+  "50": {
+    "Population": 257706,
+    "Median Age": 31.56461626815053,
+    "Median Household Income": 105858.64935325024,
+    "Renter Units": 85.03704131865167
+  },
+  "51": {
+    "Population": 200001,
+    "Median Age": 36.220401897990506,
+    "Median Household Income": 91704.42697059669,
+    "Renter Units": 70.31100824533488
+  },
+  "52": {
+    "Population": 292948,
+    "Median Age": 36.45897224080723,
+    "Median Household Income": 141343.2515432099,
+    "Renter Units": 70.46057409318503
+  },
+  "53": {
+    "Population": 244710,
+    "Median Age": 31.966716112950024,
+    "Median Household Income": 88651.6134199665,
+    "Renter Units": 85.3000798574851
+  },
+  "54": {
+    "Population": 211737,
+    "Median Age": 35.4117905703774,
+    "Median Household Income": 71512.01044112674,
+    "Renter Units": 72.1956252579447
+  },
+  "55": {
+    "Population": 224154,
+    "Median Age": 35.699231778152516,
+    "Median Household Income": 55036.465414024875,
+    "Renter Units": 82.70204224122884
+  },
+  "56": {
+    "Population": 234974,
+    "Median Age": 33.5688842169772,
+    "Median Household Income": 74334.71150425154,
+    "Renter Units": 79.10457375993128
+  },
+  "57": {
+    "Population": 244940,
+    "Median Age": 33.146893524944886,
+    "Median Household Income": 110349.50634441088,
+    "Renter Units": 76.49758500586911
+  },
+  "58": {
+    "Population": 222813,
+    "Median Age": 41.37093481978161,
+    "Median Household Income": 70967.39462740612,
+    "Renter Units": 64.37848313051433
+  },
+  "59": {
+    "Population": 191943,
+    "Median Age": 42.831681620658394,
+    "Median Household Income": 95181.65493794355,
+    "Renter Units": 38.85542599613706
+  },
+  "60": {
+    "Population": 190123,
+    "Median Age": 37.39442466192938,
+    "Median Household Income": 57792.66484197259,
+    "Renter Units": 75.24389556194664
+  },
+  "61": {
+    "Population": 272370,
+    "Median Age": 38.7641987002974,
+    "Median Household Income": 124147.08148968377,
+    "Renter Units": 53.014643775683545
+  },
+  "62": {
+    "Population": 174190,
+    "Median Age": 42.02388254205177,
+    "Median Household Income": 120640.8082923157,
+    "Renter Units": 19.45334401281538
+  },
+  "63": {
+    "Population": 232741,
+    "Median Age": 40.364248241607626,
+    "Median Household Income": 98726.29357108727,
+    "Renter Units": 34.69880117395414
+  },
+  "64": {
+    "Population": 236396,
+    "Median Age": 42.84709682058919,
+    "Median Household Income": 101820.46769655196,
+    "Renter Units": 40.31538435339396
+  },
+  "65": {
+    "Population": 181306,
+    "Median Age": 40.04172945186591,
+    "Median Household Income": 101410.86984991257,
+    "Renter Units": 78.89725572772424
+  },
+  "66": {
+    "Population": 235297,
+    "Median Age": 36.68038351530195,
+    "Median Household Income": 162080.4819185965,
+    "Renter Units": 73.15310514790978
+  },
+  "67": {
+    "Population": 214340,
+    "Median Age": 43.42248810301391,
+    "Median Household Income": 156673.5721817666,
+    "Renter Units": 67.5275470124092
+  },
+  "68": {
+    "Population": 240725,
+    "Median Age": 38.657639630283526,
+    "Median Household Income": 69768.42087355627,
+    "Renter Units": 83.54021424927734
+  },
+  "69": {
+    "Population": 213985,
+    "Median Age": 40.56760800990725,
+    "Median Household Income": 133253.42096408625,
+    "Renter Units": 66.3497851282719
+  },
+  "70": {
+    "Population": 245807,
+    "Median Age": 36.5712603790779,
+    "Median Household Income": 63045.43401358328,
+    "Renter Units": 84.0707523170087
+  },
+  "71": {
+    "Population": 323533,
+    "Median Age": 38.66254910627355,
+    "Median Household Income": 64985.758784638034,
+    "Renter Units": 85.0379240900919
+  },
+  "72": {
+    "Population": 238468,
+    "Median Age": 38.36136672425651,
+    "Median Household Income": 61977.34015728373,
+    "Renter Units": 88.87003918306591
+  },
+  "73": {
+    "Population": 222363,
+    "Median Age": 42.65972981116462,
+    "Median Household Income": 169425.50646465464,
+    "Renter Units": 60.20406466205428
+  },
+  "74": {
+    "Population": 275840,
+    "Median Age": 36.406954393851514,
+    "Median Household Income": 131714.4751087587,
+    "Renter Units": 76.80701653403939
+  },
+  "75": {
+    "Population": 208433,
+    "Median Age": 41.34978290385881,
+    "Median Household Income": 148065.14035685328,
+    "Renter Units": 72.66227689298451
+  },
+  "76": {
+    "Population": 219387,
+    "Median Age": 41.601522638997785,
+    "Median Household Income": 151949.38954484946,
+    "Renter Units": 66.62269820748455
+  },
+  "77": {
+    "Population": 273892,
+    "Median Age": 35.69177157419712,
+    "Median Household Income": 40678.51506045338,
+    "Renter Units": 92.76500496869241
+  },
+  "78": {
+    "Population": 240327,
+    "Median Age": 34.48000349523774,
+    "Median Household Income": 43708.349352580146,
+    "Renter Units": 92.38864958479506
+  },
+  "79": {
+    "Population": 241124,
+    "Median Age": 34.59474088021101,
+    "Median Household Income": 37918.12310712408,
+    "Renter Units": 90.093696484473
+  },
+  "80": {
+    "Population": 238478,
+    "Median Age": 37.8015808586117,
+    "Median Household Income": 62770.53880288437,
+    "Renter Units": 75.38020277481323
+  },
+  "81": {
+    "Population": 201518,
+    "Median Age": 40.541316904693375,
+    "Median Household Income": 73304.32329745094,
+    "Renter Units": 68.84612981820453
+  },
+  "82": {
+    "Population": 209945,
+    "Median Age": 41.145768177379786,
+    "Median Household Income": 79461.02075374388,
+    "Renter Units": 52.42106318705424
+  },
+  "83": {
+    "Population": 182152,
+    "Median Age": 39.129777328824275,
+    "Median Household Income": 68773.75390153365,
+    "Renter Units": 58.53703139286803
+  },
+  "84": {
+    "Population": 251607,
+    "Median Age": 34.95904406475177,
+    "Median Household Income": 38593.59906072658,
+    "Renter Units": 90.8150864550242
+  },
+  "85": {
+    "Population": 247579,
+    "Median Age": 35.65708844449651,
+    "Median Household Income": 48784.27143361408,
+    "Renter Units": 81.8225136711216
+  },
+  "86": {
+    "Population": 254178,
+    "Median Age": 33.794697810196,
+    "Median Household Income": 42154.14062094932,
+    "Renter Units": 94.120439366341
+  },
+  "87": {
+    "Population": 187918,
+    "Median Age": 36.61201375067849,
+    "Median Household Income": 51088.81487237349,
+    "Renter Units": 77.95898875591509
+  }
+}

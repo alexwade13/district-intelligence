@@ -31,7 +31,9 @@ import {
 import {
   boroughColors,
   progressiveIndicators,
+  demographicIndicators,
   progressiveColors,
+  demographicColors,
   evolutionColors,
   mapStyles,
   scaleLookup,
@@ -45,9 +47,11 @@ const Index = () => {
 
   const map = useRef()
   const [selected, setSelected] = useState({})
-  const [selectedIndicator, setSelectedIndicator] = useState('Performance Change (2021-2025)')
-  const [scale, setScale] = useState('Election district')
+  const [selectedIndicator, setSelectedIndicator] = useState('Population')
+  const [dataView, setDataView] = useState('Demographics')
+  const [scale, setScale] = useState('Assembly district')
   const [progressiveColorScales, setProgressiveColorScales] = useState({})
+  const [demographicColorScales, setDemographicColorScales] = useState({})
 
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
@@ -64,7 +68,16 @@ const Index = () => {
         .range(['white', progressiveColors[d] || '#cc0000'])
     })
 
+    const demographicColorScales = {}
+    demographicIndicators['Demographics'].forEach((d) => {
+      demographicColorScales[d] = scaleLinear()
+        .domain([0, 1])
+        .interpolate(interpolateLab)
+        .range(['white', demographicColors[d] || '#1f77b4'])
+    })
+
     setProgressiveColorScales(progressiveColorScales)
+    setDemographicColorScales(demographicColorScales)
   }, [])
 
   useEffect(() => {
@@ -162,10 +175,12 @@ const Index = () => {
   }, [map.current, scale])
 
   useEffect(() => {
-    if (!progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
+    if (dataView === 'Progressive Evolution' && !progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
       setSelectedIndicator('Performance Change (2021-2025)')
+    } else if (dataView === 'Demographics' && !demographicIndicators['Demographics'].includes(selectedIndicator)) {
+      setSelectedIndicator('Population')
     }
-  }, [])
+  }, [dataView])
 
   useEffect(() => {
     const updateSelected = () => {
@@ -174,10 +189,11 @@ const Index = () => {
           let color = '#cccccc'
           let opacity = 0
 
+          // Handle progressive evolution data
           const evolutionData = data['progressive-evolution']
           const edData = evolutionData ? evolutionData[k] : null
-          
-          if (edData) {
+
+          if (edData && dataView === 'Progressive Evolution') {
             if (selectedIndicator === 'Performance Change (2021-2025)') {
               color = evolutionColors[edData.trendCategory] || '#cccccc'
               opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
@@ -192,14 +208,62 @@ const Index = () => {
             } else if (selectedIndicator === 'Growth Percentage') {
               const maxGrowth = 200
               const intensity = Math.min(Math.abs(edData.growthPercent || 0) / maxGrowth, 1)
-              color = edData.growthPercent > 0 ? 
-                progressiveColorScales['Growth Percentage'](intensity) : 
+              color = edData.growthPercent > 0 ?
+                progressiveColorScales['Growth Percentage'](intensity) :
                 '#ff4444'
               opacity = 1
             } else if (selectedIndicator === 'Vote Share Change') {
               const intensity = Math.min(Math.abs(edData.growthPoints || 0) / 50, 1)
               color = progressiveColorScales['Vote Share Change'](intensity)
               opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
+            }
+          }
+
+          // Handle demographic data
+          const demographicData = data['demographics']
+          const demoData = demographicData ? demographicData[k] : null
+
+          if (demoData && dataView === 'Demographics') {
+            // Map display names to JSON field names
+            const fieldMap = {
+              'Population': 'population',
+              'Median Household Income': 'median_income',
+              'Median Age': 'median_age',
+              'Renter Units': 'pct_renters',
+            }
+            
+            const fieldName = fieldMap[selectedIndicator] || selectedIndicator
+            const value = demoData[fieldName]
+            if (value !== undefined && value !== null) {
+              // Normalize value based on indicator type
+              let intensity = 0
+
+              if (selectedIndicator === 'Population') {
+                // Normalize population (assume max around 10,000 for NYC EDs)
+                intensity = Math.min(value / 10000, 1)
+              } else if (selectedIndicator === 'Median Household Income') {
+                // Normalize income (assume range $20k-$200k)
+                intensity = Math.min(Math.max((value - 20000) / 180000, 0), 1)
+              } else if (selectedIndicator === 'Median Age') {
+                // Normalize age (assume range 20-80)
+                intensity = Math.min(Math.max((value - 20) / 60, 0), 1)
+              } else if (selectedIndicator === 'Renter Units') {
+                // Normalize renter rate (0-100 scale)
+                intensity = Math.min(Math.max(value / 100, 0), 1)
+              } else if (selectedIndicator.includes('Hispanic') || selectedIndicator.includes('Black') ||
+                         selectedIndicator.includes('White') || selectedIndicator.includes('Asian') ||
+                         selectedIndicator.includes('Foreign')) {
+                // Normalize demographic percentages (0-1 scale already)
+                intensity = Math.min(Math.max(value, 0), 1)
+              }
+
+              color = demographicColorScales[selectedIndicator]
+                ? demographicColorScales[selectedIndicator](intensity)
+                : '#1f77b4'
+              opacity = Math.max(intensity * 0.8 + 0.2, 0.3)  // Ensure minimum opacity
+            } else {
+              color = '#cccccc'
+              opacity = 0.3
             }
           }
 
@@ -218,9 +282,40 @@ const Index = () => {
       }
 
       if (scale == 'Assembly district') {
+        const assemblyData = data['assembly-demographics']
+        
         Object.keys(shapes['assembly-districts']).forEach((k) => {
           let color = '#666666'
           let opacity = 0.3
+
+          // Handle assembly district demographics
+          if (assemblyData && assemblyData[k] && dataView === 'Demographics') {
+            const adData = assemblyData[k]
+            const value = adData[selectedIndicator]
+            
+            if (value !== undefined && value !== null) {
+              let intensity = 0
+
+              if (selectedIndicator === 'Population') {
+                // Normalize population for ADs (larger than EDs, max ~300k)
+                intensity = Math.min(value / 300000, 1)
+              } else if (selectedIndicator === 'Median Household Income') {
+                // Normalize income (assume range $20k-$200k)
+                intensity = Math.min(Math.max((value - 20000) / 180000, 0), 1)
+              } else if (selectedIndicator === 'Median Age') {
+                // Normalize age (assume range 20-80)
+                intensity = Math.min(Math.max((value - 20) / 60, 0), 1)
+              } else if (selectedIndicator === 'Renter Units') {
+                // Normalize renter rate (0-100 scale)
+                intensity = Math.min(Math.max(value / 100, 0), 1)
+              }
+
+              color = demographicColorScales[selectedIndicator]
+                ? demographicColorScales[selectedIndicator](intensity)
+                : '#1f77b4'
+              opacity = Math.max(intensity * 0.8 + 0.2, 0.3)
+            }
+          }
 
           map.current.setFeatureState(
             {
@@ -306,6 +401,7 @@ const Index = () => {
           scale={scale}
           setSelectedIndicator={setSelectedIndicator}
           selectedIndicator={selectedIndicator}
+          dataView={dataView}
         />
         </Box>
       </Box>
@@ -320,11 +416,13 @@ const Index = () => {
                     <Options
               selectedIndicator={selectedIndicator}
               setSelectedIndicator={setSelectedIndicator}
+              dataView={dataView}
+              setDataView={setDataView}
               scale={scale}
               setScale={setScale}
             />
       </Box>
-      {selectedIndicator && progressiveColorScales[selectedIndicator] && (
+      {selectedIndicator && (
         <Box
           sx={{
             position: 'absolute',
@@ -343,10 +441,26 @@ const Index = () => {
             horizontal={true}
             bottom={true}
             colormap={range(0, 1, 0.1).map(
-              progressiveColorScales[selectedIndicator],
+              dataView === 'Demographics' && demographicColorScales[selectedIndicator]
+                ? demographicColorScales[selectedIndicator]
+                : progressiveColorScales[selectedIndicator] || ((x) => '#1f77b4'),
             )}
             clim={[0, 1]}
-            format={(d) => `${d * 100}%`}
+            format={(d) => {
+              if (dataView === 'Demographics') {
+                if (selectedIndicator === 'Median Household Income') {
+                  return `$${Math.round(d * 180000 + 20000)}`
+                } else if (selectedIndicator === 'Median Age') {
+                  return `${Math.round(d * 60 + 20)}`
+                } else if (selectedIndicator === 'Population') {
+                  return `${Math.round(d * 10000)}`
+                } else {
+                  return `${Math.round(d * 100)}%`
+                }
+              } else {
+                return `${d * 100}%`
+              }
+            }}
           />
         </Box>
       )}

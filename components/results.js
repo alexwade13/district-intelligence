@@ -7,7 +7,7 @@ import { formatPercent, formatDate } from './utils'
 import { color } from 'd3-color'
 
 
-const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicator }) => {
+const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicator, dataView }) => {
   const [showResults, setShowResults] = useState(() => {
     if (typeof window !== 'undefined') {
       return !window.matchMedia('(max-width: 40em)').matches
@@ -16,8 +16,29 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
   })
 
   const evolutionData = data['progressive-evolution']
+  const demographicData = data['demographics']
 
-  if (!evolutionData) {
+  if (dataView === 'Demographics' && !demographicData) {
+    return (
+      <>
+        <Box sx={{ px: [4], py: [4] }}>
+          <Box
+            sx={{
+              fontSize: [3, 3, 3, 3],
+              fontFamily: 'heading',
+              letterSpacing: 'heading',
+              display: 'flex',
+              mb: [2],
+            }}
+          >
+            LOADING DEMOGRAPHIC DATA...
+          </Box>
+        </Box>
+      </>
+    )
+  }
+
+  if (dataView === 'Progressive Evolution' && !evolutionData) {
     return (
       <>
         <Box sx={{ px: [4], py: [4] }}>
@@ -35,7 +56,136 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
         </Box>
       </>
     )
-  } else {
+  }
+
+  if (dataView === 'Demographics') {
+    const assemblyData = data['assembly-demographics']
+    
+    if (!assemblyData) {
+      return (
+        <>
+          <Box sx={{ px: [4], py: [4] }}>
+            <Box sx={{ fontSize: [3], fontFamily: 'heading', letterSpacing: 'heading' }}>
+              LOADING DEMOGRAPHIC DATA...
+            </Box>
+          </Box>
+        </>
+      )
+    }
+    
+    let thisSelected = selected[scaleLookup[scale]]
+    const districtData = thisSelected ? assemblyData[thisSelected] : null
+
+    const fieldMap = {
+      'Population': 'Population',
+      'Median Household Income': 'Median Household Income',
+      'Median Age': 'Median Age',
+      'Renter Units': 'Renter Units',
+    }
+
+    const formatDemographicValue = (key, value) => {
+      if (value === undefined || value === null || value === 0) return 'N/A'
+      
+      switch(key) {
+        case 'Population':
+          return value.toLocaleString()
+        case 'Median Household Income':
+          return '$' + Math.round(value).toLocaleString()
+        case 'Median Age':
+          return value.toFixed(1) + ' years'
+        case 'Renter Units':
+          return value.toFixed(1) + '%'
+        default:
+          return value
+      }
+    }
+
+    return (
+      <>
+        <Box sx={{ px: [4], py: [4] }}>
+          <Box
+            sx={{
+              fontSize: [3, 3, 3, 3],
+              fontFamily: 'heading',
+              letterSpacing: 'heading',
+              display: 'flex',
+              mb: [2],
+            }}
+          >
+            <Box sx={{ textTransform: 'uppercase' }}>
+              Demographic Data
+            </Box>
+            {thisSelected && districtData && (
+              <Box
+                sx={{
+                  ml: 'auto',
+                }}
+              >
+                AD {thisSelected}
+              </Box>
+            )}
+            {!thisSelected && (
+              <Box
+                sx={{
+                  ml: 'auto',
+                  display: ['none', 'initial', 'initial', 'initial'],
+                  textTransform: 'intial',
+                }}
+              >
+                ALL ADS
+              </Box>
+            )}
+            <IconButton
+              onClick={() => setShowResults((prev) => !prev)}
+              sx={{
+                cursor: 'pointer',
+                ml: 'auto',
+                mt: ['-5px', -2, -2, -2],
+                display: ['initial', 'none', 'none', 'none'],
+              }}
+            >
+              {showResults && <ChevronUp size={28} />}
+              {!showResults && <ChevronDown size={28} />}
+            </IconButton>
+          </Box>
+          <Box sx={{ display: showResults ? 'initial' : 'none', mt: [4] }}>
+            {districtData ? (
+              <>
+                {Object.entries(fieldMap).map(([displayName, fieldName]) => (
+                  <Box key={displayName} sx={{ mb: [3] }}>
+                    <Box sx={{ fontSize: [2], fontWeight: 'bold', mb: [1] }}>
+                      {displayName}:
+                    </Box>
+                    <Box sx={{ fontSize: [3], fontFamily: 'mono', pl: [2] }}>
+                      {formatDemographicValue(displayName, districtData[fieldName])}
+                    </Box>
+                  </Box>
+                ))}
+              </>
+            ) : (
+              <Box sx={{ fontSize: [2], color: '#666', fontStyle: 'italic', mt: [2] }}>
+                Click on an assembly district to view demographic data
+              </Box>
+            )}
+          </Box>
+          <Box
+            sx={{
+              zIndex: 2,
+              fontSize: [3, 3, 3, 3],
+              mt: [4],
+              display: [showResults ? 'block' : 'none'],
+            }}
+          >
+            <Box sx={{ fontFamily: 'mono', fontSize: [1, 1, 1, 1] }}>
+              DATA SOURCE: US Census Bureau ACS 5-Year Estimates
+            </Box>
+          </Box>
+        </Box>
+      </>
+    )
+  }
+
+  if (evolutionData) {
     let totals = {}
     let totalReporting
     let thisSelected = selected[scaleLookup[scale]]

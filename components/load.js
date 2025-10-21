@@ -36,9 +36,39 @@ const load = () => {
     },
   )
 
+  const { data: data5, error: error5 } = useSWR(
+    '/api/data/demographics',
+    fetcher,
+    {
+      refreshInterval: 30000,
+    },
+  )
+
+  const { data: data6, error: error6 } = useSWR(
+    '/api/data/assembly-demographics',
+    fetcher,
+    {
+      refreshInterval: 30000,
+    },
+  )
+
   return {
-    data: { mayoral: data1, council: data2, status: data3, 'progressive-evolution': data4 },
-    error: { mayoral: error1, council: error2, status: error3, 'progressive-evolution': error4 },
+    data: {
+      mayoral: data1,
+      council: data2,
+      status: data3,
+      'progressive-evolution': data4,
+      'demographics': data5?.data,
+      'assembly-demographics': data6
+    },
+    error: {
+      mayoral: error1,
+      council: error2,
+      status: error3,
+      'progressive-evolution': error4,
+      'demographics': error5,
+      'assembly-demographics': error6
+    },
   }
 }
 

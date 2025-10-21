@@ -23,6 +23,13 @@ export const progressiveColors = {
   'Moderate/Conservative': '#708090',
 }
 
+export const demographicColors = {
+  'Population': '#1f77b4',
+  'Median Household Income': '#ff7f0e',
+  'Median Age': '#2ca02c',
+  'Renter Units': '#d62728',
+}
+
 export const evolutionColors = {
   'Major Growth': '#006400',
   'Growth': '#32cd32',
@@ -41,8 +48,23 @@ export const progressiveIndicators = {
   ],
 }
 
+export const demographicIndicators = {
+  'Demographics': [
+    'Population',
+    'Median Household Income',
+    'Median Age',
+    'Renter Units',
+  ],
+}
+
+export const allIndicators = {
+  ...progressiveIndicators,
+  ...demographicIndicators,
+}
+
 export const analysisLookup = {
   'Progressive Evolution': 'progressive-evolution',
+  'Demographics': 'demographics',
 }
 
 const maptilerKey = process.env.NEXT_PUBLIC_MAPTILER_KEY

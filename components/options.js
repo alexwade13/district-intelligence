@@ -1,14 +1,17 @@
 import { Box } from 'theme-ui'
 import { Select } from './'
-import { progressiveIndicators, progressiveColors } from '../components/constants'
+import { progressiveIndicators, demographicIndicators, allIndicators, progressiveColors, demographicColors } from '../components/constants'
 
 const Options = ({
   selectedIndicator,
   setSelectedIndicator,
   scale,
   setScale,
+  dataView,
+  setDataView,
 }) => {
-  const allIndicators = progressiveIndicators['Progressive Evolution']
+  const currentIndicators = allIndicators[dataView] || progressiveIndicators['Progressive Evolution']
+  const currentColors = dataView === 'Demographics' ? demographicColors : progressiveColors
 
   return (
     <>
@@ -24,6 +27,30 @@ const Options = ({
         }}
       >
         <Box sx={{ px: [4], py: [4] }}>
+          {/* Temporarily hidden - Progressive Evolution data type 
+          <Box sx={{ mb: [4] }}>
+            <Box
+              as='label'
+              htmlFor='data-view-select'
+              sx={{
+                fontSize: [3, 3, 3, 3],
+                fontFamily: 'heading',
+                letterSpacing: 'heading',
+                textTransform: 'uppercase',
+              }}
+            >
+              Data Type
+            </Box>
+            <Select
+              id='data-view-select'
+              value={dataView}
+              onChange={(e) => setDataView(e.target.value)}
+            >
+              <option value='Progressive Evolution'>Progressive Evolution</option>
+              <option value='Demographics'>Demographics</option>
+            </Select>
+          </Box>
+          */}
           <Box sx={{ mb: [4] }}>
             <Box
               as='label'
@@ -42,14 +69,14 @@ const Options = ({
               value={selectedIndicator}
               onChange={(e) => setSelectedIndicator(e.target.value)}
             >
-
-              {allIndicators.map((indicator) => (
+              {currentIndicators.map((indicator) => (
                 <option key={indicator} value={indicator}>
                   {indicator}
                 </option>
               ))}
             </Select>
           </Box>
+          {/* Scale selector temporarily hidden - only showing Assembly districts
           <Box
             as='label'
             htmlFor='scale-select'
@@ -66,10 +93,10 @@ const Options = ({
               value={scale}
               onChange={(e) => setScale(e.target.value)}
             >
-              <option value='Election district'>Election district</option>
               <option value='Assembly district'>Assembly district</option>
             </Select>
           </Box>
+          */}
         </Box>
       </Box>
     </>
