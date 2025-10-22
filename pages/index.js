@@ -2,9 +2,6 @@ import { useEffect, useState, useRef } from 'react'
 import { Box, Container, IconButton, Switch, Image, Link } from 'theme-ui'
 import { Search, X, ChevronUp, ChevronDown } from 'lucide-react'
 import { Themed } from '@theme-ui/mdx'
-import maplibregl from 'maplibre-gl'
-import { scaleLinear } from 'd3-scale'
-import { interpolateLab } from 'd3-interpolate'
 import { range } from 'd3-array'
 import {
   Row,
@@ -16,18 +13,9 @@ import {
   Colorbar,
 } from '../components'
 import { addLabels, addShapes } from '../components/layers'
-import {
-  handleShapeClick,
-  handleShapeClickOff,
-  handleShapeMouseMove,
-  handleShapeMouseMoveoff,
-  createShapeMouseMoveHandler,
-  createShapeMouseMoveOffHandler,
-  createShapeClickHandler,
-  createShapeClickOffHandler,
-  updateShapeVisibility,
-  getMaxKey,
-} from '../components/utils'
+import { getMaxKey } from '../components/utils'
+import { initializeColorScales, createMapInstance, updateDistrictColors } from '../lib/mapHelpers'
+import { setupMapEventHandlers, updateLayerVisibility } from '../lib/mapEventHelpers'
 import {
   boroughColors,
   progressiveIndicators,
@@ -60,22 +48,12 @@ const Index = () => {
   }
 
   useEffect(() => {
-    const progressiveColorScales = {}
-    progressiveIndicators['Progressive Evolution'].forEach((d) => {
-      progressiveColorScales[d] = scaleLinear()
-        .domain([0, 1])
-        .interpolate(interpolateLab)
-        .range(['white', progressiveColors[d] || '#cc0000'])
-    })
-
-    const demographicColorScales = {}
-    demographicIndicators['Demographics'].forEach((d) => {
-      demographicColorScales[d] = scaleLinear()
-        .domain([0, 1])
-        .interpolate(interpolateLab)
-        .range(['white', demographicColors[d] || '#1f77b4'])
-    })
-
+    const { progressiveColorScales, demographicColorScales } = initializeColorScales(
+      progressiveIndicators,
+      demographicIndicators,
+      progressiveColors,
+      demographicColors
+    )
     setProgressiveColorScales(progressiveColorScales)
     setDemographicColorScales(demographicColorScales)
   }, [])
@@ -85,15 +63,7 @@ const Index = () => {
       typeof window !== 'undefined' &&
       window.matchMedia('(max-width: 40em)').matches
 
-    const defaultZoom = isMobile ? 9.8 : 10.4
-
-    map.current = new maplibregl.Map({
-      container: 'map',
-      style: mapStyles.monochrome,
-      center: [-73.956, 40.7228],
-      zoom: defaultZoom,
-      minZoom: 9,
-    })
+    map.current = createMapInstance(isMobile, mapStyles)
 
     map.current.on('load', () => {
       setup()
@@ -104,75 +74,18 @@ const Index = () => {
 
   useEffect(() => {
     if (!map.current) return
-
-    const layers = ['assembly-district', 'election-district']
-    const handlers = {}
-    const foo = 2
-
-    layers.forEach((layer) => {
-      handlers[layer] = {}
-      handlers[layer].move = createShapeMouseMoveHandler(map.current, layer)
-      handlers[layer].moveOff = createShapeMouseMoveOffHandler(map.current)
-      handlers[layer].click = createShapeClickHandler(
-        map.current,
-        layer,
-        setSelected,
-      )
-      handlers[layer].clickOff = createShapeClickOffHandler(
-        map.current,
-        layer,
-        setSelected,
-      )
-
-      const addHandlers = () => {
-        map.current.on('mousemove', `${layer}s-fill`, handlers[layer].move)
-        map.current.on('click', `${layer}s-fill`, handlers[layer].click)
-        map.current.on('mousemove', handlers[layer].moveOff)
-        map.current.on('click', handlers[layer].clickOff)
-      }
-
-      if (!map.current.isStyleLoaded()) {
-        map.current.once('idle', () => {
-          addHandlers()
-        })
-      } else {
-        addHandlers()
-      }
-    })
-
-    return () => {
-      layers.forEach((layer) => {
-        map.current.off('mousemove', `${layer}s-fill`, handlers[layer].move)
-        map.current.off('click', `${layer}s-fill`, handlers[layer].click)
-        map.current.off('mousemove', handlers[layer].moveOff)
-        map.current.off('click', handlers[layer].clickOff)
-      })
-    }
-  }, [map.current, scale])
+    return setupMapEventHandlers(
+      map.current,
+      ['assembly-district', 'election-district'],
+      scale,
+      setSelected
+    )
+  }, [scale])
 
   useEffect(() => {
     if (!map.current) return
-
-    const update = () => {
-      const layers = ['election-district', 'assembly-district']
-
-      updateShapeVisibility(map.current, `${scaleLookup[scale]}s`, 'visible')
-
-      layers.forEach((l) => {
-        if (!(l == scaleLookup[scale])) {
-          updateShapeVisibility(map.current, `${l}s`, 'none')
-        }
-      })
-    }
-
-    if (!map.current.isStyleLoaded()) {
-      map.current.once('idle', () => {
-        update()
-      })
-    } else {
-      update()
-    }
-  }, [map.current, scale])
+    updateLayerVisibility(map.current, scale, scaleLookup)
+  }, [scale])
 
   useEffect(() => {
     if (dataView === 'Progressive Evolution' && !progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
@@ -183,167 +96,31 @@ const Index = () => {
   }, [dataView])
 
   useEffect(() => {
-    const updateSelected = () => {
-      if (scale == 'Election district') {
-        Object.keys(shapes['election-districts']).forEach((k) => {
-          let color = '#cccccc'
-          let opacity = 0
+    if (!map.current || !data['progressive-evolution']) return
 
-          // Handle progressive evolution data
-          const evolutionData = data['progressive-evolution']
-          const edData = evolutionData ? evolutionData[k] : null
-
-          if (edData && dataView === 'Progressive Evolution') {
-            if (selectedIndicator === 'Performance Change (2021-2025)') {
-              color = evolutionColors[edData.trendCategory] || '#cccccc'
-              opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
-            } else if (selectedIndicator === 'Maya Wiley 2021 Baseline') {
-              const intensity = (edData.progressive2021 || 0) / 100
-              color = progressiveColorScales['Maya Wiley 2021 Baseline'](intensity)
-              opacity = 1
-            } else if (selectedIndicator === 'Zohran Mamdani 2025 Current') {
-              const intensity = (edData.progressive2025 || 0) / 100
-              color = progressiveColorScales['Zohran Mamdani 2025 Current'](intensity)
-              opacity = 1
-            } else if (selectedIndicator === 'Growth Percentage') {
-              const maxGrowth = 200
-              const intensity = Math.min(Math.abs(edData.growthPercent || 0) / maxGrowth, 1)
-              color = edData.growthPercent > 0 ?
-                progressiveColorScales['Growth Percentage'](intensity) :
-                '#ff4444'
-              opacity = 1
-            } else if (selectedIndicator === 'Vote Share Change') {
-              const intensity = Math.min(Math.abs(edData.growthPoints || 0) / 50, 1)
-              color = progressiveColorScales['Vote Share Change'](intensity)
-              opacity = Math.max(Math.min(Math.abs(edData.growthPoints) / 30, 1), 0.6)
-            }
-          }
-
-          // Handle demographic data
-          const demographicData = data['demographics']
-          const demoData = demographicData ? demographicData[k] : null
-
-          if (demoData && dataView === 'Demographics') {
-            // Map display names to JSON field names
-            const fieldMap = {
-              'Population': 'population',
-              'Median Household Income': 'median_income',
-              'Median Age': 'median_age',
-              'Renter Units': 'pct_renters',
-            }
-            
-            const fieldName = fieldMap[selectedIndicator] || selectedIndicator
-            const value = demoData[fieldName]
-            if (value !== undefined && value !== null) {
-              // Normalize value based on indicator type
-              let intensity = 0
-
-              if (selectedIndicator === 'Population') {
-                // Normalize population (assume max around 10,000 for NYC EDs)
-                intensity = Math.min(value / 10000, 1)
-              } else if (selectedIndicator === 'Median Household Income') {
-                // Normalize income (assume range $20k-$200k)
-                intensity = Math.min(Math.max((value - 20000) / 180000, 0), 1)
-              } else if (selectedIndicator === 'Median Age') {
-                // Normalize age (assume range 20-80)
-                intensity = Math.min(Math.max((value - 20) / 60, 0), 1)
-              } else if (selectedIndicator === 'Renter Units') {
-                // Normalize renter rate (0-100 scale)
-                intensity = Math.min(Math.max(value / 100, 0), 1)
-              } else if (selectedIndicator.includes('Hispanic') || selectedIndicator.includes('Black') ||
-                         selectedIndicator.includes('White') || selectedIndicator.includes('Asian') ||
-                         selectedIndicator.includes('Foreign')) {
-                // Normalize demographic percentages (0-1 scale already)
-                intensity = Math.min(Math.max(value, 0), 1)
-              }
-
-              color = demographicColorScales[selectedIndicator]
-                ? demographicColorScales[selectedIndicator](intensity)
-                : '#1f77b4'
-              opacity = Math.max(intensity * 0.8 + 0.2, 0.3)  // Ensure minimum opacity
-            } else {
-              color = '#cccccc'
-              opacity = 0.3
-            }
-          }
-
-          map.current.setFeatureState(
-            {
-              source: 'election-districts',
-              id: shapes['election-districts'][k].id,
-            },
-            {
-              color,
-              opacity,
-              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.25,
-            },
-          )
-        })
-      }
-
-      if (scale == 'Assembly district') {
-        const assemblyData = data['assembly-demographics']
-        
-        Object.keys(shapes['assembly-districts']).forEach((k) => {
-          let color = '#666666'
-          let opacity = 0.3
-
-          // Handle assembly district demographics
-          if (assemblyData && assemblyData[k] && dataView === 'Demographics') {
-            const adData = assemblyData[k]
-            const value = adData[selectedIndicator]
-            
-            if (value !== undefined && value !== null) {
-              let intensity = 0
-
-              if (selectedIndicator === 'Population') {
-                // Normalize population for ADs (larger than EDs, max ~300k)
-                intensity = Math.min(value / 300000, 1)
-              } else if (selectedIndicator === 'Median Household Income') {
-                // Normalize income (assume range $20k-$200k)
-                intensity = Math.min(Math.max((value - 20000) / 180000, 0), 1)
-              } else if (selectedIndicator === 'Median Age') {
-                // Normalize age (assume range 20-80)
-                intensity = Math.min(Math.max((value - 20) / 60, 0), 1)
-              } else if (selectedIndicator === 'Renter Units') {
-                // Normalize renter rate (0-100 scale)
-                intensity = Math.min(Math.max(value / 100, 0), 1)
-              }
-
-              color = demographicColorScales[selectedIndicator]
-                ? demographicColorScales[selectedIndicator](intensity)
-                : '#1f77b4'
-              opacity = Math.max(intensity * 0.8 + 0.2, 0.3)
-            }
-          }
-
-          map.current.setFeatureState(
-            {
-              source: 'assembly-districts',
-              id: shapes['assembly-districts'][k].id,
-            },
-            {
-              color,
-              opacity,
-              'line-width': selected[scaleLookup[scale]] === k ? 1.5 : 0.5,
-            },
-          )
-        })
-      }
+    const updateColors = () => {
+      updateDistrictColors(
+        map,
+        shapes,
+        scale,
+        data,
+        selectedIndicator,
+        dataView,
+        { progressive: progressiveColorScales, demographic: demographicColorScales },
+        selected,
+        scaleLookup,
+        evolutionColors
+      )
     }
 
-    if (data['progressive-evolution']) {
-      if (map.current) {
-        if (!map.current.isStyleLoaded()) {
-          map.current.once('idle', () => {
-            updateSelected()
-          })
-        } else {
-          updateSelected()
-        }
-      }
+    if (!map.current.isStyleLoaded()) {
+      map.current.once('idle', () => {
+        updateColors()
+      })
+    } else {
+      updateColors()
     }
-  }, [data, selected, selectedIndicator, scale])
+  }, [data, selected, selectedIndicator, scale, dataView, progressiveColorScales, demographicColorScales])
 
   const resetView = () => {
     map.current.flyTo({
