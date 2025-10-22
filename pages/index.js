@@ -14,7 +14,7 @@ import {
 } from '../components'
 import { addLabels, addShapes } from '../components/layers'
 import { getMaxKey } from '../components/utils'
-import { initializeColorScales, createMapInstance, updateDistrictColors } from '../lib/mapHelpers'
+import { initializeColorScales, createMapInstance, updateDistrictColors, updateTractColors } from '../lib/mapHelpers'
 import { setupMapEventHandlers, updateLayerVisibility } from '../lib/mapEventHelpers'
 import {
   boroughColors,
@@ -38,12 +38,15 @@ const Index = () => {
   const [selectedIndicator, setSelectedIndicator] = useState('Population')
   const [dataView, setDataView] = useState('Demographics')
   const [scale, setScale] = useState('Assembly district')
+  const [viewMode, setViewMode] = useState('assembly')
+  const [selectedTract, setSelectedTract] = useState(null)
   const [progressiveColorScales, setProgressiveColorScales] = useState({})
   const [demographicColorScales, setDemographicColorScales] = useState({})
 
   const setup = async () => {
     addShapes(map.current, 'election-districts', 0.25)
     addShapes(map.current, 'assembly-districts', 0.25)
+    addShapes(map.current, 'census-tracts', 0.1)
     addLabels(map.current)
   }
 
@@ -78,14 +81,16 @@ const Index = () => {
       map.current,
       ['assembly-district', 'election-district'],
       scale,
-      setSelected
+      setSelected,
+      viewMode,
+      setSelectedTract
     )
-  }, [scale])
+  }, [scale, viewMode])
 
   useEffect(() => {
     if (!map.current) return
-    updateLayerVisibility(map.current, scale, scaleLookup)
-  }, [scale])
+    updateLayerVisibility(map.current, scale, scaleLookup, viewMode)
+  }, [scale, viewMode])
 
   useEffect(() => {
     if (dataView === 'Progressive Evolution' && !progressiveIndicators['Progressive Evolution'].includes(selectedIndicator)) {
@@ -99,18 +104,29 @@ const Index = () => {
     if (!map.current || !data['progressive-evolution']) return
 
     const updateColors = () => {
-      updateDistrictColors(
-        map,
-        shapes,
-        scale,
-        data,
-        selectedIndicator,
-        dataView,
-        { progressive: progressiveColorScales, demographic: demographicColorScales },
-        selected,
-        scaleLookup,
-        evolutionColors
-      )
+      if (viewMode === 'tract') {
+        updateTractColors(
+          map,
+          shapes,
+          data,
+          selectedIndicator,
+          { progressive: progressiveColorScales, demographic: demographicColorScales },
+          selectedTract
+        )
+      } else {
+        updateDistrictColors(
+          map,
+          shapes,
+          scale,
+          data,
+          selectedIndicator,
+          dataView,
+          { progressive: progressiveColorScales, demographic: demographicColorScales },
+          selected,
+          scaleLookup,
+          evolutionColors
+        )
+      }
     }
 
     if (!map.current.isStyleLoaded()) {
@@ -120,7 +136,7 @@ const Index = () => {
     } else {
       updateColors()
     }
-  }, [data, selected, selectedIndicator, scale, dataView, progressiveColorScales, demographicColorScales])
+  }, [data, selected, selectedIndicator, scale, dataView, progressiveColorScales, demographicColorScales, viewMode, selectedTract])
 
   const resetView = () => {
     map.current.flyTo({
@@ -179,6 +195,8 @@ const Index = () => {
           setSelectedIndicator={setSelectedIndicator}
           selectedIndicator={selectedIndicator}
           dataView={dataView}
+          viewMode={viewMode}
+          selectedTract={selectedTract}
         />
         </Box>
       </Box>
@@ -197,6 +215,8 @@ const Index = () => {
               setDataView={setDataView}
               scale={scale}
               setScale={setScale}
+              viewMode={viewMode}
+              setViewMode={setViewMode}
             />
       </Box>
       {selectedIndicator && (

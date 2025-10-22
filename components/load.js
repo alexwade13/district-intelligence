@@ -52,6 +52,14 @@ const load = () => {
     },
   )
 
+  const { data: data7, error: error7 } = useSWR(
+    '/api/data/assembly-tract-data',
+    fetcher,
+    {
+      refreshInterval: 30000,
+    },
+  )
+
   return {
     data: {
       mayoral: data1,
@@ -59,7 +67,8 @@ const load = () => {
       status: data3,
       'progressive-evolution': data4,
       'demographics': data5?.data,
-      'assembly-demographics': data6
+      'assembly-demographics': data6,
+      'assembly-tract-data': data7
     },
     error: {
       mayoral: error1,
@@ -67,7 +76,8 @@ const load = () => {
       status: error3,
       'progressive-evolution': error4,
       'demographics': error5,
-      'assembly-demographics': error6
+      'assembly-demographics': error6,
+      'assembly-tract-data': error7
     },
   }
 }

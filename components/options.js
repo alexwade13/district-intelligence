@@ -9,6 +9,8 @@ const Options = ({
   setScale,
   dataView,
   setDataView,
+  viewMode,
+  setViewMode,
 }) => {
   const currentIndicators = allIndicators[dataView] || progressiveIndicators['Progressive Evolution']
   const currentColors = dataView === 'Demographics' ? demographicColors : progressiveColors
@@ -51,6 +53,28 @@ const Options = ({
             </Select>
           </Box>
           */}
+          <Box sx={{ mb: [4] }}>
+            <Box
+              as='label'
+              htmlFor='view-mode-select'
+              sx={{
+                fontSize: [3, 3, 3, 3],
+                fontFamily: 'heading',
+                letterSpacing: 'heading',
+                textTransform: 'uppercase',
+              }}
+            >
+              View Mode
+            </Box>
+            <Select
+              id='view-mode-select'
+              value={viewMode}
+              onChange={(e) => setViewMode(e.target.value)}
+            >
+              <option value='assembly'>Assembly Districts</option>
+              <option value='tract'>Census Tracts</option>
+            </Select>
+          </Box>
           <Box sx={{ mb: [4] }}>
             <Box
               as='label'

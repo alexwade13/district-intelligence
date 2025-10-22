@@ -7,7 +7,7 @@ import { formatPercent, formatDate } from './utils'
 import { color } from 'd3-color'
 
 
-const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicator, dataView }) => {
+const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicator, dataView, viewMode, selectedTract }) => {
   const [showResults, setShowResults] = useState(() => {
     if (typeof window !== 'undefined') {
       return !window.matchMedia('(max-width: 40em)').matches
@@ -17,6 +17,111 @@ const Results = ({ data, selected, setSelectedIndicator, scale, selectedIndicato
 
   const evolutionData = data['progressive-evolution']
   const demographicData = data['demographics']
+  const tractData = data['assembly-tract-data']
+
+  if (viewMode === 'tract') {
+    if (!selectedTract) {
+      return (
+        <Box sx={{ px: [4], py: [4] }}>
+          <Box
+            sx={{
+              fontSize: [3, 3, 3, 3],
+              fontFamily: 'heading',
+              letterSpacing: 'heading',
+              display: 'flex',
+              mb: [2],
+            }}
+          >
+            Census Tract Mode
+          </Box>
+          <Box sx={{ fontSize: [2], mb: [3] }}>
+            Click on a census tract to view demographic data
+          </Box>
+        </Box>
+      )
+    }
+
+    let tractDemographics = null
+    let parentAD = null
+    if (tractData) {
+      for (const adId in tractData) {
+        if (tractData[adId].tract_demographics && tractData[adId].tract_demographics[selectedTract]) {
+          tractDemographics = tractData[adId].tract_demographics[selectedTract]
+          parentAD = adId
+          break
+        }
+      }
+    }
+
+    if (!tractDemographics) {
+      return (
+        <Box sx={{ px: [4], py: [4] }}>
+          <Box
+            sx={{
+              fontSize: [3, 3, 3, 3],
+              fontFamily: 'heading',
+              letterSpacing: 'heading',
+              display: 'flex',
+              mb: [2],
+            }}
+          >
+            Census Tract {selectedTract}
+          </Box>
+          <Box sx={{ fontSize: [2] }}>No data available</Box>
+        </Box>
+      )
+    }
+
+    const formatValue = (value, indicator) => {
+      if (value === null || value === undefined) return 'N/A'
+      
+      if (indicator === 'Population') {
+        return value.toLocaleString()
+      } else if (indicator === 'Median Household Income') {
+        return `$${value.toLocaleString()}`
+      } else if (indicator === 'Median Age') {
+        return `${value.toFixed(1)} years`
+      } else if (indicator === 'Renter Units') {
+        return `${value.toFixed(1)}%`
+      }
+      return value
+    }
+
+    return (
+      <Box sx={{ px: [4], py: [4] }}>
+        <Box
+          sx={{
+            fontSize: [3, 3, 3, 3],
+            fontFamily: 'heading',
+            letterSpacing: 'heading',
+            display: 'flex',
+            mb: [2],
+          }}
+        >
+          Census Tract Data
+        </Box>
+        <Box sx={{ fontSize: [2], mb: [3] }}>
+          <Box sx={{ mb: [2] }}>
+            <strong>Tract ID:</strong> {selectedTract}
+          </Box>
+          <Box sx={{ mb: [2] }}>
+            <strong>Assembly District:</strong> {parentAD}
+          </Box>
+        </Box>
+        <Box sx={{ mb: [3] }}>
+          <Box sx={{ fontSize: [3], fontWeight: 'bold', mb: [2] }}>
+            {selectedIndicator}
+          </Box>
+          <Box sx={{ fontSize: [4], fontWeight: 'bold', color: 'primary' }}>
+            {formatValue(tractDemographics[selectedIndicator], selectedIndicator)}
+          </Box>
+        </Box>
+        <Box sx={{ fontSize: [1], fontStyle: 'italic', mt: [3] }}>
+          DATA SOURCE: US Census Bureau ACS 5-Year Estimates
+        </Box>
+      </Box>
+    )
+  }
 
   if (dataView === 'Demographics' && !demographicData) {
     return (
