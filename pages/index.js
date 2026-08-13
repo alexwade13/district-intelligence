@@ -14,7 +14,7 @@ import {
 } from '../components'
 import { addLabels, addShapes } from '../components/layers'
 import { getMaxKey } from '../components/utils'
-import { initializeColorScales, createMapInstance, updateDistrictColors, updateTractColors } from '../lib/mapHelpers'
+import { initializeColorScales, createMapInstance, updateDistrictColors, updateTractColors, updateDrilledDownTracts } from '../lib/mapHelpers'
 import { setupMapEventHandlers, updateLayerVisibility } from '../lib/mapEventHelpers'
 import {
   boroughColors,
@@ -126,6 +126,31 @@ const Index = () => {
           scaleLookup,
           evolutionColors
         )
+        
+        if (scale === 'Assembly district' && selected['assembly-district']) {
+          if (map.current.getLayer('census-tracts-fill')) {
+            map.current.setLayoutProperty('census-tracts-fill', 'visibility', 'visible')
+          }
+          if (map.current.getLayer('census-tracts-line')) {
+            map.current.setLayoutProperty('census-tracts-line', 'visibility', 'visible')
+          }
+          
+          updateDrilledDownTracts(
+            map,
+            shapes,
+            data,
+            selectedIndicator,
+            { demographic: demographicColorScales },
+            selected['assembly-district']
+          )
+        } else {
+          if (map.current.getLayer('census-tracts-fill')) {
+            map.current.setLayoutProperty('census-tracts-fill', 'visibility', 'none')
+          }
+          if (map.current.getLayer('census-tracts-line')) {
+            map.current.setLayoutProperty('census-tracts-line', 'visibility', 'none')
+          }
+        }
       }
     }
 
